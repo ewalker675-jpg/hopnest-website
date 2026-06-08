@@ -55,7 +55,7 @@
     }
 
     .hn-container {
-      max-width: 800px; /* Centered content column for reading layout */
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
@@ -280,6 +280,18 @@
       color: var(--sage);
     }
 
+    .hn-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @media (max-width: 768px) {
+      .hn-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
     .hn-footer {
       background: var(--bark);
       color: var(--mist);
@@ -383,13 +395,17 @@
   <!-- Farm Story Section -->
   <section class="hn-section" style="background: white;">
     <div class="hn-container">
-      <h2>This land has been our home for generations</h2>
-      
-      <p style="margin-bottom: 1.5rem;">We have been farming organically since 1998. As one of only three certified organic hop growers in the United Kingdom, we are deeply committed to working in harmony with nature. Our family history on this land spans generations, and we steward it using progressive, regenerative farming methods to build soil organic carbon and restore natural ecosystems.</p>
-      
-      <p style="margin-bottom: 1.5rem;">The farm is a vibrant, active agricultural business. We breed pedigree Hereford cattle with a lineage extending back to the 1800s, alongside easycare sheep. We also tend traditional cider orchards, Worcestershire damsons, and maintain wide wildflower meadow corridors that provide nesting habitats for native wildlife. Scientific assessments show our land holds 34% more biodiversity than conventional farms.</p>
-      
-      <p style="margin-bottom: 1.5rem;">For groups of friends and families looking for cool places to stay with a big group of friends that we can do fun stuff in England, our farm offers a unique landscape. Guests are invited to walk the organic farm trails, explore the orchards, swim in the clean waters of the River Teme, or simply relax in the dark-sky peacefulness of this ancient landscape.</p>
+      <div class="hn-grid-2" style="align-items: center; gap: 4rem;">
+        <div>
+          <h2>This land has been our home for generations</h2>
+          <p style="margin-bottom: 1.5rem;">We have been farming organically since 1998. As one of only three certified organic hop growers in the United Kingdom, we are deeply committed to working in harmony with nature. Our family history on this land spans generations, and we steward it using progressive, regenerative farming methods to build soil organic carbon and restore natural ecosystems.</p>
+          <p style="margin-bottom: 1.5rem;">The farm is a vibrant, active agricultural business. We breed pedigree Hereford cattle with a lineage extending back to the 1800s, alongside easycare sheep. We also tend traditional cider orchards, Worcestershire damsons, and maintain wide wildflower meadow corridors that provide nesting habitats for native wildlife. Scientific assessments show our land holds 34% more biodiversity than conventional farms.</p>
+          <p>For groups of friends and families looking for cool places to stay with a big group of friends that we can do fun stuff in England, our farm offers a unique landscape. Guests are invited to walk the organic farm trails, explore the orchards, swim in the clean waters of the River Teme, or simply relax in the dark-sky peacefulness of this ancient landscape.</p>
+        </div>
+        <div>
+          <img src="/images/about the farm.png" alt="Hopnest Organic Farm, Worcestershire" style="width: 100%; height: auto; border: 1px solid var(--mist); display: block;">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -404,21 +420,27 @@
   <!-- Elizabeth Section -->
   <section class="hn-section" style="background: white;">
     <div class="hn-container">
-      <h2>Your host, Elizabeth</h2>
-      <p>I've lived on this farm my whole life. I want guests who love the countryside and want to be part of it, even just for a few days. I'm always nearby if you need anything, and always happy to leave you alone if you don't. Whether you are hosting a reunion or asking where can I stay with 20 friends in England, I am on hand to help you plan activities, arrange local logs, and ensure your stay is memorable.</p>
-      
-      <div class="hn-bio-stats">
-        <div class="hn-bio-stat">
-          <span class="hn-bio-stat-val">5.0</span>
-          <span class="hn-bio-stat-lbl">Airbnb Rating</span>
+      <div class="hn-grid-2" style="align-items: center; gap: 4rem;">
+        <div>
+          <img src="/images/about elizabeth.jpeg" alt="Your host, Elizabeth, at Hopnest Retreats" style="width: 100%; height: auto; border: 1px solid var(--mist); display: block;">
         </div>
-        <div class="hn-bio-stat">
-          <span class="hn-bio-stat-val">28</span>
-          <span class="hn-bio-stat-lbl">Guest Reviews</span>
-        </div>
-        <div class="hn-bio-stat">
-          <span class="hn-bio-stat-val">5+</span>
-          <span class="hn-bio-stat-lbl">Years Hosting</span>
+        <div>
+          <h2>Your host, Elizabeth</h2>
+          <p style="margin-bottom: 1.5rem;">I've lived on this farm my whole life. I want guests who love the countryside and want to be part of it, even just for a few days. I'm always nearby if you need anything, and always happy to leave you alone if you don't. Whether you are hosting a reunion or asking where can I stay with 20 friends in England, I am on hand to help you plan activities, arrange local logs, and ensure your stay is memorable.</p>
+          <div class="hn-bio-stats">
+            <div class="hn-bio-stat">
+              <span class="hn-bio-stat-val">5.0</span>
+              <span class="hn-bio-stat-lbl">Airbnb Rating</span>
+            </div>
+            <div class="hn-bio-stat">
+              <span class="hn-bio-stat-val">28</span>
+              <span class="hn-bio-stat-lbl">Guest Reviews</span>
+            </div>
+            <div class="hn-bio-stat">
+              <span class="hn-bio-stat-val">5+</span>
+              <span class="hn-bio-stat-lbl">Years Hosting</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
