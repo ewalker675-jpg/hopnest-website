@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exclusive Glamping Worcestershire | Private Tipi Retreat | Hopnest Retreats</title>
+  <meta name="description" content="Exclusive tipi glamping on the River Teme near Martley, Worcestershire. Five furnished tipis, privately yours — no other guests on site. Organic farm, wild swimming, dog friendly. 25 minutes from Worcester.">
+  <link rel="canonical" href="https://www.hopnestretreats.co.uk/">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hopnest Retreats">
+  <meta property="og:title" content="Exclusive Glamping Worcestershire | Private Tipi Retreat | Hopnest Retreats">
+  <meta property="og:description" content="Exclusive tipi glamping on the River Teme near Martley, Worcestershire. Five furnished tipis, privately yours — no other guests on site. Organic farm, wild swimming, dog friendly. 25 minutes from Worcester.">
+  <meta property="og:url" content="https://www.hopnestretreats.co.uk/">
+  <meta property="og:image" content="https://www.hopnestretreats.co.uk/images/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Exclusive Glamping Worcestershire | Private Tipi Retreat | Hopnest Retreats">
+  <meta name="twitter:description" content="Exclusive tipi glamping on the River Teme near Martley, Worcestershire. Five furnished tipis, privately yours — no other guests on site. Organic farm, wild swimming, dog friendly. 25 minutes from Worcester.">
+  <meta name="twitter:image" content="https://www.hopnestretreats.co.uk/images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bark: #3E3028;
+      --sage: #6B7C5C;
+      --amber: #C4882A;
+      --river: #4A6B7A;
+      --parchment: #F7F3EE;
+      --linen: #EDE8E0;
+      --mist: #D6CFC4;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--bark);
+      background-color: var(--parchment);
+    }
+
+    .hn-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .hn-section {
+      padding: 5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .hn-section {
+        padding: 3rem 0;
+      }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 300;
+      color: var(--bark);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--bark);
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--bark);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hn-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--sage);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .hn-btn {
+      display: inline-block;
+      background: var(--sage);
+      color: white;
+      padding: 0.9rem 2rem;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-align: center;
+    }
+    .hn-btn:hover {
+      background: var(--bark);
+    }
+
+    .hn-btn-ghost {
+      display: inline-block;
+      background: transparent;
+      color: var(--sage);
+      padding: 0.9rem 2rem;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1.5px solid var(--sage);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-align: center;
+    }
+    .hn-btn-ghost:hover {
+      background: var(--sage);
+      color: white;
+    }
+
+    .hn-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: white;
+      border-bottom: 1px solid var(--mist);
+    }
+
+    .hn-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .hn-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .hn-logo-img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: multiply; /* Blends the white background away */
+    }
+
+    .hn-logo-text {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bark);
+    }
+
+    .hn-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hn-nav a {
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--bark);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .hn-nav a:hover {
+      color: var(--sage);
+    }
+
+    .hn-nav-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.78rem;
+    }
+
+    .hn-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--bark);
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hn-hamburger {
+        display: block;
+      }
+      .hn-nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--mist);
+      }
+      .hn-nav.open {
+        display: flex;
+      }
+    }
+
+    .hn-card {
+      background: white;
+      border: 1px solid var(--mist);
+      padding: 2rem;
+    }
+
+    .hn-hero {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 6rem 0;
+    }
+    .hn-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+    .hn-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+    }
+    .hn-hero-content h1 {
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+    .hn-hero-content p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+    .hn-hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .hn-hero-buttons .hn-btn-ghost {
+      color: white;
+      border-color: white;
+    }
+    .hn-hero-buttons .hn-btn-ghost:hover {
+      background: white;
+      color: var(--bark);
+    }
+
+    .hn-trust-bar {
+      background: var(--linen);
+      padding: 1.25rem 0;
+      text-align: center;
+    }
+    .hn-trust-items {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hn-trust-item {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--bark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hn-trust-divider {
+      color: var(--mist);
+    }
+
+    .hn-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .hn-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .hn-grid-2, .hn-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hn-wild-swimming-section {
+      background: var(--linen);
+      border-top: 1px solid var(--mist);
+      border-bottom: 1px solid var(--mist);
+    }
+    .hn-wild-swimming-content {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hn-wild-swimming-disclaimer {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--river);
+      margin-top: 1.5rem;
+      display: block;
+    }
+
+    .hn-reviews-section {
+      background: var(--parchment);
+    }
+    .hn-review-stars {
+      color: var(--amber);
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    .hn-review-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .hn-review-author {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hn-about-home-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .hn-about-home-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    .hn-stat-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .hn-stat-item {
+      border-left: 2px solid var(--sage);
+      padding-left: 1.5rem;
+    }
+    .hn-stat-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--bark);
+    }
+    .hn-stat-subtitle {
+      font-size: 0.85rem;
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hn-getting-here-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+    @media (max-width: 768px) {
+      .hn-getting-here-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    .hn-distance-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    .hn-distance-table th, .hn-distance-table td {
+      padding: 0.75rem 0;
+      text-align: left;
+      border-bottom: 1px solid var(--mist);
+    }
+    .hn-distance-table th {
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--sage);
+    }
+    .hn-getting-here-note {
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+    .hn-map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    .hn-contact-strip {
+      background: var(--sage);
+      color: white;
+      text-align: center;
+    }
+    .hn-contact-strip h2 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .hn-contact-strip p {
+      margin-bottom: 1.5rem;
+    }
+    .hn-contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .hn-contact-links .hn-btn-ghost {
+      color: white;
+      border-color: white;
+    }
+    .hn-contact-links .hn-btn-ghost:hover {
+      background: white;
+      color: var(--sage);
+    }
+
+    .hn-footer {
+      background: var(--bark);
+      color: var(--mist);
+      margin-top: 5rem;
+    }
+    .hn-footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding: 4rem 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .hn-footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .hn-footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+    @media (max-width: 480px) {
+      .hn-footer-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+    .hn-footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+    .hn-footer-brand .hn-logo-link {
+      margin-bottom: 1rem;
+      display: flex;
+    }
+    .hn-footer-brand .hn-logo-img {
+      height: 40px;
+      mix-blend-mode: screen; /* Inverts/blends nicely on dark brown */
+    }
+    .hn-footer-brand .hn-logo-text {
+      color: white;
+    }
+    .hn-footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .hn-footer-links .hn-label {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .hn-footer-links a {
+      color: var(--mist);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+    .hn-footer-links a:hover {
+      color: white;
+    }
+    .hn-footer-base {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.25rem 1.5rem;
+    }
+    .hn-footer-base p {
+      font-size: 0.8rem;
+      color: var(--mist);
+    }
+  </style>
+  
+  <!-- Base JSON-LD schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Hopnest Retreats",
+    "url": "https://www.hopnestretreats.co.uk",
+    "description": "Exclusive tipi glamping and shepherd huts on a family-run organic farm near Martley, Worcestershire. No other guests on site — the whole site is yours when you book.",
+    "telephone": "+447583340173",
+    "email": "hello@hopnestretreats.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Martley",
+      "addressRegion": "Worcestershire",
+      "postalCode": "WR6",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.201950,
+      "longitude": -2.391437
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "28",
+      "bestRating": "5"
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Exclusive site hire", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "No other guests on site", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "River Teme access", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wild swimming", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Fire pit", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Hot shower", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Dogs allowed", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Free parking", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Organic farm", "value": true }
+    ],
+    "priceRange": "££",
+    "checkinTime": "16:00",
+    "checkoutTime": "10:00",
+    "petsAllowed": true
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hn-header">
+    <div class="hn-container hn-header-inner">
+      <a href="/index.html" class="hn-logo-link">
+        <img src="/images/favicon.png" alt="Hopnest Retreats" class="hn-logo-img">
+        <span class="hn-logo-text">Hopnest Retreats</span>
+      </a>
+      <nav class="hn-nav" id="hn-nav">
+        <a href="/index.html">Home</a>
+        <a href="/tipis.html">Tipi Retreat</a>
+        <a href="/shepherd-huts.html">Shepherd Huts</a>
+        <a href="/about.html">About</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/tipis.html#book" class="hn-btn hn-nav-btn">Book Now</a>
+      </nav>
+      <button class="hn-hamburger" id="hn-hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <!-- REPLACE: hero image path -->
+  <section class="hn-hero" style="background-image: url('/images/hero.jpg'); min-height: 85vh;">
+    <div class="hn-hero-overlay"></div>
+    <div class="hn-container hn-hero-content">
+      <span class="hn-label" style="color: var(--amber);">Exclusive Site Hire</span>
+      <h1>Exclusive Private Glamping for Groups in Worcestershire</h1>
+      <p>Are you looking for private retreats for groups or asking where you can stay with 20 friends in England? Hopnest is the ultimate solution. Hire our riverside meadow exclusively with five furnished tipis on the River Teme. Your group, no one else. 25 minutes from Worcester.</p>
+      <div class="hn-hero-buttons">
+        <a href="/tipis.html#book" class="hn-btn">Book the Tipis</a>
+        <a href="#offerings" class="hn-btn-ghost">Find out more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="hn-trust-bar">
+    <div class="hn-container hn-trust-items">
+      <span class="hn-trust-item">Organic farm since 1998</span>
+      <span class="hn-trust-divider">·</span>
+      <span class="hn-trust-item">Exclusive site hire — no other guests</span>
+      <span class="hn-trust-divider">·</span>
+      <span class="hn-trust-item">5.0 ★ on Airbnb</span>
+    </div>
+  </section>
+
+  <!-- Offerings Section -->
+  <section class="hn-section" id="offerings">
+    <div class="hn-container">
+      <h2>Two ways to stay</h2>
+      <div class="hn-grid-2">
+        <!-- Card 1 — Tipi Retreat -->
+        <div class="hn-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <!-- REPLACE: tipi image path -->
+            <img src="/images/tipis.jpg" alt="Five furnished bell tipis at Hopnest Retreats, Worcestershire" style="width: 100%; height: 220px; object-fit: cover; margin-bottom: 1.5rem; border: 1px solid var(--mist);">
+            <span class="hn-label">Group Glamping</span>
+            <h3>The Tipi Retreat</h3>
+            <p style="margin-bottom: 1.5rem;">Five furnished bell tipis on the banks of the River Teme. King beds, covered communal area, fire pit, hot shower, and two loos. The whole site is exclusively yours — no other guests. It is one of the cool places to stay with a big group of friends that we can do fun stuff in England, offering private river access for swimming, group campfires, and walking trails.</p>
+            <div style="background: var(--linen); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
+              <strong style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--sage);">Pricing</strong>
+              <p><strong>2026:</strong> £500/night weekends · £450/night weekdays<br>Up to 20 guests · No booking fees</p>
+              <p style="margin-top: 0.5rem;"><strong>From 2027:</strong> Weekends: £600/night for up to 10 guests + £30/night per additional person<br>Weekdays: £520/night for up to 10 guests + £30/night per additional person<br>Min 2 nights · Max 20 guests</p>
+            </div>
+          </div>
+          <a href="/tipis.html" class="hn-btn" style="align-self: flex-start;">View and Book</a>
+        </div>
+
+        <!-- Card 2 — Shepherd Huts -->
+        <div class="hn-card" style="background: var(--linen); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="background: var(--mist); width: 100%; height: 220px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+              <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--bark);">Coming Soon · Summer 2026</span>
+            </div>
+            <span class="hn-label">Coming Soon · Summer 2026</span>
+            <h3>Skylark & Nuthatch</h3>
+            <p style="margin-bottom: 1.5rem;">Two shepherd huts on a small hill above the Teme Valley, with far-reaching views and proper dark skies. King beds, en suite shower and toilet, full kitchen, electric heating, outdoor firepit, and a stargazing net bed. Opening summer 2026. Perfect for quiet escapes or booking together for small groups seeking private retreats.</p>
+            <div style="background: white; border: 1px solid var(--mist); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
+              <strong style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--sage);">Pricing</strong>
+              <p><strong>From summer 2026:</strong> £120/night weekends · £100/night weekdays<br>Minimum 2 nights</p>
+            </div>
+          </div>
+          <a href="/shepherd-huts.html" class="hn-btn-ghost" style="align-self: flex-start;">Find out more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wild Swimming Callout Section -->
+  <section class="hn-section hn-wild-swimming-section">
+    <div class="hn-container hn-wild-swimming-content">
+      <span class="hn-label">Riverside Adventure</span>
+      <h2>Wild swimming on your doorstep</h2>
+      <p>The River Teme runs along the edge of the site. It is one of the cleanest rivers in England and a short walk from the tipis. Your group has private access during your stay. There are no crowds, no entry fees, and no other guests. Just the river.</p>
+      <p class="hn-wild-swimming-disclaimer">Please note: Access to the River Teme and wild swimming are entirely at guests' own risk. Safety instructions are provided on site.</p>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="hn-section hn-reviews-section">
+    <div class="hn-container">
+      <h2 style="margin-bottom: 0.5rem;">What guests say</h2>
+      <p class="hn-label" style="margin-bottom: 2rem;">5.0 on Airbnb · 28 reviews</p>
+      <div class="hn-grid-3">
+        <!-- Review 1 -->
+        <div class="hn-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"We absolutely loved our stay here. Particular highlights were the access to the river for swimming and the short walk to the local pub. Elizabeth was responsive to any questions. If you are after a private, peaceful camping spot this is ideal."</p>
+          <p class="hn-review-author">— Lewis, May 2026</p>
+        </div>
+        <!-- Review 2 -->
+        <div class="hn-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"Highly recommend camping here. An absolutely stunning area in the Malvern Hills. Amenities are great, hot shower and clean toilets, lovely fire pit. Elizabeth was very responsive and helpful. The Talbot pub is a five minute walk with a lovely beer garden. 100% would come back."</p>
+          <p class="hn-review-author">— Nicholas, August 2025</p>
+        </div>
+        <!-- Review 3 -->
+        <div class="hn-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"We all complimented on what a great location this was for camping. The toilets were clean and the shower was surprisingly nice and given a thumbs up from the other campers. The instructions to find the campsite were spot on and the pub had a great beer garden."</p>
+          <p class="hn-review-author">— Garath, June 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Farm Section -->
+  <section class="hn-section" style="background: white;">
+    <div class="hn-container hn-about-home-grid">
+      <div>
+        <h2>Our farm</h2>
+        <p style="margin-bottom: 1.5rem;">We have been farming organically since 1998. One of only three certified organic hop growers in the UK, we also farm regeneratively with pedigree Hereford cattle, EasyCare sheep, cider orchards, damsons, and wildflower meadow corridors. This land has been in our family for generations and we share it with guests who love and respect the countryside. If you are wondering where you can stay with 20 friends in England, our organic farm offers a beautiful, private setting where you can enjoy exclusive group glamping with direct river access.</p>
+        <a href="/about.html" style="color: var(--sage); text-decoration: none; font-weight: 600;">Read more about the farm →</a>
+      </div>
+      <div class="hn-stat-block">
+        <div class="hn-stat-item">
+          <div class="hn-stat-title">Organic since 1998</div>
+          <div class="hn-stat-subtitle">Certified Organic</div>
+        </div>
+        <div class="hn-stat-item">
+          <div class="hn-stat-title">1 of 3 growers</div>
+          <div class="hn-stat-subtitle">Organic hop growers in UK</div>
+        </div>
+        <div class="hn-stat-item">
+          <div class="hn-stat-title">5.0 ★ Rating</div>
+          <div class="hn-stat-subtitle">Airbnb Guest Favourite</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Getting Here Section -->
+  <section class="hn-section" style="background: var(--linen);">
+    <div class="hn-container">
+      <h2 style="margin-bottom: 2rem;">Getting here</h2>
+      <div class="hn-getting-here-grid">
+        <div>
+          <table class="hn-distance-table">
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>Approx. drive</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Worcester city centre</td>
+                <td>25 min</td>
+              </tr>
+              <tr>
+                <td>Birmingham</td>
+                <td>50 min</td>
+              </tr>
+              <tr>
+                <td>Hereford</td>
+                <td>40 min</td>
+              </tr>
+              <tr>
+                <td>Cheltenham</td>
+                <td>45 min</td>
+              </tr>
+              <tr>
+                <td>The Malvern Hills</td>
+                <td>30 min</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="hn-getting-here-note">Exact address sent on booking. Very low cars not advised on the farm track.</p>
+        </div>
+        <div class="hn-map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.5!2d-2.3936257!3d52.2019499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487082a0b1234567%3A0x0!2zNTLCsDEyJzA3LjAiTiAywrAyMycyOS4yIlc!5e0!3m2!1sen!2suk!4v1685000000000!5m2!1sen!2suk" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Strip Section -->
+  <section class="hn-section hn-contact-strip">
+    <div class="hn-container">
+      <h2>Any questions?</h2>
+      <p>Elizabeth is on hand and always responds quickly.</p>
+      <div class="hn-contact-links">
+        <a href="https://wa.me/447583340173" class="hn-btn-ghost">WhatsApp: 07583 340173</a>
+        <a href="mailto:hello@hopnestretreats.co.uk" class="hn-btn-ghost">Email: hello@hopnestretreats.co.uk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="hn-footer">
+    <div class="hn-container hn-footer-inner">
+      <div class="hn-footer-brand">
+        <a href="/index.html" class="hn-logo-link" style="margin-bottom: 1rem;">
+          <img src="/images/favicon.png" alt="Hopnest Retreats" class="hn-logo-img">
+          <span class="hn-logo-text" style="color: white;">Hopnest Retreats</span>
+        </a>
+        <p>Riverside tipi glamping and shepherd huts on a family-run organic farm near Martley, Worcestershire.</p>
+        <p>hello@hopnestretreats.co.uk<br>07583 340173</p>
+      </div>
+      <div class="hn-footer-links">
+        <p class="hn-label">Stay</p>
+        <a href="/tipis.html">Tipi Retreat</a>
+        <a href="/shepherd-huts.html">Shepherd Huts</a>
+      </div>
+      <div class="hn-footer-links">
+        <p class="hn-label">Info</p>
+        <a href="/about.html">About the Farm</a>
+        <a href="/faq.html">FAQ</a>
+      </div>
+      <div class="hn-footer-links">
+        <p class="hn-label">Legal</p>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/cookies.html">Cookie Policy</a>
+        <a href="/terms.html">Terms and Conditions</a>
+      </div>
+    </div>
+    <div class="hn-footer-base">
+      <div class="hn-container">
+        <p>© 2026 Hopnest Retreats · Martley, Worcestershire, WR6</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hn-hamburger').addEventListener('click', function() {
+      document.getElementById('hn-nav').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

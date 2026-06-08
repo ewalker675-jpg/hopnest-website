@@ -1,0 +1,38 @@
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/tipis"
+  to = "/tipis.html"
+  status = 200
+
+[[redirects]]
+  from = "/shepherd-huts"
+  to = "/shepherd-huts.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/cookies"
+  to = "/cookies.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200

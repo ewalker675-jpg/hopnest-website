@@ -1,0 +1,18 @@
+{
+  "name": "hopnest-website",
+  "version": "1.0.0",
+  "description": "Exclusive glamping and private retreats in Worcestershire for large groups",
+  "main": "server.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "vite": "^5.2.11"
+  }
+}
