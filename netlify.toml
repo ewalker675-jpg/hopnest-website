@@ -56,3 +56,18 @@
   from = "/blog/large-group-glamping-uk-guide"
   to = "/blog/large-group-glamping-uk-guide.html"
   status = 200
+
+[[redirects]]
+  from = "/exclusive-group-glamping"
+  to = "/exclusive-group-glamping.html"
+  status = 200
+
+[[redirects]]
+  from = "/the-tipi-retreat"
+  to = "/the-tipi-retreat.html"
+  status = 200
+
+[[redirects]]
+  from = "/local-guide"
+  to = "/local-guide.html"
+  status = 200

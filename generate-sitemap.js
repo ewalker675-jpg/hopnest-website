@@ -8,7 +8,10 @@ const priorities = {
   '/': '1.0',
   '/tipis': '0.9',
   '/exclusive-hire-glamping': '0.9',
+  '/exclusive-group-glamping': '0.9',
+  '/the-tipi-retreat': '0.9',
   '/faq': '0.8',
+  '/local-guide': '0.8',
   '/large-group-glamping': '0.7',
   '/group-glamping-hot-tub': '0.7',
   '/shepherd-huts': '0.7',
@@ -20,11 +23,14 @@ const pages = [
   '/',
   '/tipis',
   '/exclusive-hire-glamping',
+  '/exclusive-group-glamping',
+  '/the-tipi-retreat',
   '/large-group-glamping',
   '/group-glamping-hot-tub',
   '/shepherd-huts',
   '/about',
   '/faq',
+  '/local-guide',
   '/blog/large-group-glamping-uk-guide'
 ];
 
