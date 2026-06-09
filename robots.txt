@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /privacy
+Disallow: /cookies
+Disallow: /terms
+
 Sitemap: https://www.hopnestretreats.co.uk/sitemap.xml
