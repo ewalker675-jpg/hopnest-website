@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About the Farm | Organic Glamping Worcestershire | Hopnest Retreats</title>
-  <meta name="description" content="Hopnest Retreats sits on a family-run organic farm near Martley, Worcestershire. Farming organically since 1998. One of only three certified organic hop growers in the UK. Meet your host, Elizabeth.">
-  <link rel="canonical" href="https://www.hopnestretreats.co.uk/about">
+  <title>Large Group Glamping UK | Glamping for 10 People | Hopnest</title>
+  <meta name="description" content="Discover premier large group glamping in the UK. Fully private glamping for 10 people or more with wild swimming, campfire setups, and organic farm views.">
+  <link rel="canonical" href="https://www.hopnestretreats.co.uk/large-group-glamping">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hopnest Retreats">
-  <meta property="og:title" content="About the Farm | Organic Glamping Worcestershire | Hopnest Retreats">
-  <meta property="og:description" content="Hopnest Retreats sits on a family-run organic farm near Martley, Worcestershire. Farming organically since 1998. One of only three certified organic hop growers in the UK. Meet your host, Elizabeth.">
-  <meta property="og:url" content="https://www.hopnestretreats.co.uk/about">
-  <meta property="og:image" content="https://www.hopnestretreats.co.uk/images/hero.jpg">
+  <meta property="og:title" content="Large Group Glamping UK | Glamping for 10 People | Hopnest">
+  <meta property="og:description" content="Discover premier large group glamping in the UK. Fully private glamping for 10 people or more with wild swimming, campfire setups, and organic farm views.">
+  <meta property="og:url" content="https://www.hopnestretreats.co.uk/large-group-glamping">
+  <meta property="og:image" content="https://www.hopnestretreats.co.uk/images/tipi-photo.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About the Farm | Organic Glamping Worcestershire | Hopnest Retreats">
-  <meta name="twitter:description" content="Hopnest Retreats sits on a family-run organic farm near Martley, Worcestershire. Farming organically since 1998. One of only three certified organic hop growers in the UK. Meet your host, Elizabeth.">
-  <meta name="twitter:image" content="https://www.hopnestretreats.co.uk/images/hero.jpg">
+  <meta name="twitter:title" content="Large Group Glamping UK | Glamping for 10 People | Hopnest">
+  <meta name="twitter:description" content="Discover premier large group glamping in the UK. Fully private glamping for 10 people or more with wild swimming, campfire setups, and organic farm views.">
+  <meta name="twitter:image" content="https://www.hopnestretreats.co.uk/images/tipi-photo.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -85,6 +85,15 @@
       margin-bottom: 1.5rem;
     }
 
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--bark);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
     .hn-label {
       font-size: 0.8rem;
       font-weight: 600;
@@ -149,9 +158,6 @@
       align-items: center;
       justify-content: space-between;
       height: 64px;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
     }
 
     .hn-logo-link {
@@ -230,54 +236,70 @@
       }
     }
 
-    .hn-page-header {
-      background: var(--parchment);
-      padding: 5rem 0 3rem 0;
-      border-bottom: 1px solid var(--mist);
+    .hn-hero {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 4rem 0;
+    }
+    .hn-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+    .hn-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+    }
+    .hn-hero-content h1 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .hn-hero-content p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 0;
+      line-height: 1.5;
     }
 
-    .hn-bio-stats {
-      background: var(--linen);
-      padding: 1.5rem;
+    .hn-table-container {
+      overflow-x: auto;
+      margin: 2.5rem 0;
       border: 1px solid var(--mist);
-      margin-top: 1.5rem;
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
     }
-    .hn-bio-stat {
-      display: flex;
-      flex-direction: column;
+    .hn-data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      font-size: 0.95rem;
+      color: var(--bark);
     }
-    .hn-bio-stat-val {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--amber);
-    }
-    .hn-bio-stat-lbl {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .hn-cta-section {
+    .hn-data-table th {
       background: var(--sage);
       color: white;
-      text-align: center;
+      font-weight: 600;
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 2px solid var(--mist);
     }
-    .hn-cta-section h2 {
-      color: white;
+    .hn-data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--mist);
     }
-    .hn-cta-section p {
-      margin-bottom: 2rem;
+    .hn-data-table tr:last-child td {
+      border-bottom: none;
     }
-    .hn-cta-section .hn-btn-ghost {
-      color: white;
-      border-color: white;
-    }
-    .hn-cta-section .hn-btn-ghost:hover {
-      background: white;
-      color: var(--sage);
+    .hn-data-table tr:nth-child(even) {
+      background: var(--parchment);
     }
 
     .hn-grid-2 {
@@ -292,18 +314,31 @@
       }
     }
 
+    .hn-contact-strip {
+      background: var(--linen);
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .hn-contact-strip h2 {
+      margin-bottom: 0.5rem;
+    }
+    .hn-contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
     .hn-footer {
       background: var(--bark);
       color: var(--mist);
-      margin-top: 5rem;
     }
     .hn-footer-inner {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 3rem;
       padding: 4rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
     }
     @media (max-width: 768px) {
       .hn-footer-inner {
@@ -361,12 +396,66 @@
       color: var(--mist);
     }
   </style>
+
+  <!-- Advanced JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Campground",
+        "@id": "https://hopnestretreats.co.uk",
+        "name": "Hopnest Retreats",
+        "url": "https://hopnestretreats.co.uk",
+        "image": "https://hopnestretreats.co.uk/images/tipi-photo.jpg",
+        "priceRange": "£££",
+        "telephone": "+447583340173",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Martley",
+          "addressLocality": "Worcester",
+          "addressRegion": "Worcestershire",
+          "postalCode": "WR6",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 52.2443, 
+          "longitude": -2.3614
+        },
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Wood-fired Hot Tub",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Wild Swimming",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Private Site Hire",
+            "value": true
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hopnestretreats.co.uk",
+        "url": "https://hopnestretreats.co.uk",
+        "name": "Hopnest Retreats"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- Header -->
   <header class="hn-header">
-    <div class="hn-header-inner">
+    <div class="hn-container hn-header-inner">
       <a href="/index.html" class="hn-logo-link">
         <img src="/images/favicon.png" alt="Hopnest Retreats" class="hn-logo-img">
         <span class="hn-logo-text">Hopnest Retreats</span>
@@ -383,75 +472,72 @@
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section class="hn-page-header">
-    <div class="hn-container">
-      <span class="hn-label">Our Story</span>
-      <h1>About the farm</h1>
-      <p style="font-size: 1.2rem; font-weight: 300; line-height: 1.6;">A working organic farm near Martley, Worcestershire. In our family for generations.</p>
+  <!-- Hero Section -->
+  <section class="hn-hero" style="background-image: url('/images/tipi head photo.png'); min-height: 50vh;">
+    <div class="hn-hero-overlay"></div>
+    <div class="hn-container hn-hero-content">
+      <span class="hn-label" style="color: var(--amber);">Spacious Group Stays</span>
+      <h1>Large Group Glamping UK</h1>
+      <p>Luxury private glamping for 10 people or more near Martley, Worcestershire. Wild swimming, campfire cooking, and organic valley views.</p>
     </div>
   </section>
 
-  <!-- Farm Story Section -->
+  <!-- Main Content Section -->
   <section class="hn-section" style="background: white;">
     <div class="hn-container">
-      <div class="hn-grid-2" style="align-items: center; gap: 4rem;">
+      <h2>Glamping for 10 People & More with Complete Exclusivity</h2>
+      <p style="margin-bottom: 2rem; max-width: 800px;">Finding the perfect large group glamping setup in the UK can be a challenge. At Hopnest Retreats, we offer a dedicated meadow exclusively for your group, making it easy to enjoy time together without worrying about sharing facilities or disturbing other guests.</p>
+      
+      <!-- Responsive Data Table -->
+      <div class="hn-table-container">
+        <table class="hn-data-table">
+          <thead>
+            <tr>
+              <th>Offering</th>
+              <th>Capacity</th>
+              <th>Structural Configurations</th>
+              <th>Exclusivity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight: 600;">The Tipi Retreat</td>
+              <td>Up to 20 guests</td>
+              <td>5 furnished bell tipis (each sleeps 2 in king-size beds) + extra tents allowed for additional guests</td>
+              <td>100% Exclusive (No other guests on site)</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600;">Shepherd Huts (Coming Summer 2026)</td>
+              <td>2 to 4 guests</td>
+              <td>Skylark and Nuthatch huts (2 guests per hut, king size beds, stargazing nets)</td>
+              <td>Private meadow settings, separated from the tipis</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="hn-grid-2" style="margin-top: 3rem; align-items: center; gap: 4rem;">
         <div>
-          <h2>This land has been our home for generations</h2>
-          <p style="margin-bottom: 1.5rem;">We have been farming organically since 1998. As one of only three certified organic hop growers in the United Kingdom, we are deeply committed to working in harmony with nature. Our family history on this land spans generations, and we steward it using progressive, regenerative farming methods to build soil organic carbon and restore natural ecosystems.</p>
-          <p style="margin-bottom: 1.5rem;">The farm is a vibrant, active agricultural business. We breed pedigree Hereford cattle with a lineage extending back to the 1800s, alongside easycare sheep. We also tend traditional cider orchards, Worcestershire damsons, and maintain wide wildflower meadow corridors that provide nesting habitats for native wildlife. Scientific assessments show our land holds 34% more biodiversity than conventional farms.</p>
-          <p>The meadow is yours alone — a hidden corner of Worcestershire where you can relax with friends, walk the countryside, and cook over an open fire.</p>
+          <h3>Designed for Memorable Group Events</h3>
+          <p style="margin-bottom: 1.5rem;">Our glamping site features a central communal area under a spacious covered stretch tent, a large shared fire pit, a gas hob with an equipped kitchen, hot showers, and flushing loos. It provides a perfect balance of comfortable rustic accommodation and pristine nature.</p>
+          <a href="/tipis.html" class="hn-btn">View Tipi Retreat Options</a>
         </div>
         <div>
-          <img src="/images/about-the-farm.png" alt="Hopnest Organic Farm, Worcestershire" style="width: 100%; height: auto; border: 1px solid var(--mist); display: block;">
+          <img src="/images/tipi-photo.jpg" alt="Furnished bell tipis at Hopnest Retreats" style="width: 100%; height: auto; border: 1px solid var(--mist); display: block;">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Exclusive Hire Section -->
-  <section class="hn-section" style="border-top: 1px solid var(--mist); border-bottom: 1px solid var(--mist);">
+  <!-- Contact Strip Section -->
+  <section class="hn-section hn-contact-strip">
     <div class="hn-container">
-      <h2>Why no other guests</h2>
-      <p>We only ever take one booking at a time. No strangers sharing the fire pit, no awkward hellos in the morning. We believe that the best private retreats for groups require absolute privacy. When you book Hopnest with your friends or family, the entire tipi meadow and river frontage are exclusively yours. There are no other guests, allowing you to enjoy your escape in total comfort and safety.</p>
-    </div>
-  </section>
-
-  <!-- Elizabeth Section -->
-  <section class="hn-section" style="background: white;">
-    <div class="hn-container">
-      <div class="hn-grid-2" style="align-items: center; gap: 4rem;">
-        <div>
-          <img src="/images/about-elizabeth.jpeg" alt="Your host, Elizabeth, at Hopnest Retreats" style="width: 100%; height: auto; border: 1px solid var(--mist); display: block;">
-        </div>
-        <div>
-          <h2>Your host, Elizabeth</h2>
-          <p style="margin-bottom: 1.5rem;">I've lived on this farm my whole life. I want guests who love the countryside and want to be part of it, even just for a few days. I'm always nearby if you need anything, and always happy to leave you alone if you don't. Whether you are planning a reunion, a milestone birthday, or just a long-overdue trip with friends, I am on hand to help with activities, firewood, and anything else you need.</p>
-          <div class="hn-bio-stats">
-            <div class="hn-bio-stat">
-              <span class="hn-bio-stat-val">5.0</span>
-              <span class="hn-bio-stat-lbl">Airbnb Rating</span>
-            </div>
-            <div class="hn-bio-stat">
-              <span class="hn-bio-stat-val">28</span>
-              <span class="hn-bio-stat-lbl">Guest Reviews</span>
-            </div>
-            <div class="hn-bio-stat">
-              <span class="hn-bio-stat-val">5+</span>
-              <span class="hn-bio-stat-lbl">Years Hosting</span>
-            </div>
-          </div>
-        </div>
+      <h2>Planning a Group Trip?</h2>
+      <p>Contact Elizabeth to coordinate sleeping arrangements, extra tents, or campervan access.</p>
+      <div class="hn-contact-links">
+        <a href="https://wa.me/447583340173" class="hn-btn-ghost">WhatsApp: 07583 340173</a>
+        <a href="mailto:hello@hopnestretreats.co.uk" class="hn-btn-ghost">Email: hello@hopnestretreats.co.uk</a>
       </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="hn-section hn-cta-section">
-    <div class="hn-container">
-      <h2>Ready to visit?</h2>
-      <p>Gather your group and enjoy exclusive hire of our riverside retreat.</p>
-      <a href="/tipis.html#book" class="hn-btn-ghost">Book the Tipi Retreat</a>
     </div>
   </section>
 

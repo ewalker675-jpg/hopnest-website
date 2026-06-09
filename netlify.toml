@@ -1,6 +1,6 @@
 [build]
   publish = "."
-  command = ""
+  command = "npm run build"
 
 [[redirects]]
   from = "/tipis"
@@ -35,4 +35,24 @@
 [[redirects]]
   from = "/terms"
   to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/exclusive-hire-glamping"
+  to = "/exclusive-hire-glamping.html"
+  status = 200
+
+[[redirects]]
+  from = "/large-group-glamping"
+  to = "/large-group-glamping.html"
+  status = 200
+
+[[redirects]]
+  from = "/group-glamping-hot-tub"
+  to = "/group-glamping-hot-tub.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/large-group-glamping-uk-guide"
+  to = "/blog/large-group-glamping-uk-guide.html"
   status = 200
