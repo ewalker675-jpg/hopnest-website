@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Bell Tent Retreat Worcestershire | Luxury Riverside Glamping | Hopnest</title>
-  <meta name="description" content="Experience luxury bell tent glamping in Worcestershire at the Hopnest Bell Tent Retreat. Five furnished bell tents with king beds, private river access, and a wood-fired hot tub.">
-  <link rel="canonical" href="https://www.hopnestretreats.co.uk/the-tipi-retreat">
+  <meta name="description" content="Experience luxury bell tent glamping in Worcestershire at the Hopnest Bell Tent Retreat. Five furnished bell tents with king beds, private river access, and a peaceful organic farm setting.">
+  <link rel="canonical" href="https://www.hopnestretreats.co.uk/the-tipi-retreat.html">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hopnest Retreats">
-  <meta property="og:title" content="The Bell Tent Retreat Worcestershire | Luxury Riverside Glamping | Hopnest">
-  <meta property="og:description" content="Experience luxury bell tent glamping in Worcestershire at the Hopnest Bell Tent Retreat. Five furnished bell tents with king beds, private river access, and a wood-fired hot tub.">
-  <meta property="og:url" content="https://www.hopnestretreats.co.uk/the-tipi-retreat">
+  <meta property="og:title" content="The Bell Tent Retreat | Private Group Glamping Worcestershire">
+  <meta property="og:description" content="Experience luxury bell tent glamping in Worcestershire at the Hopnest Bell Tent Retreat. Five furnished bell tents with king beds, private river access, and a peaceful organic farm setting.">
+  <meta property="og:url" content="https://www.hopnestretreats.co.uk/the-tipi-retreat.html">
   <meta property="og:image" content="https://www.hopnestretreats.co.uk/images/tipi-photo.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Bell Tent Retreat Worcestershire | Luxury Riverside Glamping | Hopnest">
-  <meta name="twitter:description" content="Experience luxury bell tent glamping in Worcestershire at the Hopnest Bell Tent Retreat. Five furnished bell tents with king beds, private river access, and a wood-fired hot tub.">
+  <meta name="twitter:title" content="The Bell Tent Retreat | Private Group Glamping Worcestershire">
+  <meta name="twitter:description" content="Experience luxury bell tent glamping in Worcestershire at the Hopnest Bell Tent Retreat. Five furnished bell tents with king beds, private river access, and a peaceful organic farm setting.">
   <meta name="twitter:image" content="https://www.hopnestretreats.co.uk/images/tipi-photo.jpg">
 
   <!-- Favicon -->
@@ -25,7 +25,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -52,6 +52,12 @@
       line-height: 1.7;
       color: var(--bark);
       background-color: var(--parchment);
+      opacity: 0;
+      animation: hn-fade-in-page 0.6s ease-out forwards;
+    }
+
+    @keyframes hn-fade-in-page {
+      to { opacity: 1; }
     }
 
     .hn-container {
@@ -70,23 +76,26 @@
       }
     }
 
+    h1, h2, .hn-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+    }
+
     h1 {
-      font-size: 2.4rem;
-      font-weight: 300;
+      font-size: 3.2rem;
       color: var(--bark);
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.8rem;
-      font-weight: 300;
+      font-size: 2.4rem;
       color: var(--bark);
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     h3 {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: var(--bark);
       letter-spacing: 0.04em;
@@ -175,9 +184,10 @@
     }
 
     .hn-logo-text {
-      font-size: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--bark);
     }
@@ -238,13 +248,26 @@
 
     .hn-hero {
       position: relative;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      overflow: hidden;
       display: flex;
       align-items: center;
       color: white;
-      padding: 4rem 0;
+      padding: 6rem 0;
+    }
+    .hn-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      animation: kenburns 25s ease-out forwards;
+    }
+    @keyframes kenburns {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.06); }
     }
     .hn-hero-overlay {
       position: absolute;
@@ -388,6 +411,25 @@
       font-size: 0.8rem;
       color: var(--mist);
     }
+
+    /* Scroll fade-in-up animations */
+    .hn-animate-fade {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .hn-animate-fade.hn-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth Image Scale Hover */
+    .hn-card img, .hn-image-hover-zoom {
+      transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .hn-card:hover img, .hn-image-hover-zoom:hover {
+      transform: scale(1.03);
+    }
   </style>
 
   <!-- Advanced JSON-LD Structured Data Schema -->
@@ -419,17 +461,12 @@
         "amenityFeature": [
           {
             "@type": "LocationFeatureSpecification",
-            "name": "Wood-fired Hot Tub",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Wild Swimming",
-            "value": true
-          },
-          {
-            "@type": "LocationFeatureSpecification",
             "name": "Private Site Hire",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Private Loos and Hot Shower",
             "value": true
           }
         ]
@@ -466,17 +503,18 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hn-hero" style="background-image: url('/images/tipi head photo.png'); min-height: 50vh;">
+  <section class="hn-hero" style="min-height: 50vh;">
+    <div class="hn-hero-bg" style="background-image: url('/images/tipi head photo.png');"></div>
     <div class="hn-hero-overlay"></div>
     <div class="hn-container hn-hero-content">
-      <span class="hn-label" style="color: var(--amber);">Luxury Glamping Accommodation</span>
-      <h1>The Bell Tent Retreat Worcestershire</h1>
-      <p>Escape to our five premium furnished riverside bell tents. King-size beds, cozy settings, private river access, and a wood-fired hot tub near Worcester.</p>
+      <span class="hn-label" style="color: var(--amber);">Exclusive Group Glamping</span>
+      <h1>The Bell Tent Retreat</h1>
+      <p>Escape to our five premium furnished riverside bell tents. King-size beds, cozy settings, private river access, and a peaceful organic farm setting near Worcester.</p>
     </div>
   </section>
 
-  <!-- Main Content Section -->
-  <section class="hn-section" style="background: white;">
+  <!-- Main Info -->
+  <section class="hn-section hn-animate-fade" style="background: white;">
     <div class="hn-container">
       <h2>Inside the Bell Tent Retreat</h2>
       <p style="margin-bottom: 2rem; max-width: 800px;">Our bell tent meadow features five luxury bell tents designed for maximum relaxation and connection to nature. Take a visual tour of our private glamping retreat, the organic farm, and the River Teme landscape below.</p>
@@ -490,7 +528,7 @@
         </div>
         <!-- Item 2 -->
         <div class="hn-gallery-item">
-          <img src="/images/river-teme.png" alt="Wild swimming on the River Teme at Hopnest">
+          <img src="/images/river-teme.png" alt="Private river access on the River Teme at Hopnest">
           <div class="hn-gallery-caption">Private River Access</div>
         </div>
         <!-- Item 3 -->
@@ -522,7 +560,7 @@
   </section>
 
   <!-- Contact Strip Section -->
-  <section class="hn-section hn-contact-strip">
+  <section class="hn-section hn-contact-strip hn-animate-fade">
     <div class="hn-container">
       <h2>Have Questions About the Huts or Bell Tents?</h2>
       <p>Elizabeth is happy to help with booking options, extra guest capacity, or site configurations.</p>
@@ -573,6 +611,22 @@
   <script>
     document.getElementById('hn-hamburger').addEventListener('click', function() {
       document.getElementById('hn-nav').classList.toggle('open');
+    });
+
+    // Scroll Fade-in-up Intersection Observer
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedEls = document.querySelectorAll('.hn-animate-fade');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('hn-visible');
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      animatedEls.forEach(el => observer.observe(el));
     });
   </script>
 </body>

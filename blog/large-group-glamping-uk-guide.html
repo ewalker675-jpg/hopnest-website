@@ -25,7 +25,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -52,6 +52,12 @@
       line-height: 1.7;
       color: var(--bark);
       background-color: var(--parchment);
+      opacity: 0;
+      animation: hn-fade-in-page 0.6s ease-out forwards;
+    }
+
+    @keyframes hn-fade-in-page {
+      to { opacity: 1; }
     }
 
     .hn-container {
@@ -70,17 +76,20 @@
       }
     }
 
+    h1, h2, .hn-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+    }
+
     h1 {
-      font-size: 2.4rem;
-      font-weight: 300;
+      font-size: 3.2rem;
       color: var(--bark);
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 1.5rem;
     }
 
     h2 {
-      font-size: 1.6rem;
-      font-weight: 300;
+      font-size: 2.4rem;
       color: var(--bark);
       margin-top: 2.5rem;
       margin-bottom: 1rem;
@@ -149,9 +158,10 @@
     }
 
     .hn-logo-text {
-      font-size: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--bark);
     }
@@ -294,6 +304,25 @@
       font-size: 0.8rem;
       color: var(--mist);
     }
+
+    /* Scroll fade-in-up animations */
+    .hn-animate-fade {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .hn-animate-fade.hn-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth Image Scale Hover */
+    .hn-card img, .hn-image-hover-zoom {
+      transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .hn-card:hover img, .hn-image-hover-zoom:hover {
+      transform: scale(1.03);
+    }
   </style>
 
   <!-- Advanced JSON-LD Structured Data Schema -->
@@ -323,11 +352,6 @@
           "longitude": -2.3614
         },
         "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Wood-fired Hot Tub",
-            "value": true
-          },
           {
             "@type": "LocationFeatureSpecification",
             "name": "Private River Teme Access",
@@ -372,7 +396,7 @@
   </header>
 
   <!-- Main Content Container -->
-  <main class="hn-container" style="margin-top: 3rem; background: white; padding: 3rem 2rem; border: 1px solid var(--mist);">
+  <main class="hn-container hn-animate-fade" style="margin-top: 3rem; background: white; padding: 3rem 2rem; border: 1px solid var(--mist);">
     <span class="hn-label">Glamping Comparison Guide</span>
     <h1>Large Group Glamping UK Guide: An Accessible Midlands Alternative to Scotland</h1>
     <p style="font-size: 1.1rem; color: var(--sage); margin-bottom: 2rem;">Why choosing a central location in the Midlands can save your group hours of travel while offering the same wild countryside experience.</p>
@@ -389,7 +413,6 @@
     <ul style="margin: 1.5rem 0 1.5rem 2rem; line-height: 1.8;">
       <li><strong>Total Privacy:</strong> Exclusive meadow hire with no other guests on site.</li>
       <li><strong>Riverside Setting:</strong> Direct access to the River Teme for paddling and relaxing by the water (at guests' own risk).</li>
-      <li><strong>Wood-Fired Hot Tubs:</strong> Natural, chemical-free hot tubs overlooking the valley hills.</li>
       <li><strong style="font-weight: 600;">Comfortable Stay:</strong> 5 furnished bell tents sleeping 10 guests in king-size beds, with space for up to 20 total.</li>
       <li><strong style="font-weight: 600;">Exclusive Setting:</strong> A covered communal stretch tent, fire pits, hot showers, and flush toilets.</li>
     </ul>
@@ -407,7 +430,7 @@
   </main>
 
   <!-- Contact Strip Section -->
-  <section class="hn-section hn-contact-strip">
+  <section class="hn-section hn-contact-strip hn-animate-fade">
     <div class="hn-container">
       <h2>Have Questions About Travel Times?</h2>
       <p>Ask Elizabeth about parking, train connections to Worcester, or vehicle access instructions.</p>
@@ -458,6 +481,22 @@
   <script>
     document.getElementById('hn-hamburger').addEventListener('click', function() {
       document.getElementById('hn-nav').classList.toggle('open');
+    });
+
+    // Scroll Fade-in-up Intersection Observer
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedEls = document.querySelectorAll('.hn-animate-fade');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('hn-visible');
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      animatedEls.forEach(el => observer.observe(el));
     });
   </script>
 </body>

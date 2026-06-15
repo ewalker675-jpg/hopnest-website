@@ -25,7 +25,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -52,6 +52,12 @@
       line-height: 1.7;
       color: var(--bark);
       background-color: var(--parchment);
+      opacity: 0;
+      animation: hn-fade-in-page 0.6s ease-out forwards;
+    }
+
+    @keyframes hn-fade-in-page {
+      to { opacity: 1; }
     }
 
     .hn-container {
@@ -70,19 +76,22 @@
       }
     }
 
+    h1, h2, .hn-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+    }
+
     h1 {
-      font-size: 2.4rem;
-      font-weight: 300;
+      font-size: 3.2rem;
       color: var(--bark);
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.8rem;
-      font-weight: 300;
+      font-size: 2.4rem;
       color: var(--bark);
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     h3 {
@@ -158,6 +167,9 @@
       align-items: center;
       justify-content: space-between;
       height: 64px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
 
     .hn-logo-link {
@@ -175,9 +187,10 @@
     }
 
     .hn-logo-text {
-      font-size: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--bark);
     }
@@ -238,13 +251,26 @@
 
     .hn-hero {
       position: relative;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      overflow: hidden;
       display: flex;
       align-items: center;
       color: white;
-      padding: 4rem 0;
+      padding: 6rem 0;
+    }
+    .hn-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      animation: kenburns 25s ease-out forwards;
+    }
+    @keyframes kenburns {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.06); }
     }
     .hn-hero-overlay {
       position: absolute;
@@ -339,6 +365,8 @@
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: 3rem;
       padding: 4rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
     @media (max-width: 768px) {
       .hn-footer-inner {
@@ -395,6 +423,25 @@
       font-size: 0.8rem;
       color: var(--mist);
     }
+
+    /* Scroll fade-in-up animations */
+    .hn-animate-fade {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .hn-animate-fade.hn-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth Image Scale Hover */
+    .hn-card img, .hn-image-hover-zoom {
+      transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .hn-card:hover img, .hn-image-hover-zoom:hover {
+      transform: scale(1.03);
+    }
   </style>
 
   <!-- Advanced JSON-LD Structured Data Schema -->
@@ -424,11 +471,6 @@
           "longitude": -2.3614
         },
         "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Wood-fired Hot Tub",
-            "value": true
-          },
           {
             "@type": "LocationFeatureSpecification",
             "name": "Private River Teme Access",
@@ -473,7 +515,8 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hn-hero" style="background-image: url('/images/tipi head photo.png'); min-height: 50vh;">
+  <section class="hn-hero" style="min-height: 50vh;">
+    <div class="hn-hero-bg" style="background-image: url('/images/tipi head photo.png');"></div>
     <div class="hn-hero-overlay"></div>
     <div class="hn-container hn-hero-content">
       <span class="hn-label" style="color: var(--amber);">Spacious Group Stays</span>
@@ -483,7 +526,7 @@
   </section>
 
   <!-- Main Content Section -->
-  <section class="hn-section" style="background: white;">
+  <section class="hn-section hn-animate-fade" style="background: white;">
     <div class="hn-container">
       <h2>Glamping for 10 People & More with Complete Exclusivity</h2>
       <p style="margin-bottom: 2rem; max-width: 800px;">Finding the perfect large group glamping setup in the UK can be a challenge. At Hopnest Retreats, we offer a dedicated meadow exclusively for your group, making it easy to enjoy time together without worrying about sharing facilities or disturbing other guests.</p>
@@ -526,14 +569,14 @@
           <a href="/tipis.html" class="hn-btn">View Bell Tent Retreat Options</a>
         </div>
         <div>
-          <img src="/images/tipi-photo.jpg" alt="Furnished bell tents at Hopnest Retreats" style="width: 100%; height: auto; border: 1px solid var(--mist); display: block;">
+          <img src="/images/tipi-photo.jpg" alt="Furnished bell tents at Hopnest Retreats" class="hn-image-hover-zoom" style="width: 100%; height: auto; border: 1px solid var(--mist); display: block;">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Strip Section -->
-  <section class="hn-section hn-contact-strip">
+  <section class="hn-section hn-contact-strip hn-animate-fade">
     <div class="hn-container">
       <h2>Planning a Group Trip?</h2>
       <p>Contact Elizabeth to coordinate sleeping arrangements, extra tents, or campervan access.</p>
@@ -584,6 +627,22 @@
   <script>
     document.getElementById('hn-hamburger').addEventListener('click', function() {
       document.getElementById('hn-nav').classList.toggle('open');
+    });
+
+    // Scroll Fade-in-up Intersection Observer
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedEls = document.querySelectorAll('.hn-animate-fade');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('hn-visible');
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      animatedEls.forEach(el => observer.observe(el));
     });
   </script>
 </body>

@@ -25,7 +25,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -52,6 +52,12 @@
       line-height: 1.7;
       color: var(--bark);
       background-color: var(--parchment);
+      opacity: 0;
+      animation: hn-fade-in-page 0.6s ease-out forwards;
+    }
+
+    @keyframes hn-fade-in-page {
+      to { opacity: 1; }
     }
 
     .hn-container {
@@ -70,16 +76,19 @@
       }
     }
 
+    h1, h2, .hn-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
     h1 {
-      font-size: 2.4rem;
-      font-weight: 300;
+      font-size: 3.2rem;
       color: var(--bark);
-      line-height: 1.2;
+      line-height: 1.15;
       margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 600;
       color: var(--bark);
       margin-top: 2.5rem;
@@ -153,9 +162,10 @@
     }
 
     .hn-logo-text {
-      font-size: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--bark);
     }
@@ -215,9 +225,26 @@
     }
 
     .hn-page-header {
+      position: relative;
+      overflow: hidden;
       background: var(--parchment);
       padding: 5rem 0 3rem 0;
       border-bottom: 1px solid var(--mist);
+    }
+    .hn-page-header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      animation: kenburns 25s ease-out forwards;
+    }
+    @keyframes kenburns {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.06); }
     }
 
     /* FAQ accordion styling */
@@ -327,6 +354,25 @@
       font-size: 0.8rem;
       color: var(--mist);
     }
+
+    /* Scroll fade-in-up animations */
+    .hn-animate-fade {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    .hn-animate-fade.hn-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth Image Scale Hover */
+    .hn-card img, .hn-image-hover-zoom {
+      transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .hn-card:hover img, .hn-image-hover-zoom:hover {
+      transform: scale(1.03);
+    }
   </style>
   
   <!-- Additional FAQ JSON-LD Schema -->
@@ -337,34 +383,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Where can I stay with 20 friends in England?",
+        "name": "Is the site exclusively ours when we book?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Hopnest Retreats near Martley, Worcestershire offers exclusive hire of a riverside bell tent meadow for groups of up to 20. You get the entire site to yourselves — five furnished bell tents on the River Teme, with no other guests on site."
+          "text": "Yes — every booking includes exclusive use of the entire riverside meadow. No other guests, no shared facilities, no strangers arriving. Just your group, the farm, and the river. It works well for birthdays, reunions, hen parties, family gatherings, or any occasion where you want the place to yourselves."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you accept bookings for private retreats for groups?",
+        "name": "How many people can stay?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Every booking at Hopnest is exclusive — you hire the entire site, so there are no other guests. It works well for birthdays, reunions, hen parties, or any occasion where you want total privacy in the Worcestershire countryside."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I book the entire glamping site privately?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Every booking includes exclusive use of the entire glamping area. You will never share the site with other guests."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Hopnest Retreats suitable for large family gatherings?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. The Bell Tent Retreat is ideal for family gatherings, birthdays, reunions and group getaways. The furnished bell tents sleep 10 guests, with space for up to 20 guests in total."
+          "text": "The five bell tents sleep 10 guests in king-size beds with bedding provided. Groups of up to 20 are welcome — bring extra sleeping arrangements like air beds, camp beds, or small tents for children. Let us know your numbers in advance."
         }
       },
       {
@@ -372,23 +402,7 @@
         "name": "How much does it cost to hire the bell tent retreat?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For 2026, the bell tent retreat is £500 per night at weekends and £450 per night on weekdays. The whole site is exclusively yours with no per-person charge, for up to 20 guests. From 2027, weekend nights are £600 for up to 10 guests plus £30 per additional person per night (20 guests: £900/night), and weekday nights are £500 for up to 10 guests plus £30 per additional person (20 guests: £800/night), minimum 2 nights."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will there be other guests on site?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Hopnest only ever takes one booking at a time. When you book, you have exclusive use of the entire site — no other guests, no strangers. Just your group and the farm."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many people can stay at Hopnest Retreats?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The five bell tents sleep 10 guests, with a king size bed and bedding provided in each. For 2026, groups of up to 20 are welcome — bring your own extra sleeping arrangements such as air beds, camp beds, sleeping bags, or small tents for children. From 2027, the site will sleep up to 20 guests with no need to bring your own bedding."
+          "text": "The bell tent retreat is £500 per night at weekends and £450 per night on weekdays — the whole site is exclusively yours, no per-person charge, up to 20 guests. No booking fees when you book direct. The shepherd huts (opening summer 2026) are £120 per night at weekends and £100 per night on weekdays, minimum 2 nights."
         }
       },
       {
@@ -436,7 +450,7 @@
         "name": "What is the cancellation policy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer a 75% refund if you cancel 2 to 3 weeks before arrival, a 50% refund if you cancel 1 to 2 weeks before arrival, and no refund under one week before arrival. Date transfers are not available."
+          "text": "Cancellation: 75% refund (2–3 weeks notice) · 50% refund (1–2 weeks) · Under one week, no refund. Not sure if your event is a fit? Just ask Elizabeth."
         }
       },
       {
@@ -473,7 +487,8 @@
   </header>
 
   <!-- Page Header -->
-  <section class="hn-page-header" style="background-image: url('/images/farm faq.png'); background-size: cover; background-position: center; position: relative; color: white; border-bottom: none; padding: 6rem 0;">
+  <section class="hn-page-header" style="color: white; border-bottom: none; padding: 6rem 0;">
+    <div class="hn-page-header-bg" style="background-image: url('/images/farm faq.png');"></div>
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.45); z-index: 1;"></div>
     <div class="hn-container" style="position: relative; z-index: 2;">
       <span class="hn-label" style="color: var(--amber);">Questions & Answers</span>
@@ -483,7 +498,7 @@
   </section>
 
   <!-- FAQ Accordion List -->
-  <section class="hn-section" style="background: white;">
+  <section class="hn-section hn-animate-fade" style="background: white;">
     <div class="hn-container">
       
       <!-- Group retreats and Friends Search Section (Custom SEO added) -->
@@ -491,41 +506,21 @@
       
       <div class="hn-faq-item">
         <button class="hn-faq-question-btn">
-          <span>Where can I stay with 20 friends in England?</span>
+          <span>Is the site exclusively ours when we book?</span>
           <span class="hn-faq-chevron">❯</span>
         </button>
         <div class="hn-faq-answer">
-          <p>When you book, you get our entire riverside bell tent meadow exclusively for your group. No other guests will be on site — just your group, the farm, and private access to the River Teme.</p>
+          <p>Yes — every booking includes exclusive use of the entire riverside meadow. No other guests, no shared facilities, no strangers arriving. Just your group, the farm, and the river. It works well for birthdays, reunions, hen parties, family gatherings, or any occasion where you want the place to yourselves.</p>
         </div>
       </div>
 
       <div class="hn-faq-item">
         <button class="hn-faq-question-btn">
-          <span>Do you accept bookings for private retreats for groups?</span>
+          <span>How many people can stay?</span>
           <span class="hn-faq-chevron">❯</span>
         </button>
         <div class="hn-faq-answer">
-          <p>Yes. Every booking is exclusive — you hire the entire site, so there are no other guests on site. It works well for birthdays, reunions, hen parties, or any occasion where you want total privacy in the countryside.</p>
-        </div>
-      </div>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Can I book the entire glamping site privately?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes. Every booking includes exclusive use of the entire glamping area. You will never share the site with other guests.</p>
-        </div>
-      </div>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Is Hopnest Retreats suitable for large family gatherings?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes. The Bell Tent Retreat is ideal for family gatherings, birthdays, reunions and group getaways. The furnished bell tents sleep 10 guests, with space for up to 20 guests in total.</p>
+          <p>The five bell tents sleep 10 guests in king-size beds with bedding provided. Groups of up to 20 are welcome — bring extra sleeping arrangements like air beds, camp beds, or small tents for children. Let us know your numbers in advance.</p>
         </div>
       </div>
 
@@ -548,7 +543,7 @@
           <span class="hn-faq-chevron">❯</span>
         </button>
         <div class="hn-faq-answer">
-          <p>For 2026, the bell tent retreat is £500 per night at weekends and £450 per night on weekdays. The whole site is exclusively yours — no per person charge, up to 20 guests total. From 2027, weekend nights are £600 for up to 10 guests plus £30 per additional person per night, and weekday nights are £500 for up to 10 guests plus £30 per additional person per night, minimum 2 nights. The shepherd huts (opening summer 2026) are £120 per night at weekends and £100 per night on weekdays, minimum 2 nights.</p>
+          <p>The bell tent retreat is £500 per night at weekends and £450 per night on weekdays — the whole site is exclusively yours, no per-person charge, up to 20 guests. No booking fees when you book direct. The shepherd huts (opening summer 2026) are £120 per night at weekends and £100 per night on weekdays, minimum 2 nights.</p>
         </div>
       </div>
 
@@ -558,7 +553,7 @@
           <span class="hn-faq-chevron">❯</span>
         </button>
         <div class="hn-faq-answer">
-          <p>We offer a 75% refund if you cancel 2–3 weeks before arrival, a 50% refund if you cancel 1–2 weeks before arrival, and no refund under one week before arrival. Date transfers are not available.</p>
+          <p>Cancellation: 75% refund (2–3 weeks notice) · 50% refund (1–2 weeks) · Under one week, no refund. Not sure if your event is a fit? Just ask Elizabeth.</p>
         </div>
       </div>
 
@@ -568,7 +563,7 @@
           <span class="hn-faq-chevron">❯</span>
         </button>
         <div class="hn-faq-answer">
-          <p>For 2026 bell tent bookings, check the calendar for minimum stays. From 2027, all bookings require a minimum of 2 nights. Shepherd hut bookings are a minimum of 2 nights.</p>
+          <p>Check the booking calendar for minimum stays (usually 2 nights on weekends). Shepherd hut bookings (opening summer 2026) are a minimum of 2 nights.</p>
         </div>
       </div>
 
@@ -584,26 +579,6 @@
 
       <!-- The site -->
       <h2>The site & amenities</h2>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Will there be other guests on site?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>No. When you book, you have exclusive use of the entire site. No other guests, no strangers — just your group and the farm.</p>
-        </div>
-      </div>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>How many people can stay?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>The five bell tents sleep 10 guests, with a king size bed and bedding provided in each. For 2026, groups of up to 20 are welcome — bring your own extra sleeping arrangements such as air beds, camp beds, sleeping bags, or small tents for children. From 2027, we will be able to sleep up to 20 guests across the site with no need to bring your own bedding.</p>
-        </div>
-      </div>
 
       <div class="hn-faq-item">
         <button class="hn-faq-question-btn">
@@ -707,7 +682,7 @@
           <span class="hn-faq-chevron">❯</span>
         </button>
         <div class="hn-faq-answer">
-          <p>Yes. The farm is actively farmed — organic since 1998 with pedigree Hereford cattle, EasyCare sheep, hop fields, cider orchards, and wildflower meadows. Guests are not welcome to explore the farm; they must stay on designated footpaths and keep dogs on leads around livestock.</p>
+          <p>Yes — it's a working organic farm with cattle, sheep, hop gardens and orchards. You're welcome to enjoy the footpaths across the farm, and we ask that dogs are kept on leads around the livestock.</p>
         </div>
       </div>
 
@@ -792,6 +767,22 @@
           item.classList.add('active');
         }
       });
+    });
+
+    // Scroll Fade-in-up Intersection Observer
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedEls = document.querySelectorAll('.hn-animate-fade');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('hn-visible');
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+      animatedEls.forEach(el => observer.observe(el));
     });
   </script>
 </body>
