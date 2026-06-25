@@ -6,7 +6,8 @@ const domain = 'https://www.hopnestretreats.co.uk';
 // Define priorities for pages
 const priorities = {
   '/': '1.0',
-  '/tipis': '0.9',
+  '/bell-tents': '0.9',
+  '/small-group-getaway': '0.9',
   '/exclusive-hire-glamping': '0.9',
   '/exclusive-group-glamping': '0.9',
   '/the-tipi-retreat': '0.9',
@@ -21,7 +22,8 @@ const priorities = {
 
 const pages = [
   '/',
-  '/tipis',
+  '/bell-tents',
+  '/small-group-getaway',
   '/exclusive-hire-glamping',
   '/exclusive-group-glamping',
   '/the-tipi-retreat',

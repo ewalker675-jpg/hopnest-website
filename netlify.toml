@@ -3,9 +3,24 @@
   command = "npm run build"
 
 [[redirects]]
-  from = "/tipis"
-  to = "/tipis.html"
+  from = "/bell-tents"
+  to = "/bell-tents.html"
   status = 200
+
+[[redirects]]
+  from = "/small-group-getaway"
+  to = "/small-group-getaway.html"
+  status = 200
+
+[[redirects]]
+  from = "/tipis"
+  to = "/bell-tents"
+  status = 301
+
+[[redirects]]
+  from = "/tipis/*"
+  to = "/bell-tents"
+  status = 301
 
 [[redirects]]
   from = "/shepherd-huts"

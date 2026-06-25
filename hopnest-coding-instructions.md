@@ -320,8 +320,8 @@ Footer CSS:
 - Pricing block:
   ```
   From summer 2026
-  £120/night weekends · £100/night weekdays
-  Minimum 2 nights
+  £150/night · Minimum 2 nights
+  Launch offer: 20% off first 10 bookings
   ```
 - Button: `Find out more` → `/shepherd-huts.html`
 - Background colour `--linen` on this card (not white) to visually distinguish coming soon
@@ -668,9 +668,9 @@ Before the site goes live, confirm these prices are identical on every page and 
 - Maximum 20 guests total
 
 **Shepherd Huts — From summer 2026:**
-- Weekend: £120 per night per hut
-- Weekday: £100 per night per hut
+- Flat rate: £150 per night per hut
 - Minimum 2 nights
+- Launch offer: 20% off first 10 bookings
 
 ---
 

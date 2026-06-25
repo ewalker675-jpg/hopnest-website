@@ -67,12 +67,12 @@
     }
 
     .hn-section {
-      padding: 5rem 0;
+      padding: 7rem 0;
     }
 
     @media (max-width: 768px) {
       .hn-section {
-        padding: 3rem 0;
+        padding: 4rem 0;
       }
     }
 
@@ -82,16 +82,18 @@
     }
 
     h1 {
-      font-size: 3.2rem;
+      font-size: 3.6rem;
       color: var(--bark);
-      line-height: 1.15;
-      margin-bottom: 1rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
     }
 
     h2 {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       color: var(--bark);
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.01em;
     }
 
     h3 {
@@ -117,16 +119,16 @@
       display: inline-block;
       background: var(--sage);
       color: white;
-      padding: 0.9rem 2rem;
+      padding: 1rem 2.2rem;
       font-family: 'Open Sans', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       text-decoration: none;
       border: none;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.3s ease;
       text-align: center;
     }
     .hn-btn:hover {
@@ -137,16 +139,16 @@
       display: inline-block;
       background: transparent;
       color: var(--sage);
-      padding: 0.9rem 2rem;
+      padding: 1rem 2.2rem;
       font-family: 'Open Sans', sans-serif;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       text-decoration: none;
-      border: 1.5px solid var(--sage);
+      border: 1px solid var(--sage);
       cursor: pointer;
-      transition: background 0.2s, color 0.2s;
+      transition: background 0.3s ease, color 0.3s ease;
       text-align: center;
     }
     .hn-btn-ghost:hover {
@@ -248,8 +250,9 @@
 
     .hn-card {
       background: white;
-      border: 1px solid var(--mist);
-      padding: 2rem;
+      border: none;
+      box-shadow: 0 10px 40px rgba(62, 48, 40, 0.06);
+      padding: 3rem;
     }
 
     .hn-hero {
@@ -258,7 +261,7 @@
       display: flex;
       align-items: center;
       color: white;
-      padding: 6rem 0;
+      padding: 8rem 0;
     }
     .hn-hero-bg {
       position: absolute;
@@ -655,11 +658,12 @@
       </a>
       <nav class="hn-nav" id="hn-nav">
         <a href="/index.html">Home</a>
-        <a href="/tipis.html">Bell Tent Retreat</a>
+        <a href="/bell-tents.html">Bell Tent Retreat</a>
+        <a href="/small-group-getaway.html">Small Group Getaway</a>
         <a href="/shepherd-huts.html">Shepherd Huts</a>
         <a href="/about.html">About</a>
         <a href="/faq.html">FAQ</a>
-        <a href="/tipis.html#book" class="hn-btn hn-nav-btn">Book Now</a>
+        <a href="/bell-tents.html#book" class="hn-btn hn-nav-btn">Book Now</a>
       </nav>
       <button class="hn-hamburger" id="hn-hamburger" aria-label="Open menu">&#9776;</button>
     </div>
@@ -674,7 +678,7 @@
       <h1>Exclusive Private Glamping for Groups in Worcestershire</h1>
       <p>Stay on a family-run organic farm in Worcestershire and enjoy exclusive use of a private riverside meadow on the banks of the River Teme. Gather around the fire pit, cook outdoors, explore the surrounding countryside and spend quality time together in a peaceful setting with no other guests on site.</p>
       <div class="hn-hero-buttons">
-        <a href="/tipis.html#book" class="hn-btn">Book the Bell Tents</a>
+        <a href="/bell-tents.html#book" class="hn-btn">Book the Bell Tents</a>
         <a href="#offerings" class="hn-btn-ghost">Find Out More</a>
       </div>
     </div>
@@ -694,8 +698,8 @@
   <!-- Offerings Section -->
   <section class="hn-section hn-animate-fade" id="offerings">
     <div class="hn-container">
-      <h2>Two ways to stay</h2>
-      <div class="hn-grid-2">
+      <h2>Ways to stay</h2>
+      <div class="hn-grid-3">
         <!-- Card 1 — Bell Tent Retreat -->
         <div class="hn-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
@@ -711,21 +715,38 @@
               <p style="margin-top: 0.5rem; font-style: italic;">Booking ahead for 2027? Message Elizabeth.</p>
             </div>
           </div>
-          <a href="/tipis.html" class="hn-btn" style="align-self: flex-start;">View and Book</a>
+          <a href="/bell-tents.html" class="hn-btn" style="align-self: flex-start;">View and Book</a>
         </div>
 
-        <!-- Card 2 — Shepherd Huts -->
+        <!-- Card 2 — Small Group Getaway -->
+        <div class="hn-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--mist);">
+              <img src="/images/tipi-photo.jpg" alt="Two furnished bell tents at Hopnest Small Group Getaway, Worcestershire" class="hn-image-hover-zoom" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+            </div>
+            <span class="hn-label">Small Group Glamping</span>
+            <h3>The Small Group Getaway</h3>
+            <p style="margin-bottom: 1.5rem;">A pair of bell tents on a private riverside meadow, deep in the Teme Valley. Exclusively yours for up to 8 guests. Perfect for post-uni reunions, girls' weekends, stags, dads' adventures, and mums' escapes. Enjoy a covered stretch tent, rustic kitchen, fire pit, and private River Teme access.</p>
+            <div style="background: var(--linen); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
+              <strong style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--sage);">Pricing</strong>
+              <p>£400/night flat rate · Sleeps up to 8 guests · No booking fees · Entire site exclusively yours</p>
+            </div>
+          </div>
+          <a href="/small-group-getaway.html" class="hn-btn" style="align-self: flex-start;">View and Book</a>
+        </div>
+
+        <!-- Card 3 — Shepherd Huts -->
         <div class="hn-card" style="background: var(--linen); display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div style="background: var(--mist); width: 100%; height: 220px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-              <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--bark);">Coming Soon · Summer 2026</span>
+              <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--bark);">Opening 24th July 2026</span>
             </div>
-            <span class="hn-label">Coming Soon · Summer 2026</span>
+            <span class="hn-label">Opening 24th July 2026</span>
             <h3>Skylark & Nuthatch</h3>
-            <p style="margin-bottom: 1.5rem;">Two luxury shepherd huts overlooking the Teme Valley with far-reaching countryside views and dark skies for stargazing. Each hut includes a king-size bed, fully equipped kitchen, en-suite bathroom, outdoor seating area, fire pit and suspended stargazing net. Perfect for couples seeking a peaceful farm stay in Worcestershire.</p>
+            <p style="margin-bottom: 1.5rem;">Two private, luxury shepherd huts overlooking the Teme Valley. Complete privacy with no shared access and no overlapping sightlines. Each hut features a king-size bed, en-suite bathroom, full kitchen, outdoor fire pit, stargazing net, and either a private wood-fired hot tub (Skylark) or outdoor roll-top copper bath (Nuthatch).</p>
             <div style="background: white; border: 1px solid var(--mist); padding: 1.25rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
-              <strong style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--sage);">Pricing</strong>
-              <p><strong>From summer 2026:</strong> £120/night weekends · £100/night weekdays<br>Minimum 2 nights</p>
+              <strong style="display: block; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--sage);">Pricing & Offer</strong>
+              <p><strong>From 24th July 2026:</strong> £150/night · Minimum 2 nights<br><span style="color: var(--amber); font-weight: 600;">20% off for the first 10 bookings!</span></p>
             </div>
           </div>
           <a href="/shepherd-huts.html" class="hn-btn-ghost" style="align-self: flex-start;">Find Out More</a>
@@ -875,7 +896,8 @@
       </div>
       <div class="hn-footer-links">
         <p class="hn-label">Stay</p>
-        <a href="/tipis.html">Bell Tent Retreat</a>
+        <a href="/bell-tents.html">Bell Tent Retreat</a>
+        <a href="/small-group-getaway.html">Small Group Getaway</a>
         <a href="/shepherd-huts.html">Shepherd Huts</a>
       </div>
       <div class="hn-footer-links">
@@ -888,7 +910,7 @@
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/cookies.html">Cookie Policy</a>
         <a href="/terms.html">Terms & Conditions</a>
-        <a href="/tipis.html#pricing">Booking & House Rules</a>
+        <a href="/bell-tents.html#pricing">Booking & House Rules</a>
       </div>
     </div>
     <div class="hn-footer-base">
