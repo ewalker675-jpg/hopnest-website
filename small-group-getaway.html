@@ -475,6 +475,45 @@
     .hn-card:hover img, .hn-image-hover-zoom:hover {
       transform: scale(1.03);
     }
+
+    /* Sign Up Form Styling */
+    .hn-signup-form {
+      margin-top: 2rem;
+    }
+    .hn-form-group {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .hn-input-field {
+      flex: 1;
+      max-width: 350px;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid var(--mist);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--bark);
+      background: white;
+      transition: border-color 0.2s;
+    }
+    .hn-input-field:focus {
+      outline: none;
+      border-color: var(--sage);
+    }
+    @media (max-width: 480px) {
+      .hn-form-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .hn-input-field {
+        width: 100%;
+        max-width: none;
+      }
+      .hn-signup-form .hn-btn {
+        width: 100%;
+      }
+    }
   </style>
   
   <!-- Additional JSON-LD schema for accommodation -->
@@ -528,20 +567,18 @@
         <a href="/shepherd-huts.html">Shepherd Huts</a>
         <a href="/about.html">About</a>
         <a href="/faq.html">FAQ</a>
-        <a href="#book" class="hn-btn hn-nav-btn">Book Now</a>
+        <a href="#book" class="hn-btn hn-nav-btn">Register Interest</a>
       </nav>
       <button class="hn-hamburger" id="hn-hamburger" aria-label="Open menu">&#9776;</button>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hn-hero" style="min-height: 50vh;">
-    <div class="hn-hero-bg" style="background-image: url('/images/tipi head photo.png');"></div>
-    <div class="hn-hero-overlay"></div>
-    <div class="hn-container hn-hero-content">
-      <span class="hn-label" style="color: var(--amber);">Exclusive Site Hire</span>
-      <h1>The Small Group Getaway</h1>
-      <p>A pair of bell tents on the river meadow, deep in the serene Teme Valley. Exclusively yours — for up to 8.</p>
+  <section class="hn-hero-minimal" style="background: var(--linen); padding: 6rem 0; border-bottom: 1px solid var(--mist);">
+    <div class="hn-container">
+      <span class="hn-label" style="color: var(--sage); margin-bottom: 1rem;">Exclusive Site Hire</span>
+      <h1 style="font-size: 3.2rem; margin-bottom: 1.25rem; color: var(--bark);">The Small Group Getaway</h1>
+      <p style="font-size: 1.25rem; font-weight: 300; line-height: 1.6; max-width: 800px; color: var(--bark);">A pair of bell tents on the river meadow, deep in the serene Teme Valley. Exclusively yours — for up to 8.</p>
     </div>
   </section>
 
@@ -602,17 +639,22 @@
     </div>
   </section>
 
-  <!-- Booking Widget Section -->
-  <section class="hn-section hn-animate-fade" id="book">
+  <!-- Register Interest Section -->
+  <section class="hn-section hn-animate-fade" id="book" style="background: var(--parchment); border-top: 1px solid var(--mist);">
     <div class="hn-container">
-      <div style="text-align: center; margin-bottom: 3rem;">
-        <h2>Check availability and book</h2>
-        <p class="hn-label">Book direct — no booking fees</p>
-      </div>
-      
-      <!-- Bookalet Widget Embed -->
-      <div style="max-width:900px; margin:0 auto;">
-        <div><script src="https://widgets.bookalet.co.uk/publish.js" data-bookalet="9a2748bd-8e0e-4fbd-91bf-d221725d3197" data-property="58084" data-monthcount="3"></script></div>
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2>Register your interest</h2>
+        <p class="hn-label" style="color: var(--sage); margin-bottom: 1.5rem;">Early sign up</p>
+        <p style="margin-bottom: 2rem;">Sign up below to be the first to know when bookings open for The Small Group Getaway. Have a question or planning a trip? You can also email Elizabeth directly at <a href="mailto:hello@hopnestretreats.co.uk" style="color: var(--sage); text-decoration: underline; font-weight: 600;">hello@hopnestretreats.co.uk</a>.</p>
+        
+        <!-- Netlify Email Capture Form -->
+        <form name="small-group-signup" method="POST" data-netlify="true" class="hn-signup-form">
+          <input type="hidden" name="form-name" value="small-group-signup" />
+          <div class="hn-form-group">
+            <input type="email" name="email" placeholder="Enter your email address" required class="hn-input-field">
+            <button type="submit" class="hn-btn">Sign Up</button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
