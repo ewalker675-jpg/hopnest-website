@@ -287,6 +287,77 @@
       transform: rotate(90deg);
     }
 
+    /* FAQ Tabs Styling */
+    .hn-faq-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      border-bottom: 2px solid var(--linen);
+      padding-bottom: 0.25rem;
+    }
+    .hn-faq-tab {
+      background: none;
+      border: none;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--bark);
+      cursor: pointer;
+      padding: 0.75rem 1.5rem;
+      position: relative;
+      transition: color 0.3s, opacity 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.65;
+    }
+    .hn-faq-tab:hover {
+      color: var(--sage);
+      opacity: 1;
+    }
+    .hn-faq-tab.active {
+      color: var(--sage);
+      opacity: 1;
+    }
+    .hn-faq-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -0.4rem;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--sage);
+      border-radius: 2px;
+    }
+    .hn-faq-group {
+      display: none;
+    }
+    .hn-faq-group.active {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .hn-faq-tabs {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        border-bottom: none;
+      }
+      .hn-faq-tab {
+        padding: 0.75rem;
+        background: var(--linen);
+        text-align: center;
+        border-radius: 4px;
+        font-size: 1.15rem;
+      }
+      .hn-faq-tab.active::after {
+        display: none;
+      }
+      .hn-faq-tab.active {
+        background: var(--sage);
+        color: white;
+      }
+    }
+
     .hn-footer {
       background: var(--bark);
       color: var(--mist);
@@ -510,218 +581,489 @@
   <section class="hn-section hn-animate-fade" style="background: white;">
     <div class="hn-container">
       
-      <!-- Group retreats and Friends Search Section (Custom SEO added) -->
-      <h2>Group bookings & retreats</h2>
-      
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Is the site exclusively ours when we book?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes — every booking includes exclusive use of the entire riverside meadow. No other guests, no shared facilities, no strangers arriving. Just your group, the farm, and the river. It works well for birthdays, reunions, hen parties, family gatherings, or any occasion where you want the place to yourselves.</p>
+      <!-- Tabs Bar -->
+      <div class="hn-faq-tabs">
+        <button class="hn-faq-tab active" data-tab="bell-tents">Bell Tent Retreat</button>
+        <button class="hn-faq-tab" data-tab="getaway">Small Group Getaway</button>
+        <button class="hn-faq-tab" data-tab="huts">Shepherd Huts</button>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- TAB 1: BELL TENT RETREAT                       -->
+      <!-- ============================================== -->
+      <div class="hn-faq-group active" id="hn-faq-group-bell-tents">
+        <h2>Group bookings & retreats</h2>
+        
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is the site exclusively ours when we book?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes — every booking includes exclusive use of the entire 3-acre riverside meadow. No other guests, no shared facilities, no strangers arriving. Just your group, the farm, and the river. It works well for birthdays, reunions, hen parties, family gatherings, or any occasion where you want the place to yourselves.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>How many people can stay?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>The five bell tents sleep 10 guests in king-size beds with bedding provided. Groups of up to 20 are welcome — bring extra sleeping arrangements like air beds, camp beds, or small tents for children. Please let us know numbers in advance.</p>
+          </div>
+        </div>
+
+        <h2>Booking and pricing</h2>
+        
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>How do I book?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check availability and book direct through the booking calendar on the Bell Tent Retreat page. No booking fees when you book direct. You can also WhatsApp or email Elizabeth if you have any questions before booking.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What are the prices?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>The Bell Tent Retreat is £500 per night at weekends and £450 per night on weekdays — the whole site is exclusively yours, no per-person charge, for up to 20 guests. No booking fees when you book direct.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What is the cancellation policy?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Cancellation: 75% refund (2–3 weeks notice) · 50% refund (1–2 weeks) · Under one week, no refund. Not sure if your event is a fit? Just ask Elizabeth.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is there a minimum stay?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check the booking calendar for minimum stays (usually 2 nights on weekends).</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are there booking fees?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>No. When you book direct through our website, you avoid any third-party booking fees.</p>
+          </div>
+        </div>
+
+        <h2>The site & amenities</h2>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are pets welcome?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Please ask about pets before booking. When on the farm, dogs must be kept on leads around livestock and stick to footpaths.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is there electricity?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>The Bell Tent Retreat has solar electricity only (suitable for charging phones and powering lights; there is no mains power in the meadow).</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are towels provided?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Towels are not provided for the Bell Tent Retreat. Please bring your own. Bedding is provided.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Can I have a fire?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes. The Bell Tent Retreat features a central fire pit in the communal area (firewood is available to buy on-site).</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What are the check-in and check-out times?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check in from 3pm. Check out by 10am.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What makes Hopnest Retreats different?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Unlike many glamping sites, every booking includes exclusive use of the retreat. There are no shared camping pitches, no neighbouring groups, and no public access to the glamping area during your stay.</p>
+          </div>
+        </div>
+
+        <h2>Getting here & The farm</h2>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Where is Hopnest Retreats?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Near Martley, Worcestershire. 25 minutes from Worcester, 50 minutes from Birmingham, 40 minutes from Hereford.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Can I drive onto the site?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes, you can drive straight onto the site. Free parking is available on site. Very low cars are not advised on the farm track.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is this a working farm?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes — it's a working organic farm with cattle, sheep, hop gardens, and orchards. You're welcome to enjoy the footpaths across the farm, and we ask that pets are kept on leads around the livestock.</p>
+          </div>
         </div>
       </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>How many people can stay?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>The five bell tents sleep 10 guests in king-size beds with bedding provided. Groups of up to 20 are welcome — bring extra sleeping arrangements like air beds, camp beds, or small tents for children. Let us know your numbers in advance.</p>
+      <!-- ============================================== -->
+      <!-- TAB 2: SMALL GROUP GETAWAY                     -->
+      <!-- ============================================== -->
+      <div class="hn-faq-group" id="hn-faq-group-getaway">
+        <h2>Group bookings & retreats</h2>
+        
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is the site exclusively ours when we book?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes — every booking includes exclusive use of the entire 3-acre riverside meadow. You will have full access without sharing any facilities with other guests.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>How many people can stay?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>The Small Group Getaway is designed for groups of up to 8 guests max, set across two furnished bell tents.</p>
+          </div>
+        </div>
+
+        <h2>Booking and pricing</h2>
+        
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>How do I book?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check availability and book direct through the booking calendar on the Small Group Getaway page. No booking fees when you book direct. You can also WhatsApp or email Elizabeth if you have any questions.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What are the prices?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>The Small Group Getaway is a flat rate of £400 per night — the whole site is exclusively yours, for up to 8 guests. No booking fees when you book direct.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What is the cancellation policy?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Cancellation: 75% refund (2–3 weeks notice) · 50% refund (1–2 weeks) · Under one week, no refund.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is there a minimum stay?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check the booking calendar for minimum stays (usually 2 nights on weekends).</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are there booking fees?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>No. When you book direct through our website, you avoid any third-party booking fees.</p>
+          </div>
+        </div>
+
+        <h2>The site & amenities</h2>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are pets welcome?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Please ask about pets before booking. When on the farm, dogs must be kept on leads around livestock and stick to footpaths.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is there electricity?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>The getaway has solar electricity only (suitable for charging phones and powering lights; there is no mains power in the meadow).</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are towels provided?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Towels are not provided. Please bring your own. Bedding is provided in both bell tents.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Can I have a fire?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes, a fire pit is available for you to enjoy. Firewood is available to buy on-site.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What are the check-in and check-out times?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check in from 3pm. Check out by 10am.</p>
+          </div>
+        </div>
+
+        <h2>Getting here & The farm</h2>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Where is Hopnest Retreats?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Near Martley, Worcestershire. 25 minutes from Worcester, 50 minutes from Birmingham. Free parking on site.</p>
+          </div>
+        </div>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is this a working farm?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes — it's a working organic farm. You're welcome to enjoy the footpaths across the farm, and we ask that pets are kept on leads around livestock.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Booking and pricing -->
-      <h2>Booking and pricing</h2>
-      
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>How do I book?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Check availability and book direct through the booking calendar on the Bell Tent Retreat page. No booking fees when you book direct. You can also WhatsApp or email Elizabeth if you have any questions before booking.</p>
+      <!-- ============================================== -->
+      <!-- TAB 3: SHEPHERD HUTS                           -->
+      <!-- ============================================== -->
+      <div class="hn-faq-group" id="hn-faq-group-huts">
+        <h2>About the huts & privacy</h2>
+        
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are the huts private?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes. Skylark and Nuthatch are designed for couples and are positioned to offer complete visual privacy from one another, with no shared access.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>What are the prices?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>The bell tent retreat is £500 per night at weekends and £450 per night on weekdays — the whole site is exclusively yours, no per-person charge, up to 20 guests. No booking fees when you book direct. The shepherd huts (opening 24th July 2026) are £150 per night, minimum 2 nights. We are offering a special 20% discount for the first 10 bookings.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>How many people can stay?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Each shepherd hut is strictly for a maximum of 2 people (designed for couples). They cannot be booked together for groups of 4 as they won't be accessible to each other.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>What is the cancellation policy?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Cancellation: 75% refund (2–3 weeks notice) · 50% refund (1–2 weeks) · Under one week, no refund. Not sure if your event is a fit? Just ask Elizabeth.</p>
+        <h2>Booking and pricing</h2>
+        
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>How do I book?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check availability and book direct through the booking calendar on the Shepherd Huts page. No booking fees when you book direct.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Is there a minimum stay?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Check the booking calendar for minimum stays (usually 2 nights on weekends). Shepherd hut bookings (opening 24th July 2026) are a minimum of 2 nights.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What are the prices?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>The Shepherd Huts (opening 24th July 2026) are £150 per night. We are offering a special 20% discount for the first 10 bookings.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Are there booking fees?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>No. When you book direct through our website, you avoid any third-party booking fees.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What is the cancellation policy?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Cancellation: 75% refund (2–3 weeks notice) · 50% refund (1–2 weeks) · Under one week, no refund.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- The site -->
-      <h2>The site & amenities</h2>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Are dogs welcome?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes, dogs are very welcome. We ask that they are kept on leads when around livestock on the farm.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is there a minimum stay?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Shepherd hut bookings have a minimum stay of 2 nights.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Is there electricity?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>The Bell Tent Retreat has solar electricity only (suitable for charging phones and powering lights; there is no mains power in the meadow). The Shepherd Huts (opening 2026) have full mains power.</p>
+        <h2>Hut amenities & utilities</h2>
+
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are pets welcome in the shepherd huts?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>No. To preserve clean air and keep the huts allergen-free for all guests, pets are strictly not permitted in the shepherd huts.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Are towels provided?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Towels are not provided for the Bell Tent Retreat. Please bring your own. Bedding is provided. The Shepherd Huts (opening 2026) include all bedding, towels, and organic toiletries.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is there electricity and heating?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes, the shepherd huts feature full mains power, electric heating, and cozy electric blankets to keep you warm throughout your stay.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>What cooking facilities and amenities are provided in the shepherd's huts?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Each shepherd's hut is designed for a comfortable, luxury stay. Inside, you'll find a fully equipped kitchen with a 2-ring gas hob, an air fryer, toaster, kettle, fridge (with a mini milk jug and 6 farm-fresh organic eggs on arrival), plates, glasses, mugs, and complimentary tea, coffee, and sugar. The huts feature king-size beds, cozy scenery artwork, underfloor heating, and en-suite bathrooms. For each arrival, we also provide fresh flowers, organic toiletries, cozy outdoor blankets for the stargazing net, and a private outdoor fire pit with campfire wood, a cooking grill, and marshmallows.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Are towels and bedding provided?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes. All bedding, luxury towels, and organic toiletries are fully provided for your stay.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Can I have a fire?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes. The Bell Tent Retreat features a central fire pit in the communal area (firewood is available to buy on-site). The Shepherd Huts each have their own private, small outdoor fire pit with campfire wood and a cooking grill provided for your stay.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What cooking facilities are provided?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Each hut features a fully equipped kitchen with a 2-ring gas hob, air fryer, toaster, kettle, and fridge (stocked with a mini milk jug and 6 farm-fresh organic eggs on arrival). All plates, cutlery, mugs, and complimentary tea, coffee, and sugar are also included.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>What are the check-in and check-out times?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Check in from 4pm. Check out by 10am.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Can I have a fire?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes. Each hut features its own private outdoor fire pit with campfire wood and a cooking grill provided (strictly no indoor wood burners to preserve clean air inside the huts and reduce fire risk).</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>What makes Hopnest Retreats different from other glamping sites in Worcestershire?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Unlike many glamping sites, every booking includes exclusive use of the retreat. There are no shared camping pitches, no neighbouring groups and no public access to the glamping area during your stay.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>What are the check-in and check-out times?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Check in from 4pm. Check out by 10am.</p>
+          </div>
         </div>
-      </div>
 
-      <!-- Getting here -->
-      <h2>Getting here</h2>
+        <h2>Getting here & The farm</h2>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Where is Hopnest Retreats?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Near Martley, Worcestershire. 25 minutes from Worcester, 50 minutes from Birmingham, 40 minutes from Hereford.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Where are the shepherd huts?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Near Martley, Worcestershire, approximately 25 minutes from Worcester city centre and around 30 minutes from the Malvern Hills.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Can I drive onto the site?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes, you can drive straight onto the site. Very low cars are not advised on the farm track.</p>
-        </div>
-      </div>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Is there parking?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes, free parking on site.</p>
-        </div>
-      </div>
-
-      <!-- The farm -->
-      <h2>The farm</h2>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Is this a working farm?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes — it's a working organic farm with cattle, sheep, hop gardens and orchards. You're welcome to enjoy the footpaths across the farm, and we ask that dogs are kept on leads around the livestock.</p>
-        </div>
-      </div>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>Are there shepherd huts near Worcester?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Yes. Skylark and Nuthatch are located near Martley, approximately 25 minutes from Worcester city centre and around 30 minutes from the Malvern Hills.</p>
-        </div>
-      </div>
-
-      <div class="hn-faq-item">
-        <button class="hn-faq-question-btn">
-          <span>When are the shepherd huts opening?</span>
-          <span class="hn-faq-chevron">❯</span>
-        </button>
-        <div class="hn-faq-answer">
-          <p>Skylark and Nuthatch are opening 24th July 2026. You can join the waitlist on the shepherd huts page to get early booking access.</p>
+        <div class="hn-faq-item">
+          <button class="hn-faq-question-btn">
+            <span>Is this a working farm?</span>
+            <span class="hn-faq-chevron">❯</span>
+          </button>
+          <div class="hn-faq-answer">
+            <p>Yes — Skylark and Nuthatch sit on our family-run organic working farm. You are welcome to walk along the designated footpaths across the farm fields.</p>
+          </div>
         </div>
       </div>
 
@@ -769,6 +1111,22 @@
     // Header hamburger menu
     document.getElementById('hn-hamburger').addEventListener('click', function() {
       document.getElementById('hn-nav').classList.toggle('open');
+    });
+
+    // FAQ Tab switching logic
+    document.querySelectorAll('.hn-faq-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        document.querySelectorAll('.hn-faq-tab').forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+        
+        // Hide all FAQ groups
+        document.querySelectorAll('.hn-faq-group').forEach(group => group.classList.remove('active'));
+        // Show target FAQ group
+        const targetGroup = document.getElementById('hn-faq-group-' + tab.getAttribute('data-tab'));
+        if (targetGroup) targetGroup.classList.add('active');
+      });
     });
 
     // FAQ Accordion toggles

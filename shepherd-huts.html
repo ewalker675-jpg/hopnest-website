@@ -705,8 +705,7 @@
   <section class="hn-section hn-animate-fade">
     <div class="hn-container" style="max-width: 800px; text-align: center;">
       <h2>Private huts above the valley</h2>
-      <p style="margin-bottom: 2rem;">Skylark and Nuthatch sit above the Teme Valley with uninterrupted views across rolling Worcestershire countryside. Designed for couples, each shepherd hut combines the simplicity of outdoor living with modern comforts, including a king-size bed, private bathroom, full kitchen and cozy underfloor electric heating. The huts are positioned to offer complete visual privacy from one another, with no shared access and no overlapping sightlines. Outside, enjoy your own private sanctuary—featuring a wood-fired hot tub (Skylark) or outdoor roll-top copper bath (Nuthatch), a suspended stargazing net to watch the dark skies, and a crackling outdoor fire pit (no indoor wood burners, preserving clean air inside your hut).</p>
-      <p style="font-style: italic; color: var(--sage); font-size: 0.95rem; margin-bottom: 3rem;">Note: For friends looking for larger private retreats for groups, both shepherd huts can be booked together to accommodate groups of up to 4 guests, or combined with our Bell Tent Retreat for larger group events.</p>
+      <p style="margin-bottom: 3rem;">Skylark and Nuthatch sit above the Teme Valley with uninterrupted views across rolling Worcestershire countryside. Designed for couples, each shepherd hut combines the simplicity of country living with modern comforts, including a king-size bed, private bathroom, kitchen and electric heater. The huts are positioned to offer complete visual privacy from one another, with no shared access. Outside, enjoy your own private sanctuary, featuring a large outdoor bath and  a suspended stargazing net bed to watch the dark skies, and a crackling outdoor fire pit (no indoor wood burners, preserving clean air inside your hut and reducing fire risk).</p>
     </div>
   </section>
 
@@ -852,15 +851,6 @@
             <label for="hn-form-guests">Number of Guests</label>
             <select id="hn-form-guests">
               <!-- Dynamically populated -->
-            </select>
-          </div>
-          <div>
-            <label for="hn-form-dogs">Number of Dogs</label>
-            <select id="hn-form-dogs">
-              <option value="0">No dogs</option>
-              <option value="1">1 dog</option>
-              <option value="2">2 dogs</option>
-              <option value="3">3 dogs</option>
             </select>
           </div>
         </div>
@@ -1072,6 +1062,7 @@
               checkOutDate = dateStr;
               updateSelectionHighlighting();
               showSelectionDetails();
+              openBookingModal();
             } else {
               alert("The selected range includes booked or unavailable dates. Please select consecutive available dates.");
               checkInDate = null;
@@ -1194,7 +1185,6 @@
         const name = document.getElementById('hn-form-name').value;
         const email = document.getElementById('hn-form-email').value;
         const guests = document.getElementById('hn-form-guests').value;
-        const dogs = document.getElementById('hn-form-dogs').value;
         const requests = document.getElementById('hn-form-requests').value;
         const submitBtn = document.getElementById('hn-submit-btn');
         
@@ -1213,16 +1203,11 @@
         const options = { month: 'long', day: 'numeric', year: 'numeric' };
         const dateRangeStr = `${start.toLocaleDateString('en-GB', options)} to ${end.toLocaleDateString('en-GB', options)}`;
         
-        let dogsStr = "";
-        if (parseInt(dogs) > 0) {
-          dogsStr = ` and ${dogs} dog${parseInt(dogs) > 1 ? 's' : ''}`;
-        }
         let requestsStr = "";
         if (requests.trim() !== "") {
           requestsStr = `\n\nSpecial requests:\n${requests}`;
         }
-        
-        const messageText = `Hi Elizabeth, we would like to book ${siteName} for the dates ${dateRangeStr} (${getNights()} nights). We are a group of ${guests} people${dogsStr}. Please can you confirm availability? Many thanks, ${name} (${email})${requestsStr}`;
+        const messageText = `Hi Elizabeth, we would like to book ${siteName} for the dates ${dateRangeStr} (${getNights()} nights). We are a group of ${guests} people. Please can you confirm availability? Many thanks, ${name} (${email})${requestsStr}`;
         
         const whatsappUrl = `https://wa.me/447583340173?text=${encodeURIComponent(messageText)}`;
         
