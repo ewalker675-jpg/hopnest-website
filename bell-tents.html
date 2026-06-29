@@ -1110,6 +1110,16 @@
             hideSelectionDetails();
           } else {
             if (validateRange(checkInDate, dateStr)) {
+              const checkoutDateObj = parseFormattedDate(dateStr);
+              const checkoutDay = checkoutDateObj.getDay(); // 0 = Sunday, 1 = Monday, ..., 5 = Friday, 6 = Saturday
+              if (checkoutDay === 5 || checkoutDay === 6) {
+                alert("Departures are not allowed on Fridays or Saturdays. Please select a different check-out date (e.g. Thursday or Sunday/Monday) to protect our weekend booking slots.");
+                checkOutDate = null;
+                updateSelectionHighlighting();
+                hideSelectionDetails();
+                return;
+              }
+              
               checkOutDate = dateStr;
               updateSelectionHighlighting();
               showSelectionDetails();
