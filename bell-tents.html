@@ -1078,7 +1078,14 @@
         
         container.addEventListener('click', function(e) {
           const cell = e.target.closest('.hn-day-cell');
-          if (!cell || cell.classList.contains('empty') || cell.classList.contains('booked') || cell.classList.contains('unavailable')) {
+          if (!cell || cell.classList.contains('empty')) {
+            return;
+          }
+          
+          // If we are choosing a check-in date, it MUST be an available date.
+          // If we are choosing a check-out date, we CAN click a booked/unavailable date to depart on it.
+          const isSelectingCheckout = checkInDate && !checkOutDate;
+          if (!isSelectingCheckout && (cell.classList.contains('booked') || cell.classList.contains('unavailable'))) {
             return;
           }
           
