@@ -866,60 +866,24 @@
           <!-- Calendar months will be rendered here by JS -->
         </div>
 
-        <!-- Selection Details (Shown when valid range is selected) -->
-        <div class="hn-selection-details" id="hn-selection-details" style="display: none;">
-          <p style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--bark);">Selected: <strong id="hn-selected-range-text"></strong> (<span id="hn-nights-count"></span> nights)</p>
-          <button class="hn-btn" onclick="openBookingModal()">Book</button>
+<!-- Selection Details (Shown when valid range is selected) -->
+        <div class="hn-selection-details" id="hn-selection-details" style="display: none; background: var(--linen); padding: 1.5rem; border-radius: 4px; margin-top: 1.5rem; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+          <p style="font-size: 1.25rem; margin-bottom: 1.25rem; color: var(--bark); font-family: 'Cormorant Garamond', serif; font-weight: 600;">Selected: <strong id="hn-selected-range-text"></strong> (<span id="hn-nights-count"></span> nights)</p>
+          
+          <div style="margin-bottom: 1.25rem; display: inline-flex; align-items: center; gap: 0.75rem; justify-content: center; width: 100%;">
+            <label for="hn-selection-guests" style="font-size: 0.9rem; font-weight: 600; color: var(--bark); text-transform: uppercase; letter-spacing: 0.05em;">Number of Guests:</label>
+            <select id="hn-selection-guests" style="padding: 0.5rem 1rem; border: 1px solid var(--mist); font-family: 'Open Sans', sans-serif; font-size: 0.9rem; background: white; border-radius: 4px; color: var(--bark);">
+              <!-- Will be populated dynamically -->
+            </select>
+          </div>
+          
+          <button class="hn-btn" onclick="redirectToBeds24()" style="width: 100%; max-width: 320px; display: block; margin: 0 auto;">Book Now</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Booking Form Modal -->
-  <div class="hn-modal-overlay" id="hn-modal-overlay" onclick="if(event.target === this) closeBookingModal()">
-    <div class="hn-modal">
-      <button class="hn-modal-close" onclick="closeBookingModal()">&times;</button>
-      <h2>Booking Request</h2>
-      <p class="hn-modal-dates" id="hn-modal-dates-text"></p>
-      
-      <div id="hn-modal-content-wrapper">
-        <form class="hn-modal-form" onsubmit="submitBookingRequest(event); return false;">
-          <input type="hidden" id="hn-form-checkin">
-        <input type="hidden" id="hn-form-checkout">
-        
-        <div class="hn-form-row">
-          <div>
-            <label for="hn-form-name">Your Name</label>
-            <input type="text" id="hn-form-name" required placeholder="Full Name">
-          </div>
-          <div>
-            <label for="hn-form-email">Email Address</label>
-            <input type="email" id="hn-form-email" required placeholder="email@address.com">
-          </div>
-        </div>
-        
-        <div class="hn-form-row">
-          <div>
-            <label for="hn-form-guests">Number of Guests</label>
-            <select id="hn-form-guests">
-              <!-- Dynamically populated -->
-            </select>
-          </div>
-        </div>
-        
-        <div>
-          <label for="hn-form-requests">Special Requests / Group Type</label>
-          <textarea id="hn-form-requests" placeholder="Tell us a bit about your group or any special requests..."></textarea>
-        </div>
-        
-        
-        <button type="submit" class="hn-btn" id="hn-submit-btn" style="width: 100%; margin-top: 1rem;">
-          Send Booking Request
-        </button>
-        </form>
-      </div>
-    </div>
-  </div>
+  <!-- Booking Modal is now handled directly by Beds24 -->
 
   <!-- Getting Here (Short) -->
   <section class="hn-section hn-animate-fade" style="background: var(--linen); padding: 3rem 0;">
@@ -1013,25 +977,7 @@
       const seasonStart = new Date("2026-07-17");
       const seasonEnd = new Date("2026-09-07");
       const maxGuests = 20;
-      const statusMap = {
-        "2026-07-17": "booked",
-        "2026-07-18": "booked",
-        "2026-07-19": "booked",
-        "2026-07-20": "booked",
-        "2026-07-24": "booked",
-        "2026-07-25": "booked",
-        "2026-07-26": "booked",
-        "2026-07-31": "booked",
-        "2026-08-01": "booked",
-        "2026-08-02": "booked",
-        "2026-08-07": "booked",
-        "2026-08-08": "booked",
-        "2026-08-09": "booked",
-        "2026-08-10": "booked",
-        "2026-08-14": "booked",
-        "2026-08-15": "booked",
-        "2026-08-16": "booked"
-      };
+      let statusMap = {};
 
       let checkInDate = null;
       let checkOutDate = null;
@@ -1159,7 +1105,6 @@
               checkOutDate = dateStr;
               updateSelectionHighlighting();
               showSelectionDetails();
-              openBookingModal();
             } else {
               alert("The selected range includes booked or unavailable dates. Please select consecutive available dates.");
               checkInDate = null;
@@ -1366,7 +1311,7 @@
       };
 
       function populateGuests() {
-        const select = document.getElementById('hn-form-guests');
+        const select = document.getElementById('hn-selection-guests');
         if (!select) return;
         select.innerHTML = '';
         for (let i = 1; i <= maxGuests; i++) {
@@ -1377,9 +1322,45 @@
         }
       }
 
+      
+      async function loadAvailability() {
+        try {
+          const res = await fetch('/api/get-availability?roomid=699023&token=89db58bee5303154709421779bdefac0');
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.bookedDates) {
+              statusMap = {};
+              data.bookedDates.forEach(dateStr => {
+                statusMap[dateStr] = 'booked';
+              });
+              renderCalendar();
+            }
+          }
+        } catch (e) {
+          console.error("Failed to load availability from Beds24:", e);
+        }
+      }
+
+      window.redirectToBeds24 = function() {
+        const propId = "338106";
+        const roomId = "699023";
+        const checkIn = checkInDate;
+        const checkOut = checkOutDate;
+        const guests = document.getElementById('hn-selection-guests').value;
+        
+        if (!checkIn || !checkOut) {
+          alert("Please select your dates on the calendar first.");
+          return;
+        }
+        
+        const beds24Url = `https://beds24.com/booking2.php?propid=${propId}&roomid1=${roomId}&checkin=${checkIn}&checkout=${checkOut}&numadult1=${guests}`;
+        window.open(beds24Url, '_blank');
+      };
+
       renderCalendar();
       initCalendarEvents();
       populateGuests();
+      loadAvailability();
     })();
   </script>
 </body>

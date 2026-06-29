@@ -550,5 +550,63 @@
       animatedEls.forEach(el => observer.observe(el));
     });
   </script>
+  <!-- Email Capture Popup -->
+  <style>
+    .hn-popup-overlay {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem;
+    }
+    .hn-popup-overlay.show { display: flex; animation: fadeInPopup 0.4s ease-out forwards; }
+    @keyframes fadeInPopup { from { opacity: 0; } to { opacity: 1; } }
+    .hn-popup-content { background: white; max-width: 450px; width: 100%; padding: 3rem 2.5rem; position: relative; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+    .hn-popup-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--mist); }
+    .hn-popup-close:hover { color: var(--bark); }
+    .hn-popup-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--bark); margin-bottom: 0.5rem; }
+    .hn-popup-desc { font-size: 0.95rem; color: var(--bark); margin-bottom: 1.5rem; line-height: 1.6; }
+    .hn-popup-form input { width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid var(--mist); font-family: 'Open Sans', sans-serif; box-sizing: border-box; }
+    .hn-popup-form .hn-btn { width: 100%; padding: 1rem; }
+    .hn-popup-success { display: none; color: var(--sage); font-weight: 600; margin-top: 1rem; }
+  </style>
+
+  <div class="hn-popup-overlay" id="hn-email-popup">
+    <div class="hn-popup-content">
+      <button class="hn-popup-close" id="hn-popup-close">&times;</button>
+      <span class="hn-label">Join Our Waitlist</span>
+      <h2 class="hn-popup-title">Group Getaway Ideas</h2>
+      <p class="hn-popup-desc">Planning a group trip or waiting for our Shepherd Huts? Join our list for updates, cancellations, and a free guide to the Teme Valley.</p>
+      <form class="hn-popup-form" id="hn-email-form" onsubmit="handleEmailSubmit(event)">
+        <input type="email" required placeholder="Your email address" id="hn-popup-email">
+        <button type="submit" class="hn-btn">Subscribe</button>
+        <p class="hn-popup-success" id="hn-popup-success">Thanks for subscribing!</p>
+        <p style="font-size: 0.75rem; color: var(--mist); margin-top: 1rem; line-height: 1.4;">(Connect this form to Mailchimp or Formspree to save captured emails)</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('hn-email-popup');
+      const closeBtn = document.getElementById('hn-popup-close');
+      
+      if (!localStorage.getItem('hn_email_submitted') && !localStorage.getItem('hn_popup_dismissed')) {
+        setTimeout(() => { popup.classList.add('show'); }, 6000);
+      }
+
+      closeBtn.addEventListener('click', () => {
+        popup.classList.remove('show');
+        localStorage.setItem('hn_popup_dismissed', 'true');
+      });
+    });
+
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      document.getElementById('hn-popup-success').style.display = 'block';
+      localStorage.setItem('hn_email_submitted', 'true');
+      
+      setTimeout(() => {
+        document.getElementById('hn-email-popup').classList.remove('show');
+      }, 2000);
+    }
+  </script>
 </body>
 </html>

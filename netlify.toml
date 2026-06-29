@@ -3,6 +3,11 @@
   command = "npm run build"
 
 [[redirects]]
+  from = "/api/get-availability"
+  to = "/.netlify/functions/get-availability"
+  status = 200
+
+[[redirects]]
   from = "/bell-tents"
   to = "/bell-tents.html"
   status = 200
