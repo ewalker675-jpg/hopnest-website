@@ -878,13 +878,51 @@
             </select>
           </div>
           
-          <button class="hn-btn" onclick="redirectToBeds24()" style="width: 100%; max-width: 320px; display: block; margin: 0 auto;">Book Now</button>
+          <button class="hn-btn" onclick="openBookingModal()" style="width: 100%; max-width: 320px; display: block; margin: 0 auto;">Book Now</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Booking Modal is now handled directly by Beds24 -->
+  <!-- Booking Form Modal -->
+  <div class="hn-modal-overlay" id="hn-modal-overlay" onclick="if(event.target === this) closeBookingModal()">
+    <div class="hn-modal">
+      <button class="hn-modal-close" onclick="closeBookingModal()">&times;</button>
+      <h2>Booking Details</h2>
+      <p class="hn-modal-dates" id="hn-modal-dates-text"></p>
+      
+      <div id="hn-modal-content-wrapper">
+        <form class="hn-modal-form" onsubmit="startStripeCheckout(event); return false;">
+          <div class="hn-form-row">
+            <div>
+              <label for="hn-form-name">Your Name</label>
+              <input type="text" id="hn-form-name" required placeholder="Full Name">
+            </div>
+            <div>
+              <label for="hn-form-email">Email Address</label>
+              <input type="email" id="hn-form-email" required placeholder="email@address.com">
+            </div>
+          </div>
+          
+          <div class="hn-form-row">
+            <div>
+              <label for="hn-form-phone">Phone Number</label>
+              <input type="tel" id="hn-form-phone" required placeholder="e.g. 07123 456789">
+            </div>
+          </div>
+          
+          <div>
+            <label for="hn-form-requests">Special Requests / Group Type</label>
+            <textarea id="hn-form-requests" placeholder="Tell us a bit about your group or any special requests..."></textarea>
+          </div>
+          
+          <button type="submit" class="hn-btn" id="hn-submit-btn" style="width: 100%; margin-top: 1rem;">
+            Proceed to Payment
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- Getting Here (Short) -->
   <section class="hn-section hn-animate-fade" style="background: var(--linen); padding: 3rem 0;">
@@ -1359,26 +1397,109 @@
         }
       }
 
-      window.redirectToBeds24 = function() {
-        const propId = "338106";
-        const roomId = "699023";
-        const checkIn = checkInDate;
-        const checkOut = checkOutDate;
-        const guests = document.getElementById('hn-selection-guests').value;
+      window.openBookingModal = function() {
+        const overlay = document.getElementById('hn-modal-overlay');
+        const datesText = document.getElementById('hn-modal-dates-text');
+        if (!overlay || !datesText) return;
         
-        if (!checkIn || !checkOut) {
-          alert("Please select your dates on the calendar first.");
-          return;
+        const start = parseFormattedDate(checkInDate);
+        const end = parseFormattedDate(checkOutDate);
+        const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+        
+        datesText.innerText = `${start.toLocaleDateString('en-GB', options)} to ${end.toLocaleDateString('en-GB', options)} (${getNights()} nights)`;
+        overlay.style.display = 'flex';
+      };
+
+      window.closeBookingModal = function() {
+        const overlay = document.getElementById('hn-modal-overlay');
+        if (overlay) overlay.style.display = 'none';
+      };
+
+      window.startStripeCheckout = async function(e) {
+        if (e) e.preventDefault();
+        
+        const submitBtn = document.getElementById('hn-submit-btn');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = 'Creating Checkout Session...';
         }
         
-        const beds24Url = `https://beds24.com/booking2.php?propid=${propId}&roomid1=${roomId}&checkin=${checkIn}&checkout=${checkOut}&numadult1=${guests}`;
-        window.open(beds24Url, '_blank');
+        const name = document.getElementById('hn-form-name').value;
+        const email = document.getElementById('hn-form-email').value;
+        const phone = document.getElementById('hn-form-phone').value;
+        const requests = document.getElementById('hn-form-requests').value;
+        const guests = document.getElementById('hn-selection-guests').value;
+        
+        try {
+          const res = await fetch('/api/create-checkout-session', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              checkIn: checkInDate,
+              checkOut: checkOutDate,
+              guests,
+              name,
+              email,
+              phone,
+              requests
+            })
+          });
+          
+          if (res.ok) {
+            const data = await res.json();
+            if (data.url) {
+              window.location.href = data.url; // Redirect directly to Stripe Checkout
+            } else {
+              throw new Error("Missing URL in checkout response");
+            }
+          } else {
+            const errData = await res.json();
+            throw new Error(errData.error || "Failed to create checkout session");
+          }
+        } catch (err) {
+          console.error("Stripe Checkout Error:", err);
+          alert("Failed to initiate payment: " + err.message);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Proceed to Payment';
+          }
+        }
       };
+
+      function checkUrlParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('booking') === 'success') {
+          const overlay = document.getElementById('hn-modal-overlay');
+          const wrapper = document.getElementById('hn-modal-content-wrapper');
+          const title = document.querySelector('.hn-modal h2');
+          const datesText = document.getElementById('hn-modal-dates-text');
+          
+          if (overlay && wrapper) {
+            if (title) title.innerText = "Booking Confirmed!";
+            if (datesText) datesText.innerText = "Thank you for your payment.";
+            
+            wrapper.innerHTML = `
+              <div style="text-align: center; padding: 1.5rem 0;">
+                <div style="font-size: 3rem; color: #2E7D32; margin-bottom: 1rem;">✓</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--bark);">Payment Successful!</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.5; color: var(--bark);">Your booking has been successfully created. Betty will be in touch shortly.</p>
+                <button type="button" class="hn-btn" onclick="closeBookingModal()" style="width: 100%;">Close</button>
+              </div>
+            `;
+            overlay.style.display = 'flex';
+          }
+          window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (urlParams.get('booking') === 'cancelled') {
+          alert("Booking checkout was cancelled. No charges were made.");
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }
+      }
 
       renderCalendar();
       initCalendarEvents();
       populateGuests();
       loadAvailability();
+      checkUrlParams();
     })();
   </script>
 </body>
