@@ -1147,6 +1147,29 @@
       });
     });
 
+    // Auto-open cancellation policy from direct link
+    function handleHashChange() {
+      const hash = window.location.hash;
+      if (hash === '#cancellation' || hash === '#cancellations') {
+        const items = document.querySelectorAll('.hn-faq-item');
+        items.forEach(item => {
+          const btn = item.querySelector('.hn-faq-question-btn');
+          if (btn && btn.textContent.toLowerCase().includes('cancellation')) {
+            // Close all others
+            document.querySelectorAll('.hn-faq-item').forEach(el => el.classList.remove('active'));
+            // Open this item
+            item.classList.add('active');
+            // Scroll it into view
+            setTimeout(() => {
+              item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+          }
+        });
+      }
+    }
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('load', handleHashChange);
+
     // Scroll Fade-in-up Intersection Observer
     document.addEventListener('DOMContentLoaded', function() {
       const animatedEls = document.querySelectorAll('.hn-animate-fade');
