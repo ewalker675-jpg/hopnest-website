@@ -1396,7 +1396,24 @@
         }
       }
 
-      renderCalendar();
+      async function loadAvailability() {
+        try {
+          const res = await fetch('/api/get-availability?roomid=699023&token=89db58bee5303154709421779bdefac0');
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.bookedDates) {
+              data.bookedDates.forEach(dateStr => {
+                statusMap[dateStr] = 'booked';
+              });
+            }
+          }
+        } catch (e) {
+          console.error("Failed to load availability:", e);
+        }
+        renderCalendar();
+      }
+
+      loadAvailability();
       initCalendarEvents();
       populateGuests();
     })();
