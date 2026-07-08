@@ -7,44 +7,201 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bark: #3E3028;
       --sage: #6B7C5C;
       --parchment: #F7F3EE;
+      --linen: #EFECE6;
       --mist: #D6CFC4;
     }
-    body { font-family: 'Open Sans', sans-serif; background: var(--parchment); color: var(--bark); margin: 0; padding: 0; line-height: 1.7; }
-    .hn-container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
-    .hn-header { background: white; border-bottom: 1px solid var(--mist); height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; }
-    .hn-logo-link { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--bark); font-weight: 600; text-transform: uppercase; }
-    .hn-logo-img { height: 36px; mix-blend-mode: multiply; }
-    .hn-nav a { text-decoration: none; color: var(--bark); font-size: 0.85rem; text-transform: uppercase; margin-left: 1.5rem; }
-    .hn-section { padding: 5rem 0; }
-    h1 { font-weight: 300; font-size: 2.4rem; margin-bottom: 2rem; }
-    .hn-footer { background: var(--bark); color: var(--mist); padding: 3rem 1.5rem; text-align: center; font-size: 0.85rem; margin-top: 5rem; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--parchment);
+      color: var(--bark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hn-header {
+      background: white;
+      border-bottom: 1px solid var(--mist);
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    .hn-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--bark);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hn-logo-img {
+      height: 38px;
+      mix-blend-mode: multiply;
+    }
+    .hn-nav a {
+      text-decoration: none;
+      color: var(--bark);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 2rem;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .hn-nav a:hover {
+      color: var(--sage);
+    }
+    .hn-section {
+      padding: 6rem 0;
+    }
+    .hn-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 3rem;
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--mist);
+      padding-bottom: 1rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p, li {
+      font-size: 0.95rem;
+      color: #554840;
+    }
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a.hn-link {
+      color: var(--sage);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.hn-link:hover {
+      text-decoration: underline;
+    }
+    .hn-footer {
+      background: var(--bark);
+      color: var(--mist);
+      padding: 4rem 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 6rem;
+      border-top: 1px solid var(--mist);
+    }
+    .hn-footer p {
+      color: var(--mist);
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .hn-header { padding: 0 1rem; }
+      .hn-nav a { margin-left: 1rem; font-size: 0.8rem; }
+      .hn-section { padding: 4rem 0; }
+      h1 { font-size: 2.3rem; }
+    }
   </style>
 </head>
 <body>
   <header class="hn-header">
     <a href="/index.html" class="hn-logo-link">
       <img src="/images/favicon.png" alt="Hopnest Retreats" class="hn-logo-img">
-      <span>Hopnest Retreats</span>
+      <span>Hopnest</span>
     </a>
     <nav class="hn-nav">
       <a href="/index.html">Home</a>
-      <a href="/bell-tents.html">Bell Tent Retreat</a>
+      <a href="/bell-tents.html">Bell Tents</a>
+      <a href="/shepherd-huts.html">Shepherd Huts</a>
     </nav>
   </header>
+
   <section class="hn-section">
     <div class="hn-container">
-      <h1>Terms and Conditions</h1>
-      <p>Terms and conditions for staying at Hopnest Retreats. Standard terms cover cancellations, group behavior policies, farm access rules, and river activities liability (stating all river activities are entirely at guests' own risk). Detailed terms will be provided in your booking confirmation emails.</p>
+      <h1>Terms &amp; Conditions</h1>
+      
+  <p>Welcome to Hopnest Retreats. By making a booking or staying at our site, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+
+  <h2>1. Booking &amp; Payment</h2>
+  <ul>
+    <li>All direct website bookings are processed securely via Beds24 and Stripe.</li>
+    <li>Full payment (100% deposit) is required at the time of booking to secure your dates.</li>
+    <li>Private bookings arranged directly (e.g. via WhatsApp or email) may be paid via Stripe payment links or direct BACS bank transfer by arrangement.</li>
+  </ul>
+
+  <h2>2. Cancellation Policy</h2>
+  <ul>
+    <li><strong>4 weeks (28 days) or more notice:</strong> Full (100%) refund.</li>
+    <li><strong>2 to 4 weeks (14 to 28 days) notice:</strong> 50% refund.</li>
+    <li><strong>Within 2 weeks (less than 14 days) notice:</strong> No refund.</li>
+    <li>All cancellations must be requested in writing by emailing <a href="mailto:hello@hopnestretreats.co.uk" class="hn-link">hello@hopnestretreats.co.uk</a>.</li>
+  </ul>
+
+  <h2>3. Arrival &amp; Departure</h2>
+  <ul>
+    <li><strong>Check-in:</strong> From 3:00 PM onwards.</li>
+    <li><strong>Check-out:</strong> By 10:00 AM on your departure day.</li>
+    <li>Departures are not permitted on Fridays and Saturdays to accommodate our cleaning and preparation buffers.</li>
+  </ul>
+
+  <h2>4. Guest Capacity &amp; Group Behavior</h2>
+  <ul>
+    <li>The standard rate covers up to 10 guests in our furnished bell tents (bedding provided, please bring your own towels).</li>
+    <li>Groups of up to 20 are welcome. Any guests beyond the initial 10 must bring their own extra sleeping arrangements (air beds, camp beds, or small tents). Please notify us of total numbers in advance.</li>
+    <li>We expect all guests to respect the natural surroundings and local wildlife. Excessive noise, fireworks, and anti-social behavior are strictly prohibited.</li>
+  </ul>
+
+  <h2>5. Farm Safety &amp; Ground Conditions</h2>
+  <ul>
+    <li>Hopnest is situated on a working farm. Guests must stay within designated retreat areas and marked pathways. Do not feed, approach, or disturb livestock or farm machinery.</li>
+    <li>The farm track leading to the site is unpaved. Extremely low-slung sports cars are not advised. Drive slowly (under 10 mph) at all times.</li>
+  </ul>
+
+  <h2>6. River Access &amp; Liability Waiver</h2>
+  <p style="background: #EFECE6; padding: 1.25rem; border-left: 4px solid var(--sage); font-style: italic; font-weight: 500;">
+    IMPORTANT: Hopnest Retreats provides private access to the River Teme for relaxing, paddling, and enjoying the water. All river activities (including swimming, paddling, wading, or boating) are undertaken entirely at guests' own risk. Hopnest Retreats accepts no liability for injury, loss, or damage arising from activities on or near the river. Children must be supervised by a responsible adult at all times.
+  </p>
+
+  <h2>7. Damages &amp; Cleanliness</h2>
+  <ul>
+    <li>We ask that you leave the site tidy. Rubbish and recycling should be placed in the designated bins provided.</li>
+    <li>Any damage to tents, structures, or equipment during your stay must be reported immediately and may be charged to the card on file.</li>
+  </ul>
+
     </div>
   </section>
+
   <footer class="hn-footer">
-    <p>© 2026 Hopnest Retreats · Martley, Worcestershire<br><a href="https://www.instagram.com/hopnestretreats/" target="_blank" rel="noopener" style="color: var(--mist); text-decoration: none; font-size: 0.85rem;">Instagram: @hopnestretreats</a></p>
+    <p>© 2026 Hopnest Retreats · Martley, Worcestershire<br><br>
+    <a href="/terms.html" style="color: var(--mist); text-decoration: none; margin-right: 1.5rem;">Terms &amp; Conditions</a>
+    <a href="/privacy.html" style="color: var(--mist); text-decoration: none; margin-right: 1.5rem;">Privacy Policy</a>
+    <a href="/cookies.html" style="color: var(--mist); text-decoration: none;">Cookie Policy</a>
+    <br><br>
+    <a href="https://www.instagram.com/hopnestretreats/" target="_blank" rel="noopener" style="color: var(--mist); text-decoration: none;">Instagram: @hopnestretreats</a></p>
   </footer>
 </body>
 </html>

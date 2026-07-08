@@ -7,44 +7,171 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bark: #3E3028;
       --sage: #6B7C5C;
       --parchment: #F7F3EE;
+      --linen: #EFECE6;
       --mist: #D6CFC4;
     }
-    body { font-family: 'Open Sans', sans-serif; background: var(--parchment); color: var(--bark); margin: 0; padding: 0; line-height: 1.7; }
-    .hn-container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
-    .hn-header { background: white; border-bottom: 1px solid var(--mist); height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 1.5rem; }
-    .hn-logo-link { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--bark); font-weight: 600; text-transform: uppercase; }
-    .hn-logo-img { height: 36px; mix-blend-mode: multiply; }
-    .hn-nav a { text-decoration: none; color: var(--bark); font-size: 0.85rem; text-transform: uppercase; margin-left: 1.5rem; }
-    .hn-section { padding: 5rem 0; }
-    h1 { font-weight: 300; font-size: 2.4rem; margin-bottom: 2rem; }
-    .hn-footer { background: var(--bark); color: var(--mist); padding: 3rem 1.5rem; text-align: center; font-size: 0.85rem; margin-top: 5rem; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--parchment);
+      color: var(--bark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hn-header {
+      background: white;
+      border-bottom: 1px solid var(--mist);
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    .hn-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--bark);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .hn-logo-img {
+      height: 38px;
+      mix-blend-mode: multiply;
+    }
+    .hn-nav a {
+      text-decoration: none;
+      color: var(--bark);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 2rem;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .hn-nav a:hover {
+      color: var(--sage);
+    }
+    .hn-section {
+      padding: 6rem 0;
+    }
+    .hn-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 3rem;
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--mist);
+      padding-bottom: 1rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p, li {
+      font-size: 0.95rem;
+      color: #554840;
+    }
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a.hn-link {
+      color: var(--sage);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.hn-link:hover {
+      text-decoration: underline;
+    }
+    .hn-footer {
+      background: var(--bark);
+      color: var(--mist);
+      padding: 4rem 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 6rem;
+      border-top: 1px solid var(--mist);
+    }
+    .hn-footer p {
+      color: var(--mist);
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .hn-header { padding: 0 1rem; }
+      .hn-nav a { margin-left: 1rem; font-size: 0.8rem; }
+      .hn-section { padding: 4rem 0; }
+      h1 { font-size: 2.3rem; }
+    }
   </style>
 </head>
 <body>
   <header class="hn-header">
     <a href="/index.html" class="hn-logo-link">
       <img src="/images/favicon.png" alt="Hopnest Retreats" class="hn-logo-img">
-      <span>Hopnest Retreats</span>
+      <span>Hopnest</span>
     </a>
     <nav class="hn-nav">
       <a href="/index.html">Home</a>
-      <a href="/bell-tents.html">Bell Tent Retreat</a>
+      <a href="/bell-tents.html">Bell Tents</a>
+      <a href="/shepherd-huts.html">Shepherd Huts</a>
     </nav>
   </header>
+
   <section class="hn-section">
     <div class="hn-container">
       <h1>Cookie Policy</h1>
-      <p>This website uses cookies to enhance your experience. Standard cookies are used to track user preferences and run basic performance analytics. You can disable cookies in your browser settings if you prefer.</p>
+      
+  <p>To make our website work smoothly and securely, we use cookies. This cookie policy outlines what cookies are, how we use them, and how you can manage them.</p>
+
+  <h2>1. What are Cookies?</h2>
+  <p>Cookies are small text files stored on your computer or mobile device when you browse websites. They help websites recognize your preferences and keep booking sessions secure.</p>
+
+  <h2>2. Cookies We Use</h2>
+  <ul>
+    <li><strong>Essential Booking Cookies:</strong> Set by Beds24 to remember the dates and guests you select as you move through checkout. Without these, online booking cannot function.</li>
+    <li><strong>Secure Payment Cookies:</strong> Set by Stripe to process credit card payments securely and prevent fraud.</li>
+    <li><strong>Performance Cookies:</strong> Basic analytics cookies used to measure visits and ensure the site loads quickly.</li>
+  </ul>
+
+  <h2>3. Third-Party Cookies</h2>
+  <p>When you use the embedded Beds24 calendar, third-party cookies from Beds24 and Stripe are activated inside the booking frame to complete the transaction securely.</p>
+
+  <h2>4. How to Manage Cookies</h2>
+  <p>You can choose to accept or block cookies in your web browser settings. Please note that if you block all cookies, the Beds24 booking system and Stripe payment page will not function, and you will need to arrange your booking manually via WhatsApp or BACS transfer.</p>
+
     </div>
   </section>
+
   <footer class="hn-footer">
-    <p>© 2026 Hopnest Retreats · Martley, Worcestershire<br><a href="https://www.instagram.com/hopnestretreats/" target="_blank" rel="noopener" style="color: var(--mist); text-decoration: none; font-size: 0.85rem;">Instagram: @hopnestretreats</a></p>
+    <p>© 2026 Hopnest Retreats · Martley, Worcestershire<br><br>
+    <a href="/terms.html" style="color: var(--mist); text-decoration: none; margin-right: 1.5rem;">Terms &amp; Conditions</a>
+    <a href="/privacy.html" style="color: var(--mist); text-decoration: none; margin-right: 1.5rem;">Privacy Policy</a>
+    <a href="/cookies.html" style="color: var(--mist); text-decoration: none;">Cookie Policy</a>
+    <br><br>
+    <a href="https://www.instagram.com/hopnestretreats/" target="_blank" rel="noopener" style="color: var(--mist); text-decoration: none;">Instagram: @hopnestretreats</a></p>
   </footer>
 </body>
 </html>
