@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 // Serve static assets from the images directory
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-// Pretty URL routing: maps /bell-tents to bell-tents.html, /small-group-getaway to small-group-getaway.html, etc.
+// Pretty URL routing: maps /bell-tents to bell-tents.html, /exclusive-campsite to exclusive-campsite.html, etc.
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });

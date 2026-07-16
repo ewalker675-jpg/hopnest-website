@@ -23,8 +23,8 @@
   status = 200
 
 [[redirects]]
-  from = "/small-group-getaway"
-  to = "/small-group-getaway.html"
+  from = "/exclusive-campsite"
+  to = "/exclusive-campsite.html"
   status = 200
 
 [[redirects]]
@@ -100,4 +100,19 @@
 [[redirects]]
   from = "/local-guide"
   to = "/local-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/hen-party-glamping"
+  to = "/hen-party-glamping.html"
+  status = 200
+
+[[redirects]]
+  from = "/birthday-glamping"
+  to = "/birthday-glamping.html"
+  status = 200
+
+[[redirects]]
+  from = "/stag-do-glamping"
+  to = "/stag-do-glamping.html"
   status = 200

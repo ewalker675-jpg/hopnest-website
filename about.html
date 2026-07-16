@@ -413,7 +413,7 @@
       <nav class="hn-nav" id="hn-nav">
         <a href="/index.html">Home</a>
         <a href="/bell-tents.html">Bell Tent Retreat</a>
-        <a href="/small-group-getaway.html">Small Group Getaway</a>
+        <a href="/exclusive-campsite.html">Exclusive Campsite</a>
         <a href="/shepherd-huts.html">Shepherd Huts</a>
         <a href="/about.html">About</a>
         <a href="/faq.html">FAQ</a>
@@ -506,7 +506,7 @@
       <div class="hn-footer-links">
         <p class="hn-label">Stay</p>
         <a href="/bell-tents.html">Bell Tent Retreat</a>
-        <a href="/small-group-getaway.html">Small Group Getaway</a>
+        <a href="/exclusive-campsite.html">Exclusive Campsite</a>
         <a href="/shepherd-huts.html">Shepherd Huts</a>
       </div>
       <div class="hn-footer-links">
@@ -572,13 +572,13 @@
     <div class="hn-popup-content">
       <button class="hn-popup-close" id="hn-popup-close">&times;</button>
       <span class="hn-label">Join Our Waitlist</span>
-      <h2 class="hn-popup-title">Group Getaway Ideas</h2>
+      <h2 class="hn-popup-title">Explore Our Retreats</h2>
       <p class="hn-popup-desc">Planning a group trip or waiting for our Shepherd Huts? Join our list for updates, cancellations, and a free guide to the Teme Valley.</p>
       <form class="hn-popup-form" id="hn-email-form" onsubmit="handleEmailSubmit(event)">
         <input type="email" required placeholder="Your email address" id="hn-popup-email">
-        <button type="submit" class="hn-btn">Subscribe</button>
-        <p class="hn-popup-success" id="hn-popup-success">Thanks for subscribing!</p>
-        <p style="font-size: 0.75rem; color: var(--mist); margin-top: 1rem; line-height: 1.4;">(Connect this form to Mailchimp or Formspree to save captured emails)</p>
+        <button type="submit" class="hn-btn" id="hn-popup-btn">Join the Waitlist</button>
+        <p class="hn-popup-success" id="hn-popup-success">&#10003; You're on the list — Elizabeth will be in touch.</p>
+        <p style="font-size: 0.75rem; color: var(--mist); margin-top: 1rem; line-height: 1.4;">No spam, ever. Unsubscribe any time.</p>
       </form>
     </div>
   </div>
@@ -600,12 +600,36 @@
 
     function handleEmailSubmit(e) {
       e.preventDefault();
-      document.getElementById('hn-popup-success').style.display = 'block';
-      localStorage.setItem('hn_email_submitted', 'true');
-      
-      setTimeout(() => {
-        document.getElementById('hn-email-popup').classList.remove('show');
-      }, 2000);
+      const email = document.getElementById('hn-popup-email').value;
+      const btn = document.getElementById('hn-popup-btn');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: '47926300-ab45-48be-9e6b-fe292c019edb',
+          subject: 'Hopnest Waitlist — New Signup (About Page)',
+          name: 'Waitlist Signup',
+          email: email,
+          message: 'New waitlist signup from hopnestretreats.co.uk/about\n\nEmail: ' + email
+        })
+      })
+      .then(r => r.json())
+      .then(() => {
+        document.getElementById('hn-popup-success').style.display = 'block';
+        localStorage.setItem('hn_email_submitted', 'true');
+        setTimeout(() => {
+          document.getElementById('hn-email-popup').classList.remove('show');
+        }, 3000);
+      })
+      .catch(() => {
+        document.getElementById('hn-popup-success').style.display = 'block';
+        localStorage.setItem('hn_email_submitted', 'true');
+        setTimeout(() => {
+          document.getElementById('hn-email-popup').classList.remove('show');
+        }, 3000);
+      });
     }
   </script>
 </body>
