@@ -358,10 +358,16 @@
 
     .hn-pricing-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      max-width: 600px;
+      grid-template-columns: 1fr 1fr;
+      max-width: 960px;
       margin: 0 auto;
       gap: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .hn-pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+      }
     }
     .hn-pricing-card {
       display: flex;
@@ -827,6 +833,24 @@
               <li>Groups of up to 20 welcome — bring your own extra sleeping arrangements</li>
               <li>Entire site exclusively yours</li>
               <li>No booking fees when booking direct</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Add-on Card -->
+        <div class="hn-card hn-pricing-card">
+          <div>
+            <span class="hn-label">Optional Add-On</span>
+            <h3>Extra Glamping Tents</h3>
+            <div class="hn-price-large">£250 - £300<span style="font-size: 1rem; color: var(--bark);"> / stay</span></div>
+            <ul class="hn-price-details">
+              <li style="font-weight: 600; color: var(--sage);">Add up to 2 extra tents (sleeps up to 18 people total)</li>
+              <li>Extra tent with 1 mattress: £250 (sleeps 2 more people)</li>
+              <li>Extra tent with 2 mattresses: £300 (sleeps 4 more people)</li>
+              <li>Flat rate is per stay, not per night, added to the booking fee</li>
+              <li>Mattresses on the floor with full bedding included (no raised frames)</li>
+              <li>Perfect for large groups to keep everyone in glamping tents</li>
+              <li>Eliminates the need for guests to bring extra tents or airbeds</li>
             </ul>
           </div>
         </div>
