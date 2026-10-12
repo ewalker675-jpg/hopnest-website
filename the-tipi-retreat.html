@@ -279,6 +279,32 @@
       background: rgba(0, 0, 0, 0.35);
       z-index: 1;
     }
+
+    .hn-sub-hero-banner {
+      background: var(--linen);
+      border-bottom: 1px solid var(--mist);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+    .hn-sub-hero-banner .hn-container {
+      max-width: 850px;
+    }
+    .hn-sub-hero-banner .hn-label {
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .hn-sub-hero-banner p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--bark);
+      font-weight: 300;
+      margin: 0;
+    }
     .hn-hero-content {
       position: relative;
       z-index: 2;
@@ -504,13 +530,20 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hn-hero" style="min-height: 50vh;">
+  <section class="hn-hero" style="min-height: 45vh;">
     <div class="hn-hero-bg" style="background-image: url('/images/tipi head photo.png');"></div>
     <div class="hn-hero-overlay"></div>
     <div class="hn-container hn-hero-content">
-      <span class="hn-label" style="color: var(--amber);">Exclusive Group Glamping</span>
       <h1>The Bell Tent Retreat</h1>
-      <p>Escape to our five premium furnished bell tents in a private meadow. King-size beds, cosy settings and a peaceful organic farm setting near Worcester.</p>
+      <a href="/bell-tents.html#book" class="hn-btn" style="margin-top: 1.5rem; display: inline-block;">Check Availability &amp; Book</a>
+    </div>
+  </section>
+
+  <!-- Sub-Hero Description Banner -->
+  <section class="hn-sub-hero-banner hn-animate-fade">
+    <div class="hn-container">
+      <span class="hn-label">EXCLUSIVE SITE HIRE · PRIVATE MEADOW</span>
+      <p>Escape to our five premium furnished bell tents in a private meadow. King-size beds, wood-fired hot tub, stretch tent, fire pit, and a peaceful organic farm setting near Worcester.</p>
     </div>
   </section>
 

@@ -248,6 +248,32 @@
       100% { transform: scale(1.06); }
     }
 
+    .hn-sub-hero-banner {
+      background: var(--linen);
+      border-bottom: 1px solid var(--mist);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+    .hn-sub-hero-banner .hn-container {
+      max-width: 850px;
+    }
+    .hn-sub-hero-banner .hn-label {
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .hn-sub-hero-banner p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--bark);
+      font-weight: 300;
+      margin: 0;
+    }
+
     /* FAQ accordion styling */
     .hn-faq-item {
       border-bottom: 1px solid var(--mist);
@@ -560,13 +586,19 @@
   </header>
 
   <!-- Page Header -->
-  <section class="hn-page-header" style="color: white; border-bottom: none; padding: 6rem 0;">
-    <div class="hn-page-header-bg" style="background-image: url('/images/stretch tent overhead.jpg');"></div>
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.45); z-index: 1;"></div>
+  <section class="hn-page-header" style="position: relative; color: white; border-bottom: none; padding: 4.5rem 0; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div class="hn-page-header-bg" style="position: absolute; inset: 0; background-image: url('/images/stretch tent overhead.jpg'); background-size: cover; background-position: center; z-index: 0;"></div>
+    <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1;"></div>
     <div class="hn-container" style="position: relative; z-index: 2;">
-      <span class="hn-label" style="color: var(--amber);">Questions & Answers</span>
-      <h1 style="color: white; margin-bottom: 0.5rem;">Frequently asked questions</h1>
-      <p style="font-size: 1.2rem; font-weight: 300; line-height: 1.6; color: white; margin-bottom: 0;">Everything you need to know about exclusive glamping and group retreats at Hopnest.</p>
+      <h1 style="color: white; margin-bottom: 0;">Frequently asked questions</h1>
+    </div>
+  </section>
+
+  <!-- Sub-Hero Description Banner -->
+  <section class="hn-sub-hero-banner hn-animate-fade">
+    <div class="hn-container">
+      <span class="hn-label">QUESTIONS &amp; ANSWERS</span>
+      <p>Everything you need to know about exclusive glamping and group retreats at Hopnest Retreats.</p>
     </div>
   </section>
 

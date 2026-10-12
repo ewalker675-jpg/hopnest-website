@@ -93,6 +93,32 @@
     .hn-hero-content h1 { color: white; margin-bottom: 1rem; }
     .hn-hero-content p { font-size: 1.2rem; font-weight: 300; margin-bottom: 0; line-height: 1.5; }
 
+    .hn-sub-hero-banner {
+      background: var(--linen);
+      border-bottom: 1px solid var(--mist);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+    .hn-sub-hero-banner .hn-container {
+      max-width: 850px;
+    }
+    .hn-sub-hero-banner .hn-label {
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .hn-sub-hero-banner p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--bark);
+      font-weight: 300;
+      margin: 0;
+    }
+
     .hn-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
     @media (max-width: 768px) { .hn-grid-2 { grid-template-columns: 1fr; gap: 2rem; } }
 
@@ -217,13 +243,20 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hn-hero" style="min-height: 55vh;">
+  <section class="hn-hero" style="min-height: 45vh;">
     <div class="hn-hero-bg" style="background-image: url('/images/tipi head photo.png');"></div>
     <div class="hn-hero-overlay"></div>
     <div class="hn-container hn-hero-content">
-      <span class="hn-label" style="color: var(--amber);">Hen Party Glamping · Worcestershire</span>
-      <h1>Hen Party Glamping in the Worcestershire Countryside</h1>
-      <p>A fully private meadow on a working organic farm, five furnished bell tents, and exclusive use of the entire site. No other guests, no strangers, just the people who matter most.</p>
+      <h1>Hen Party Glamping in Worcestershire</h1>
+      <a href="/bell-tents.html#book" class="hn-btn" style="margin-top: 1.5rem; display: inline-block;">Book Your Hen Party</a>
+    </div>
+  </section>
+
+  <!-- Sub-Hero Description Banner -->
+  <section class="hn-sub-hero-banner hn-animate-fade">
+    <div class="hn-container">
+      <span class="hn-label">EXCLUSIVE SITE HIRE · PRIVATE MEADOW</span>
+      <p>A fully private meadow on a working organic farm, five furnished bell tents, wood-fired hot tub, and exclusive use of the entire site. No other guests, no strangers, just the people who matter most.</p>
     </div>
   </section>
 

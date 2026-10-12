@@ -58,6 +58,32 @@
     .hn-hero-content h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:600;line-height:1.15}
     .hn-hero-content p{font-size:1.15rem;max-width:560px;opacity:0.92}
     .hn-label{font-family:'Open Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber)}
+    .hn-sub-hero-banner {
+      background: var(--linen);
+      border-bottom: 1px solid var(--mist);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+    .hn-sub-hero-banner .hn-container {
+      max-width: 850px;
+    }
+    .hn-sub-hero-banner .hn-label {
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .hn-sub-hero-banner p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--bark);
+      font-weight: 300;
+      margin: 0;
+    }
+
     .hn-trust-bar{background:var(--bark);color:rgba(255,255,255,0.85);padding:0.85rem 0;text-align:center;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase}
     .hn-trust-bar span{margin:0 1.25rem}
     .hn-experience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem}
@@ -120,14 +146,20 @@
     </div>
   </header>
 
-  <section class="hn-hero">
+  <section class="hn-hero" style="min-height: 45vh;">
     <div class="hn-hero-bg" style="background-image:url('/images/campsite-field-1.jpg');"></div>
     <div class="hn-hero-overlay"></div>
     <div class="hn-container hn-hero-content">
-      <span class="hn-label" style="color:var(--amber)">Exclusive Campsite Hire &middot; 29 &#9733;&#9733;&#9733;&#9733;&#9733; Reviews</span>
       <h1>Your Own Private Campsite</h1>
-      <p>Entirely yours. No other guests. No strangers. Just your group, a fire, and wide open Worcestershire countryside.</p>
       <a href="#book" style="display:inline-block;background:var(--amber);color:white;padding:0.85rem 2.25rem;font-family:'Open Sans',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;margin-top:1rem;transition:opacity 0.2s" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Check Availability &amp; Book</a>
+    </div>
+  </section>
+
+  <!-- Sub-Hero Description Banner -->
+  <section class="hn-sub-hero-banner hn-animate-fade">
+    <div class="hn-container">
+      <span class="hn-label">Exclusive Campsite Hire · Private 1.5 Acre Field</span>
+      <p>Hire our private 1.5 acre campsite exclusively for your group. With space for up to 18 people, the entire site is yours with no other guests. Includes portaloos, outdoor shower, secure lockable indoor storage space, and stone fire area.</p>
     </div>
   </section>
 

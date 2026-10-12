@@ -273,6 +273,32 @@
       0% { transform: scale(1); }
       100% { transform: scale(1.06); }
     }
+
+    .hn-sub-hero-banner {
+      background: var(--linen);
+      border-bottom: 1px solid var(--mist);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+    .hn-sub-hero-banner .hn-container {
+      max-width: 850px;
+    }
+    .hn-sub-hero-banner .hn-label {
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .hn-sub-hero-banner p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--bark);
+      font-weight: 300;
+      margin: 0;
+    }
     .hn-hero-overlay {
       position: absolute;
       top: 0;
@@ -511,13 +537,20 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hn-hero" style="min-height: 50vh;">
+  <section class="hn-hero" style="min-height: 45vh;">
     <div class="hn-hero-bg" style="background-image: url('/images/tipi head photo.png');"></div>
     <div class="hn-hero-overlay"></div>
     <div class="hn-container hn-hero-content">
-      <span class="hn-label" style="color: var(--amber);">Spacious Group Stays</span>
       <h1>Large Group Glamping UK</h1>
-      <p>Luxury private glamping for 10 people or more near Martley, Worcestershire. Campfire cooking, and organic valley views.</p>
+      <a href="/bell-tents.html#book" class="hn-btn" style="margin-top: 1.5rem; display: inline-block;">Book Large Group Stay</a>
+    </div>
+  </section>
+
+  <!-- Sub-Hero Description Banner -->
+  <section class="hn-sub-hero-banner hn-animate-fade">
+    <div class="hn-container">
+      <span class="hn-label">EXCLUSIVE SITE HIRE · SPACIOUS GROUP STAYS</span>
+      <p>Luxury private glamping for groups of up to 18 people near Martley, Worcestershire. Five furnished bell tents, wood-fired hot tub, stretch tent, fire pit, and organic valley views.</p>
     </div>
   </section>
 

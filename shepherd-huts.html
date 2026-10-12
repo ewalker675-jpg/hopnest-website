@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -299,6 +299,30 @@
       position: absolute;
       left: 0;
       top: -0.1rem;
+    .hn-sub-hero-banner {
+      background: var(--linen);
+      border-bottom: 1px solid var(--mist);
+      padding: 2.25rem 0;
+      text-align: center;
+    }
+    .hn-sub-hero-banner .hn-container {
+      max-width: 850px;
+    }
+    .hn-sub-hero-banner .hn-label {
+      color: var(--sage);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .hn-sub-hero-banner p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--bark);
+      font-weight: 300;
+      margin: 0;
     }
 
     .hn-pricing-box {
@@ -693,11 +717,17 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hn-hero">
+  <section class="hn-hero" style="min-height: 40vh; background: var(--bark); color: white; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 0;">
     <div class="hn-container">
-      <span class="hn-label" style="color: var(--amber);">opening late Summer 2026</span>
-      <h1>Skylark & Nuthatch</h1>
-      <p>Two shepherd huts above the Teme Valley. opening late Summer 2026.</p>
+      <h1 style="color: white; margin-bottom: 0;">Skylark &amp; Nuthatch</h1>
+    </div>
+  </section>
+
+  <!-- Sub-Hero Description Banner -->
+  <section class="hn-sub-hero-banner hn-animate-fade">
+    <div class="hn-container">
+      <span class="hn-label">COMING LATE SUMMER 2026</span>
+      <p>Two private, luxury shepherd huts overlooking the Teme Valley. Complete privacy with no shared access and no overlapping sightlines.</p>
     </div>
   </section>
 
