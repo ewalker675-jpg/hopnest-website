@@ -734,6 +734,11 @@
     .hn-hero-content h1{text-shadow:0 2px 10px rgba(0,0,0,0.45)}
     .hn-booking-calendar{background:white;border:1px solid var(--mist);padding:1.25rem;margin:0 auto 2rem;max-width:760px;text-align:left}
     .hn-booking-calendar[hidden]{display:none}
+    .hn-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;align-items:start}
+    .hn-review-card{background:white;border:1px solid var(--mist);padding:1.75rem}
+    .hn-review-stars{color:var(--amber);margin-bottom:0.75rem}
+    .hn-review-text{font-size:0.93rem;line-height:1.7;font-style:italic;margin-bottom:1rem}
+    .hn-review-author{font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--sage)}
     /* FAQ accordion */
     .hn-faq-item{background:white;border:1px solid var(--mist);margin-bottom:0.85rem;border-radius:4px;overflow:hidden}
     .hn-faq-item[open]{border-color:var(--sage)}
@@ -1179,6 +1184,33 @@
              style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease;"
              onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
       </div>
+    </div>
+  </section>
+
+  <!-- Reviews: real Airbnb reviews from the Bell Tent Retreat listing, copied word for word. Do not edit. -->
+  <section class="hn-section hn-animate-fade" id="reviews" style="background: var(--linen);">
+    <div class="hn-container">
+      <span class="hn-label">Guest reviews</span>
+      <h2 style="margin-top: 0.4rem;">What guests say</h2>
+      <p style="max-width: 680px;">We're rated 5.0 on Airbnb. Here's what some of our guests have said:</p>
+      <div class="hn-reviews-grid">
+        <div class="hn-review-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"Wow, what a stunning location! We had the perfect 3 night stay here with our friends (a group of 3 families, including 5 kids, from 18 months to 5 years old). The whole site was just beautiful, and so peaceful! The children had an absolute blast biking and running round the huge field, playing badminton and toasting marshmallows in the fire pit. They didn’t want to leave!<br>In terms of facilities, the kitchen area was great and well stocked with equipment (a gas bbq, hob, fridge and loads of cooking utensils).<br>The glamping tents were gorgeous, and super comfortable, with king size beds and blankets. The toilets and washing facilities were all spotless.<br>Elizabeth was such a lovely host - always on hand to answer any questions before and during our stay.<br>Thank you for such a wonderful stay, we will be back!"</p>
+          <p class="hn-review-author">Lucy, August 2026</p>
+        </div>
+        <div class="hn-review-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"We used Hopnest for a family gathering of 16 people aged 7 to 67 (plus 6 dogs!) and had the best time. We planned to walk to the nearby pub but didn’t leave the field in the end, as we were having too much fun. The covered kitchen is well kitted out with everything you need. On the first night we all ate around a large dining table, whilst the second night was spent around the camp fire. The solar charging station was great for keeping phones topped up. The shower was powerful and strong and the eco toilets were brilliant and fresh smelling. The beds were comfy and teepees spacious. There was a washing line and volleyball/badminton net. We were able to take our own camper van and pay a surcharge to accommodate additional people. Children slept on airbeds in the teepees.<br>Elizabeth was friendly and helpful throughout our stay. We are already planning our next visit to Hopnest."</p>
+          <p class="hn-review-author">Kelly, August 2026</p>
+        </div>
+        <div class="hn-review-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"Perfect for our needs as we are a family who converged from all directions. An elegant experience for those used to “just camping”. Highly recommend and will come back again"</p>
+          <p class="hn-review-author">Ian, August 2026</p>
+        </div>
+      </div>
+      <p style="margin-top: 2rem;"><a href="https://www.airbnb.co.uk/rooms/1688384559808569892/reviews" target="_blank" rel="noopener" style="color: var(--sage); font-weight: 600;">Read all our reviews on Airbnb →</a></p>
     </div>
   </section>
 
