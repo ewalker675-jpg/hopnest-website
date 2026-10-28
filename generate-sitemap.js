@@ -18,7 +18,6 @@ const priorities = {
   '/stag-do-glamping': '0.8',
   '/large-group-glamping': '0.7',
   '/group-glamping-hot-tub': '0.7',
-  '/shepherd-huts': '0.7',
   '/about': '0.7',
   '/blog/large-group-glamping-uk-guide': '0.7'
 };
@@ -35,7 +34,6 @@ const pages = [
   '/stag-do-glamping',
   '/large-group-glamping',
   '/group-glamping-hot-tub',
-  '/shepherd-huts',
   '/about',
   '/faq',
   '/local-guide',

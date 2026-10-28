@@ -38,9 +38,9 @@
   status = 301
 
 [[redirects]]
-  from = "/shepherd-huts"
-  to = "/shepherd-huts.html"
-  status = 200
+  from = "/shepherd-huts*"
+  to = "/bell-tents"
+  status = 301
 
 [[redirects]]
   from = "/about"
