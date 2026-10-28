@@ -730,10 +730,10 @@
     /* Hero eyebrow */
     .hn-hero-eyebrow{color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,0.45)}
     /* Booking calendar slot: shown once a Lodgify widget is pasted in and the hidden attribute removed */
+    .hn-hero-sub{font-size:1.2rem;max-width:620px;color:#fff;font-weight:400;text-shadow:0 1px 4px rgba(0,0,0,0.7),0 0 18px rgba(0,0,0,0.45)}
+    .hn-hero-content h1{text-shadow:0 2px 10px rgba(0,0,0,0.45)}
     .hn-booking-calendar{background:white;border:1px solid var(--mist);padding:1.25rem;margin:0 auto 2rem;max-width:760px;text-align:left}
     .hn-booking-calendar[hidden]{display:none}
-    .hn-price-box{display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem 2rem;background:white;border:1px solid var(--mist);padding:1.25rem 1.5rem;margin:0 auto 2rem;max-width:640px;font-size:0.95rem}
-    .hn-price-box strong{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;display:block}
     /* FAQ accordion */
     .hn-faq-item{background:white;border:1px solid var(--mist);margin-bottom:0.85rem;border-radius:4px;overflow:hidden}
     .hn-faq-item[open]{border-color:var(--sage)}
@@ -745,7 +745,6 @@
   </style>
   
   <!-- Structured data: keep the FAQPage answers word for word in sync with the visible FAQ -->
-  <!-- TODO: Betty to confirm prices (£500/£450 + £70 cleaning) -->
   <script type="application/ld+json">
 [
   {
@@ -835,22 +834,6 @@
         "name": "Parking on site",
         "value": true
       }
-    ],
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "name": "Weekend rate",
-        "price": "500",
-        "priceCurrency": "GBP",
-        "description": "Per night, Friday and Saturday, whole site. Plus £70 cleaning fee per stay."
-      },
-      {
-        "@type": "Offer",
-        "name": "Weekday rate",
-        "price": "450",
-        "priceCurrency": "GBP",
-        "description": "Per night, Sunday to Thursday, whole site. Plus £70 cleaning fee per stay."
-      }
     ]
   },
   {
@@ -863,7 +846,7 @@
         "name": "How many people does the Bell Tent Retreat sleep?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ten people sleep in king-size beds, two in each of the five bell tents, with bedding provided. You're welcome to bring air beds or camp beds if there are more of you. Just let me know your numbers when you book."
+          "text": "Ten people sleep in king-size beds, two in each of the five bell tents, with bedding provided. You're welcome to bring air beds, camp beds or extra tents if there are more of you. Just let me know your numbers when you book."
         }
       },
       {
@@ -880,14 +863,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. There's a wood-fired hot tub on site for your group to use during your stay."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "£500 a night on Fridays and Saturdays and £450 a night from Sunday to Thursday, plus a £70 cleaning fee per stay. That's for the whole site, with no per-person charge."
         }
       },
       {
@@ -954,7 +929,7 @@
     <div class="hn-container hn-hero-content">
       <span class="hn-hero-eyebrow">The Bell Tent Retreat · Martley, Worcestershire</span>
       <h1>Private bell tent glamping in Worcestershire</h1>
-      <p style="font-size:1.15rem;max-width:620px;opacity:0.95">Five furnished bell tents, a wood-fired hot tub and a meadow that's all yours.</p>
+      <p class="hn-hero-sub">Five furnished bell tents, a wood-fired hot tub and a meadow that's all yours.</p>
       <a href="#book" class="hn-btn" style="margin-top: 1rem; display: inline-block;">Check availability</a>
     </div>
   </section>
@@ -962,7 +937,7 @@
   <!-- Sub-Hero Description Banner -->
   <section class="hn-sub-hero-banner hn-animate-fade">
     <div class="hn-container">
-      <p>Our bell tents sit in around three acres of meadow on our family's organic farm, just outside Martley. When you book, the whole site is yours: no other guests, nothing shared, just your group, the tents and the fire.</p>
+      <p>Our bell tents sit in around three acres of meadow on our family's organic farm near Martley. When you book, the whole site is yours: no other guests, nothing shared, just your group, the tents and the fire.</p>
     </div>
   </section>
 
@@ -974,14 +949,6 @@
       <p style="font-size: 1.05rem; line-height: 1.8; color: var(--bark); margin-bottom: 2rem;">
         Online booking is coming soon. For now, you can book through Airbnb, or message me directly on WhatsApp or email, which works out a little cheaper. Airbnb always shows the latest dates, and I'll block yours out as soon as we've sorted it.<br><span style="font-style:italic">Elizabeth</span>
       </p>
-
-      <!-- Prices. TODO: Betty to confirm before go-live -->
-      <div class="hn-price-box" id="pricing">
-        <div><strong>£500</strong>a night, Fri &amp; Sat</div>
-        <div><strong>£450</strong>a night, Sun to Thu</div>
-        <div><strong>£70</strong>cleaning, per stay</div>
-        <div style="flex-basis:100%;text-align:center;opacity:0.8;font-size:0.88rem">Whole site, no per-person charge.</div>
-      </div>
 
       <!--
         BOOKING CALENDAR SLOT (Lodgify)
@@ -1028,8 +995,9 @@
   <section class="hn-section hn-animate-fade">
     <div class="hn-container">
       <h2>What's included</h2>
-      <p style="margin-bottom: 1rem; max-width: 800px;">Everything here is set up for groups to cook, eat and unwind together. Ten of you sleep in proper king-size beds, two to a tent, and if there are more of you, you're welcome to bring air beds.</p>
-      <p style="margin-bottom: 3rem; max-width: 800px;">We've farmed organically here since 1998, and the tents sit in a quiet corner of the farm with plenty of room for games, wandering and doing very little.</p>
+      <p style="margin-bottom: 1rem; max-width: 800px;">Everything here is set up for groups to cook, eat and unwind together. Ten of you sleep in proper king-size beds, two to a tent, and if there are more of you, you're welcome to bring air beds and extra tents.</p>
+      <p style="margin-bottom: 1.5rem; max-width: 800px;">We've farmed organically here since 1998, and the tents sit in a quiet corner of the farm with plenty of room for games, wandering and doing very little.</p>
+      <p style="margin-bottom: 3rem; max-width: 800px; background: var(--linen); border-left: 3px solid var(--sage); padding: 1rem 1.25rem; font-size: 0.93rem;">A quick note on the photos: we've since moved the bell tents to a different field on the farm, a little further from the river to keep everyone safe. The new field is just as beautiful, quiet and private.</p>
       
       <div class="hn-experience-grid">
         <div>
@@ -1221,7 +1189,7 @@
       <h2 style="margin-top: 0.4rem; margin-bottom: 1.75rem;">Questions about the Bell Tent Retreat</h2>
       <details class="hn-faq-item">
         <summary class="hn-faq-question"><span>How many people does the Bell Tent Retreat sleep?</span><span class="hn-faq-icon">+</span></summary>
-        <div class="hn-faq-answer"><p>Ten people sleep in king-size beds, two in each of the five bell tents, with bedding provided. You're welcome to bring air beds or camp beds if there are more of you. Just let me know your numbers when you book.</p></div>
+        <div class="hn-faq-answer"><p>Ten people sleep in king-size beds, two in each of the five bell tents, with bedding provided. You're welcome to bring air beds, camp beds or extra tents if there are more of you. Just let me know your numbers when you book.</p></div>
       </details>
       <details class="hn-faq-item">
         <summary class="hn-faq-question"><span>Is the whole site private?</span><span class="hn-faq-icon">+</span></summary>
@@ -1230,10 +1198,6 @@
       <details class="hn-faq-item">
         <summary class="hn-faq-question"><span>Is there a hot tub?</span><span class="hn-faq-icon">+</span></summary>
         <div class="hn-faq-answer"><p>Yes. There's a wood-fired hot tub on site for your group to use during your stay.</p></div>
-      </details>
-      <details class="hn-faq-item">
-        <summary class="hn-faq-question"><span>How much does it cost?</span><span class="hn-faq-icon">+</span></summary>
-        <div class="hn-faq-answer"><p>£500 a night on Fridays and Saturdays and £450 a night from Sunday to Thursday, plus a £70 cleaning fee per stay. That's for the whole site, with no per-person charge.</p></div>
       </details>
       <details class="hn-faq-item">
         <summary class="hn-faq-question"><span>Is there electricity?</span><span class="hn-faq-icon">+</span></summary>
@@ -1263,8 +1227,8 @@
     </div>
   </section>
 
-  <!-- House Rules Section -->
-  <section class="hn-section hn-animate-fade" style="background: var(--parchment);">
+  <!-- House Rules Section (id="pricing" kept because footers across the site link to it) -->
+  <section class="hn-section hn-animate-fade" id="pricing" style="background: var(--parchment);">
     <div class="hn-container">
       <h2>Good to know</h2>
       <ul class="hn-experience-list" style="margin-top: 1rem; max-width: 600px;">
