@@ -7,14 +7,16 @@
   <meta name="description" content="A cosy shepherd hut for two on an organic farm in the Teme Valley, Worcestershire. Valley views, king bed, kitchen, shower inside and a fire pit. From 1 night.">
   <link rel="canonical" href="https://www.hopnestretreats.co.uk/shepherd-huts">
 
-  <!-- Open Graph (add og:image once hut photos are in) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hopnest Retreats">
   <meta property="og:title" content="Shepherd Hut Worcestershire | Cosy Hut for Two near Martley | Hopnest">
   <meta property="og:description" content="A cosy shepherd hut for two on an organic farm in the Teme Valley, Worcestershire. Valley views, king bed, kitchen, shower inside and a fire pit. From 1 night.">
   <meta property="og:url" content="https://www.hopnestretreats.co.uk/shepherd-huts">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://www.hopnestretreats.co.uk/images/shepherd-hut-outside-seating.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Shepherd Hut Worcestershire | Cosy Hut for Two near Martley | Hopnest">
+  <meta name="twitter:image" content="https://www.hopnestretreats.co.uk/images/shepherd-hut-outside-seating.jpg">
   <meta name="twitter:description" content="A cosy shepherd hut for two on an organic farm in the Teme Valley, Worcestershire. Valley views, king bed, kitchen, shower inside and a fire pit. From 1 night.">
 
   <!-- Favicon -->
@@ -159,6 +161,8 @@
     .hn-photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
     .hn-photo-grid div { overflow: hidden; aspect-ratio: 4/5; }
     .hn-photo-grid img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .hn-photo-grid-3 { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 768px) { .hn-photo-grid-3 { grid-template-columns: 1fr 1fr; } }
     .hn-photo-grid div:hover img { transform: scale(1.04); }
     @media (max-width: 768px) { .hn-photo-grid { grid-template-columns: 1fr 1fr; } }
     .hn-field-note { background: var(--linen); border-left: 3px solid var(--sage); padding: 1rem 1.25rem; font-size: 0.93rem; line-height: 1.7; margin-bottom: 1.5rem; }
@@ -301,7 +305,13 @@
       "ratingValue": "5.0",
       "reviewCount": "5",
       "bestRating": "5"
-    }
+    },
+    "image": [
+      "https://www.hopnestretreats.co.uk/images/shepherd-hut-outside-seating.jpg",
+      "https://www.hopnestretreats.co.uk/images/shepherd-hut-king-size-bed.jpg",
+      "https://www.hopnestretreats.co.uk/images/shepherd-hut-kitchen.jpg",
+      "https://www.hopnestretreats.co.uk/images/shepherd-hut-sunset-glass-of-wine.jpg"
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -390,21 +400,42 @@
     </div>
   </header>
 
-  <!-- Hero (photos to be added later) -->
-  <section class="hn-hero-plain">
-    <div class="hn-container">
-      <span class="hn-label">The Shepherd Hut · Near Martley, Worcestershire</span>
+  <!-- Hero -->
+  <section class="hn-hero" style="min-height: 60vh;">
+    <div class="hn-hero-bg" style="background-image: url('/images/shepherd-hut-outside-seating.jpg'); background-position: center 55%;"></div>
+    <div class="hn-hero-overlay"></div>
+    <div class="hn-container hn-hero-content">
+      <span class="hn-hero-eyebrow">The Shepherd Hut · Near Martley, Worcestershire</span>
       <h1>A shepherd hut in Worcestershire</h1>
       <p>A cosy little hut for two on our organic farm in the Teme Valley. Stay for one night or a few.</p>
-      <a href="#book" class="hn-btn" style="margin-top: 1.75rem; display: inline-block;">Check availability</a>
+      <a href="#book" class="hn-btn" style="margin-top: 1.5rem; display: inline-block;">Check availability</a>
     </div>
   </section>
 
   <!-- Intro -->
-  <section class="hn-section hn-animate-fade" style="background: white; padding: 3.5rem 0;">
-    <div class="hn-container" style="max-width: 760px; text-align: center;">
-      <p style="font-size: 1.1rem; line-height: 1.85; margin-bottom: 1rem;">Sit back with a glass of wine while the sun sets across the valley. The hut is tucked away on our organic farm in the Teme Valley, just 20 minutes from Worcester, and it really does feel like a world of your own.</p>
-      <p style="font-size: 1.1rem; line-height: 1.85;">Inside there's a big comfy king-size bed, your own shower and loo, and a little kitchen so you can cook for yourselves. Outside there's a fire pit with the firewood ready for you, and a spot for two to sit and watch the evening go by. The Worcestershire Way walking route runs nearby too, if you fancy a good walk.</p>
+  <section class="hn-section hn-animate-fade" style="background: white;">
+    <div class="hn-container">
+      <div class="hn-grid-2" style="align-items: center; gap: 4rem;">
+        <div>
+          <p style="font-size: 1.1rem; line-height: 1.85; margin-bottom: 1rem;">Sit back with a glass of wine while the sun sets across the valley. The hut is tucked away on our organic farm in the Teme Valley, just 20 minutes from Worcester, and it really does feel like a world of your own.</p>
+          <p style="font-size: 1.1rem; line-height: 1.85;">Inside there's a big comfy king-size bed, your own shower and loo, and a little kitchen so you can cook for yourselves. Outside there's a fire pit with the firewood ready for you, and a spot for two to sit and watch the evening go by. The Worcestershire Way walking route runs nearby too, if you fancy a good walk.</p>
+        </div>
+        <div>
+          <img src="/images/shepherd-hut-sunset-glass-of-wine.jpg" alt="Sitting outside the shepherd hut with a glass of wine as the sun sets over the Teme Valley" loading="lazy" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photos of the hut -->
+  <section class="hn-animate-fade" style="padding: 0;">
+    <div class="hn-photo-grid hn-photo-grid-3">
+      <div><img src="/images/shepherd-hut-king-size-bed.jpg" alt="King-size bed with towels inside the shepherd hut" loading="lazy"></div>
+      <div><img src="/images/shepherd-hut-bed-window-view.jpg" alt="View of the valley from the window above the bed" loading="lazy"></div>
+      <div><img src="/images/shepherd-hut-kitchen.jpg" alt="Little kitchen inside the shepherd hut with gas hob, sink, kettle and toaster" loading="lazy"></div>
+      <div><img src="/images/shepherd-hut-kitchen-valley-view.jpg" alt="Kitchen worktop by the window looking out over the fields and Teme Valley" loading="lazy"></div>
+      <div><img src="/images/shepherd-hut-shower-room.jpg" alt="Shower room inside the shepherd hut" loading="lazy"></div>
+      <div><img src="/images/shepherd-hut-bathroom-sink.jpg" alt="Bathroom sink with mirror and towels in the shepherd hut" loading="lazy"></div>
     </div>
   </section>
 
