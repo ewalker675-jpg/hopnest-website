@@ -7,6 +7,7 @@ const domain = 'https://www.hopnestretreats.co.uk';
 const priorities = {
   '/': '1.0',
   '/bell-tents': '0.9',
+  '/shepherd-huts': '0.9',
   '/exclusive-campsite': '0.9',
   '/exclusive-hire-glamping': '0.9',
   '/exclusive-group-glamping': '0.9',
@@ -25,6 +26,7 @@ const priorities = {
 const pages = [
   '/',
   '/bell-tents',
+  '/shepherd-huts',
   '/exclusive-campsite',
   '/exclusive-hire-glamping',
   '/exclusive-group-glamping',

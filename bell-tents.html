@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bell Tent Glamping Worcestershire | Exclusive Private Retreat | Hopnest Retreats</title>
-  <meta name="description" content="Five furnished bell tents in Worcestershire. Exclusive private glamping with king-size beds, outdoor kitchen, fire pit and private meadow on a working organic farm. Sleeps 10 on beds (guests welcome to bring extra bedding for more).">
+  <title>Bell Tent Glamping Worcestershire | Private Group Retreat with Hot Tub | Hopnest</title>
+  <meta name="description" content="Five furnished bell tents and a wood-fired hot tub near Worcester. Sleeps 10 in king-size beds and up to 20 with extra tents. The whole site is yours, no other guests.">
   <link rel="canonical" href="https://www.hopnestretreats.co.uk/bell-tents">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Hopnest Retreats">
-  <meta property="og:title" content="Bell Tent Glamping Worcestershire | Exclusive Private Retreat | Hopnest Retreats">
-  <meta property="og:description" content="Five furnished bell tents in Worcestershire. Exclusive private glamping with king-size beds, outdoor kitchen, fire pit and private meadow on a working organic farm. Sleeps 10 on beds (guests welcome to bring extra bedding for more).">
+  <meta property="og:title" content="Bell Tent Glamping Worcestershire | Private Group Retreat with Hot Tub | Hopnest">
+  <meta property="og:description" content="Five furnished bell tents and a wood-fired hot tub near Worcester. Sleeps 10 in king-size beds and up to 20 with extra tents. The whole site is yours, no other guests.">
   <meta property="og:url" content="https://www.hopnestretreats.co.uk/bell-tents">
-  <meta property="og:image" content="https://www.hopnestretreats.co.uk/images/tipis.jpg">
+  <meta property="og:image" content="https://www.hopnestretreats.co.uk/images/bell%20tent%20from%20outside.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bell Tent Glamping Worcestershire | Exclusive Private Retreat | Hopnest Retreats">
-  <meta name="twitter:description" content="Five furnished bell tents in Worcestershire. Exclusive private glamping with king-size beds, outdoor kitchen, fire pit and private meadow on a working organic farm. Sleeps 10 on beds (guests welcome to bring extra bedding for more).">
-  <meta name="twitter:image" content="https://www.hopnestretreats.co.uk/images/tipis.jpg">
+  <meta name="twitter:title" content="Bell Tent Glamping Worcestershire | Private Group Retreat with Hot Tub | Hopnest">
+  <meta name="twitter:description" content="Five furnished bell tents and a wood-fired hot tub near Worcester. Sleeps 10 in king-size beds and up to 20 with extra tents. The whole site is yours, no other guests.">
+  <meta name="twitter:image" content="https://www.hopnestretreats.co.uk/images/bell%20tent%20from%20outside.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -727,46 +727,185 @@
       resize: vertical;
       min-height: 80px;
     }
+    /* Hero eyebrow */
+    .hn-hero-eyebrow{color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,0.45)}
+    /* Booking calendar slot: shown once a Lodgify widget is pasted in and the hidden attribute removed */
+    .hn-hero-sub{font-size:1.2rem;max-width:620px;color:#fff;font-weight:400;text-shadow:0 1px 4px rgba(0,0,0,0.7),0 0 18px rgba(0,0,0,0.45)}
+    .hn-hero-content h1{text-shadow:0 2px 10px rgba(0,0,0,0.45)}
+    .hn-booking-calendar{margin:0 auto 2rem;max-width:940px;text-align:left}
+    #book > .hn-container > p{max-width:760px;margin-left:auto;margin-right:auto}
+    .hn-booking-calendar[hidden]{display:none}
+    .hn-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;align-items:start}
+    .hn-review-card{background:white;border:1px solid var(--mist);padding:1.75rem}
+    .hn-review-stars{color:var(--amber);margin-bottom:0.75rem}
+    .hn-review-text{font-size:0.93rem;line-height:1.7;font-style:italic;margin-bottom:1rem}
+    .hn-review-author{font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--sage)}
+    /* FAQ accordion */
+    .hn-faq-item{background:white;border:1px solid var(--mist);margin-bottom:0.85rem;border-radius:4px;overflow:hidden}
+    .hn-faq-item[open]{border-color:var(--sage)}
+    .hn-faq-question{padding:1.15rem 1.4rem;font-weight:600;font-size:1.05rem;color:var(--bark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+    .hn-faq-question::-webkit-details-marker{display:none}
+    .hn-faq-icon{font-size:1.35rem;color:var(--sage);transition:transform 0.25s ease;margin-left:1rem}
+    .hn-faq-item[open] .hn-faq-icon{transform:rotate(45deg)}
+    .hn-faq-answer{padding:1rem 1.4rem 1.35rem;border-top:1px solid rgba(214,207,196,0.35);font-size:0.96rem;line-height:1.75}
   </style>
   
-  <!-- Additional JSON-LD schema for accommodation -->
+  <!-- Structured data: keep the FAQPage answers word for word in sync with the visible FAQ -->
   <script type="application/ld+json">
+[
   {
     "@context": "https://schema.org",
-    "@type": "Accommodation",
-    "name": "Hopnest Bell Tent Retreat",
-    "description": "Five furnished bell tents in a private meadow on a working organic farm, exclusively yours. No other guests on site. King beds, covered communal area, fire pit, hot shower and two loos. Near Martley, Worcestershire.",
-    "url": "https://www.hopnestretreats.co.uk/bell-tents",
-    "numberOfRooms": 5,
-    "occupancy": {
-      "@type": "QuantitativeValue",
-      "maxValue": 20
-    },
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "King size bed", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Bedding provided", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Fire pit", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Hot shower", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Equipped kitchen", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Dogs allowed", "value": true }
+    "@type": [
+      "Campground",
+      "LodgingBusiness"
     ],
-    "offers": [
+    "@id": "https://www.hopnestretreats.co.uk/bell-tents#retreat",
+    "name": "Hopnest Bell Tent Retreat",
+    "description": "Five furnished bell tents in a private meadow on an organic family farm near Martley, Worcestershire. Booked as a whole site by one group, with king-size beds, a wood-fired hot tub, covered outdoor kitchen, stretch tent, fire pit, two hot showers and two loos. No other guests on site.",
+    "url": "https://www.hopnestretreats.co.uk/bell-tents",
+    "telephone": "+447583340173",
+    "email": "hello@hopnestretreats.co.uk",
+    "image": [
+      "https://www.hopnestretreats.co.uk/images/bell%20tent%20from%20outside.jpg",
+      "https://www.hopnestretreats.co.uk/images/stretch%20tent%20with%20people.jpg",
+      "https://www.hopnestretreats.co.uk/images/girls%20on%20bed.jpg"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hopnest Farm",
+      "addressLocality": "Martley",
+      "addressRegion": "Worcestershire",
+      "postalCode": "WR6 6QA",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.235,
+      "longitude": -2.365
+    },
+    "priceRange": "££",
+    "amenityFeature": [
       {
-        "@type": "Offer",
-        "name": "Weekend rate 2026",
-        "price": "500",
-        "priceCurrency": "GBP",
-        "description": "Per night, Friday and Saturday. Entire site exclusively yours, sleeps 10 on beds (guests welcome to bring extra bedding for more)."
+        "@type": "LocationFeatureSpecification",
+        "name": "Whole-site private hire, no other guests",
+        "value": true
       },
       {
-        "@type": "Offer",
-        "name": "Weekday rate 2026",
-        "price": "450",
-        "priceCurrency": "GBP",
-        "description": "Per night, Sunday to Thursday. Entire site exclusively yours, sleeps 10 on beds (guests welcome to bring extra bedding for more)."
+        "@type": "LocationFeatureSpecification",
+        "name": "Five furnished bell tents",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "King-size beds with bedding",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wood-fired hot tub",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Covered outdoor kitchen with gas cooking",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Stretch tent dining area",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Fire pit",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Two hot showers",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Two loos",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Solar lighting and phone charging",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Parking on site",
+        "value": true
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.hopnestretreats.co.uk/bell-tents#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many people does the Bell Tent Retreat sleep?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ten people sleep in king-size beds, two in each of the five bell tents, with bedding provided. There's room for up to 20 in total if you bring air beds or extra tents, so the more the merrier. Just let me know your numbers when you book."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the whole site private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You book the whole retreat, so there are no other guests on site and you don't share the hot tub, kitchen, showers or fire pit with anyone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a hot tub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. There's a wood-fired hot tub on site for your group to use during your stay."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there electricity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There's no mains power. The site runs on solar, so you have lighting and phone charging, and the kitchen cooks on gas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it good for hen dos and birthdays?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Hen dos, birthdays, family gatherings and reunions all work really well here. Small speakers are fine. It's a quiet valley, so please keep the noise down after dark."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we bring our dog?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Please ask before booking and I'll let you know what works for your dates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We're near Martley in Worcestershire, about 25 minutes from Worcester and 50 minutes from Birmingham. The Talbot pub is a five-minute walk away. I'll send the exact address and directions when you book."
+        }
       }
     ]
   }
+]
   </script>
 </head>
 <body>
@@ -781,6 +920,7 @@
       <nav class="hn-nav" id="hn-nav">
         <a href="/index.html">Home</a>
         <a href="/bell-tents.html">Bell Tent Retreat</a>
+        <a href="/shepherd-huts.html">Shepherd Hut</a>
         <a href="/exclusive-campsite.html">Exclusive Campsite</a>
         <a href="/about.html">About</a>
         <a href="/faq.html">FAQ</a>
@@ -794,26 +934,32 @@
     <div class="hn-hero-bg" style="background-image: url('/images/stretch tent with people.jpg');"></div>
     <div class="hn-hero-overlay"></div>
     <div class="hn-container hn-hero-content">
-      <h1>The Bell Tent Retreat</h1>
-      <a href="#book" class="hn-btn" style="margin-top: 1.5rem; display: inline-block;">Check Availability &amp; Book</a>
+      <span class="hn-hero-eyebrow">The Bell Tent Retreat · Martley, Worcestershire</span>
+      <h1>Private bell tent glamping in Worcestershire</h1>
+      <p class="hn-hero-sub">Five furnished bell tents, a wood-fired hot tub and a meadow that's all yours.</p>
+      <a href="#book" class="hn-btn" style="margin-top: 1rem; display: inline-block;">Check availability</a>
     </div>
   </section>
 
   <!-- Sub-Hero Description Banner -->
   <section class="hn-sub-hero-banner hn-animate-fade">
     <div class="hn-container">
-      <p>Five furnished bell tents in a private meadow on a working organic farm, exclusively yours. No other guests on site.</p>
+      <p>Our bell tents sit in around three acres of meadow on our family's organic farm near Martley. When you book, the whole site is yours: no other guests, nothing shared, just your group, the tents and the fire.</p>
     </div>
   </section>
 
   <!-- Availability & Booking Section -->
   <section class="hn-section hn-animate-fade" id="book" style="border-top: 1px solid var(--mist); background: var(--linen); padding: 3.5rem 0;">
-    <div class="hn-container" style="max-width: 800px; text-align: center;">
-      <span class="hn-label">Check Availability</span>
-      <h2 style="margin-bottom: 1rem;">How to Book</h2>
+    <div class="hn-container" style="max-width: 980px; text-align: center;">
+      <span class="hn-label">Check availability</span>
+      <h2 style="margin-bottom: 1rem;">How to book</h2>
       <p style="font-size: 1.05rem; line-height: 1.8; color: var(--bark); margin-bottom: 2rem;">
-        You're welcome to book via Airbnb, or book privately with Elizabeth by WhatsApp or email and save. Dates are always kept up to date on Airbnb, and Elizabeth can quickly block them out once you've been in touch.
+        Online booking is coming soon. For now, you can book through Airbnb, or message me directly on WhatsApp or email, which works out a little cheaper. Airbnb always shows the latest dates, and I'll block yours out as soon as we've sorted it.<br><span style="font-style:italic">Elizabeth</span>
       </p>
+
+      <!-- BOOKING SLOT: paste the bell tent Lodgify widget inside the hn-booking-calendar div below, then remove the word "hidden" from it. -->
+      <div class="hn-booking-calendar" id="hn-booking-calendar" hidden>
+      </div>
 
       <!-- Airbnb button -->
       <a href="https://www.airbnb.co.uk/rooms/1688384559808569892?guests=1&adults=1&s=67&unique_share_id=80f4cd95-bbdf-40fa-b554-455dcb832e2f"
@@ -821,10 +967,10 @@
         style="display: inline-flex; align-items: center; gap: 0.6rem; background: #FF5A5F; color: white; padding: 0.85rem 2rem; border-radius: 50px; font-family: 'Open Sans', sans-serif; font-size: 0.95rem; font-weight: 600; text-decoration: none; margin-bottom: 1.5rem; transition: opacity 0.2s;"
         onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
         <svg style="width:20px;height:20px;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c1.016 0 1.842.826 1.842 1.842S13.016 8.184 12 8.184 10.158 7.358 10.158 6.342 10.984 4.5 12 4.5zm4.5 13.875c-.158.311-.474.475-.79.475-.142 0-.285-.032-.417-.1-1.421-.72-2.467-1.767-3.135-3.103-.5.93-1.198 1.74-2.083 2.362-.253.178-.538.26-.82.26-.447 0-.886-.21-1.167-.604-.452-.635-.305-1.515.33-1.967.99-.703 1.662-1.7 1.978-2.887-.393-.34-.635-.84-.635-1.395 0-1.016.826-1.842 1.842-1.842.568 0 1.077.257 1.421.661.345-.404.854-.661 1.421-.661 1.016 0 1.842.826 1.842 1.842 0 .556-.243 1.055-.635 1.395.316 1.188.988 2.184 1.978 2.887.635.452.782 1.332.33 1.967z"/></svg>
-        View Availability on Airbnb
+        View availability on Airbnb
       </a>
 
-      <p style="font-size: 0.9rem; color: var(--bark); margin-bottom: 1.5rem; opacity: 0.75;">Or message Elizabeth directly to book:</p>
+      <p style="font-size: 0.9rem; color: var(--bark); margin-bottom: 1.5rem; opacity: 0.75;">Or message me directly to book:</p>
 
       <!-- Contact buttons -->
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
@@ -838,7 +984,7 @@
           style="display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: var(--bark); border: 1.5px solid var(--mist); padding: 0.7rem 1.5rem; border-radius: 50px; font-family: 'Open Sans', sans-serif; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s;"
           onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">
           <svg style="width:18px;height:18px;fill:var(--bark);flex-shrink:0" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          Send an Email
+          Send an email
         </a>
       </div>
     </div>
@@ -848,31 +994,31 @@
   <section class="hn-section hn-animate-fade">
     <div class="hn-container">
       <h2>What's included</h2>
-      <p style="margin-bottom: 3rem; max-width: 800px;">The Bell Tent Retreat offers exclusive glamping in Worcestershire for families, friends and groups looking for a private countryside escape. Your booking includes exclusive use of approximately three acres of private meadow, with no shared facilities and no other guests on site. Accommodating 10 people in comfortable king-size beds across five bell tents (with space to bring extra bedding to include more people), it offers the feeling of having your own corner of the Worcestershire countryside.</p>
+      <p style="margin-bottom: 1rem; max-width: 800px;">Everything here is set up for groups to cook, eat and unwind together. Ten of you sleep in proper king-size beds, two to a tent, and there's room for up to 20 in total if you bring air beds or extra tents. The more the merrier.</p>
+      <p style="margin-bottom: 1.5rem; max-width: 800px;">We've farmed organically here since 1998, and the tents sit in a quiet corner of the farm with plenty of room for games, wandering and doing very little.</p>
+      <p style="margin-bottom: 3rem; max-width: 800px; background: var(--linen); border-left: 3px solid var(--sage); padding: 1rem 1.25rem; font-size: 0.93rem;">A quick note on the photos: we've since moved the bell tents to a different field on the farm, a little further from the river to keep everyone safe. The new field is just as beautiful, quiet and private.</p>
       
       <div class="hn-experience-grid">
         <div>
-          <h3>Inside each bell tent</h3>
+          <h3>Inside each tent</h3>
           <ul class="hn-experience-list" style="margin-top: 1rem;">
-            <li>King-size bed with bedding provided (sleeps 2)</li>
-            <li>Bedside tables</li>
+            <li>King-size bed with bedding, sleeps two</li>
+            <li>Bedside tables and lights</li>
             <li>Clothes rail</li>
-            <li>Bedside lighting</li>
-            <li>Space for extra bedding / air beds if you wish to include more guests</li>
+            <li>Room for an air bed or two if you need extra space</li>
           </ul>
         </div>
         
         <div>
-          <h3>Outside</h3>
+          <h3>Around the site</h3>
           <ul class="hn-experience-list" style="margin-top: 1rem;">
-            <li>Wood fired hot tub</li>
-            <li>Spacious stretch tent</li>
-            <li>Fire pit (firewood available to buy on site)</li>
-            <li>Covered fully equipped outdoor kitchen with gas cooking</li>
-            <li>Washing-up facilities and dining space</li>
-            <li>Two loos</li>
-            <li>Two hot showers</li>
-            <li>Free parking — drive straight onto the site</li>
+            <li>Wood-fired hot tub</li>
+            <li>Big stretch tent with long dining tables</li>
+            <li>Covered outdoor kitchen, fully equipped, with gas cooking</li>
+            <li>Washing-up area</li>
+            <li>Fire pit, with firewood to buy on site</li>
+            <li>Two hot showers and two loos</li>
+            <li>Free parking right by the tents</li>
           </ul>
         </div>
       </div>
@@ -915,9 +1061,9 @@
   <!-- Impact Text 1: Hen Do -->
   <section class="hn-animate-fade" style="background: var(--bark); padding: 5rem 1.5rem; text-align: center;">
     <div style="max-width: 780px; margin: 0 auto;">
-      <span class="hn-label" style="color: var(--amber);">For the Bride-to-Be</span>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: white; line-height: 1.2; margin-bottom: 1.25rem;">Planning the Hen Do of dreams?</h2>
-      <p style="color: var(--mist); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">We have space for 10 people on comfortable king-size beds — and you are always welcome to bring extra bedding or air beds to include more people. The whole site is exclusively yours, so the party doesn't have to stop.</p>
+      <span class="hn-label" style="color: var(--amber);">Hen dos</span>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: white; line-height: 1.2; margin-bottom: 1.25rem;">A hen do with the whole field to yourselves</h2>
+      <p style="color: var(--mist); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">Ten of you get proper king-size beds, with room for air beds if more want to come. There are no other guests, so the hot tub, the fire and the long table are all yours. Have a look at our <a href="/hen-party-glamping.html" style="color:white;text-decoration:underline">hen do glamping</a> page for ideas.</p>
       <a href="#book" style="display: inline-block; background: var(--amber); color: white; padding: 0.85rem 2.25rem; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Check Availability</a>
     </div>
   </section>
@@ -952,12 +1098,12 @@
   <!-- Impact Text 2: Friends & Family -->
   <section class="hn-animate-fade" style="background: var(--sage); padding: 5rem 1.5rem; text-align: center;">
     <div style="max-width: 780px; margin: 0 auto;">
-      <span class="hn-label" style="color: white; opacity: 0.8;">For Families &amp; Friend Groups</span>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: white; line-height: 1.2; margin-bottom: 1.25rem;">Planning a friends &amp; family getaway?</h2>
-      <p style="color: white; font-size: 1.1rem; line-height: 1.8; opacity: 0.92; margin-bottom: 2rem;">You get the comfort and luxury of king-size beds, and the kids get the fun of camping. A unique experience for everyone. Pop Elizabeth a message on WhatsApp or email — she's happy to chat through different options and make your stay truly unique to your group.</p>
+      <span class="hn-label" style="color: white; opacity: 0.8;">Families and friends</span>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: white; line-height: 1.2; margin-bottom: 1.25rem;">Family and friends getaways</h2>
+      <p style="color: white; font-size: 1.1rem; line-height: 1.8; opacity: 0.92; margin-bottom: 2rem;">Sometimes the grown-ups want a comfy bed while the kids want to rough it and try proper camping. Here you can do both. It's a safe place for children to try camping for the first time, and for everyone to get a good night's sleep. Drop me a message on WhatsApp or email and I'll happily talk through what would suit your group.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
         <a href="https://wa.me/447583340173" target="_blank" rel="noopener" style="display: inline-block; background: white; color: var(--sage); padding: 0.85rem 2.25rem; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">WhatsApp Elizabeth</a>
-        <a href="mailto:hello@hopnestretreats.co.uk" style="display: inline-block; background: transparent; color: white; border: 1.5px solid white; padding: 0.85rem 2.25rem; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">Send an Email</a>
+        <a href="mailto:hello@hopnestretreats.co.uk" style="display: inline-block; background: transparent; color: white; border: 1.5px solid white; padding: 0.85rem 2.25rem; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'">Send an email</a>
       </div>
     </div>
   </section>
@@ -994,10 +1140,20 @@
   <!-- Impact Text 3: Friends Reunion -->
   <section class="hn-animate-fade" style="background: var(--parchment); border-top: 1px solid var(--mist); border-bottom: 1px solid var(--mist); padding: 5rem 1.5rem; text-align: center;">
     <div style="max-width: 780px; margin: 0 auto;">
-      <span class="hn-label">For the Long-overdue Catch Up</span>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--bark); line-height: 1.2; margin-bottom: 1.25rem;">Booking the friends reunion?</h2>
-      <p style="color: var(--bark); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">Our stretch tent, long dining tables and fire pit are perfect for those deep conversations you haven't been able to have in a while. With space to roam around the field, you'll feel completely at ease — no distractions, just good company.</p>
+      <span class="hn-label">Reunions and catch-ups</span>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--bark); line-height: 1.2; margin-bottom: 1.25rem;">Time to catch up properly</h2>
+      <p style="color: var(--bark); font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">Long tables under the stretch tent, a fire pit and a field to wander round. It's an easy place to slow down and actually talk, and there's plenty of room for garden games when you want a break from the chat.</p>
       <a href="#book" style="display: inline-block; background: var(--sage); color: white; padding: 0.85rem 2.25rem; font-family: 'Open Sans', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Check Availability</a>
+    </div>
+  </section>
+
+  <!-- Time out in the countryside -->
+  <section class="hn-section hn-animate-fade" style="background: white;">
+    <div class="hn-container" style="max-width: 760px; text-align: center;">
+      <span class="hn-label">A bit of time out</span>
+      <h2 style="margin-top: 0.4rem;">Leave feeling rested, grounded and content</h2>
+      <p style="font-size: 1.1rem; line-height: 1.85; margin-bottom: 1rem;">It might sound a bit mad when life has so many stresses, but a few days out here can settle you more than you'd think. Away from the daily worries, with nothing much to do but cook, chat, wander and sit by the fire, people tend to sleep well and slow right down.</p>
+      <p style="font-size: 1.1rem; line-height: 1.85;">Most of our guests go home feeling rested, grounded and content. That's what we hope this place gives you.</p>
     </div>
   </section>
 
@@ -1035,26 +1191,89 @@
     </div>
   </section>
 
+  <!-- Reviews: real Airbnb reviews from the Bell Tent Retreat listing, copied word for word. Do not edit. -->
+  <section class="hn-section hn-animate-fade" id="reviews" style="background: var(--linen);">
+    <div class="hn-container">
+      <span class="hn-label">Guest reviews</span>
+      <h2 style="margin-top: 0.4rem;">What guests say</h2>
+      <p style="max-width: 680px;">We're rated 5.0 on Airbnb. Here's what some of our guests have said:</p>
+      <div class="hn-reviews-grid">
+        <div class="hn-review-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"Wow, what a stunning location! We had the perfect 3 night stay here with our friends (a group of 3 families, including 5 kids, from 18 months to 5 years old). The whole site was just beautiful, and so peaceful! The children had an absolute blast biking and running round the huge field, playing badminton and toasting marshmallows in the fire pit. They didn’t want to leave!<br>In terms of facilities, the kitchen area was great and well stocked with equipment (a gas bbq, hob, fridge and loads of cooking utensils).<br>The glamping tents were gorgeous, and super comfortable, with king size beds and blankets. The toilets and washing facilities were all spotless.<br>Elizabeth was such a lovely host - always on hand to answer any questions before and during our stay.<br>Thank you for such a wonderful stay, we will be back!"</p>
+          <p class="hn-review-author">Lucy, August 2026</p>
+        </div>
+        <div class="hn-review-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"We used Hopnest for a family gathering of 16 people aged 7 to 67 (plus 6 dogs!) and had the best time. We planned to walk to the nearby pub but didn’t leave the field in the end, as we were having too much fun. The covered kitchen is well kitted out with everything you need. On the first night we all ate around a large dining table, whilst the second night was spent around the camp fire. The solar charging station was great for keeping phones topped up. The shower was powerful and strong and the eco toilets were brilliant and fresh smelling. The beds were comfy and teepees spacious. There was a washing line and volleyball/badminton net. We were able to take our own camper van and pay a surcharge to accommodate additional people. Children slept on airbeds in the teepees.<br>Elizabeth was friendly and helpful throughout our stay. We are already planning our next visit to Hopnest."</p>
+          <p class="hn-review-author">Kelly, August 2026</p>
+        </div>
+        <div class="hn-review-card">
+          <div class="hn-review-stars">★★★★★</div>
+          <p class="hn-review-text">"Perfect for our needs as we are a family who converged from all directions. An elegant experience for those used to “just camping”. Highly recommend and will come back again"</p>
+          <p class="hn-review-author">Ian, August 2026</p>
+        </div>
+      </div>
+      <p style="margin-top: 2rem;"><a href="https://www.airbnb.co.uk/rooms/1688384559808569892/reviews" target="_blank" rel="noopener" style="color: var(--sage); font-weight: 600;">Read all our reviews on Airbnb →</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ: keep in sync with the FAQPage structured data in <head> -->
+  <section class="hn-section hn-animate-fade" id="faq" style="background: var(--parchment);">
+    <div class="hn-container" style="max-width: 850px;">
+      <span class="hn-label">Common questions</span>
+      <h2 style="margin-top: 0.4rem; margin-bottom: 1.75rem;">Questions about the Bell Tent Retreat</h2>
+      <details class="hn-faq-item">
+        <summary class="hn-faq-question"><span>How many people does the Bell Tent Retreat sleep?</span><span class="hn-faq-icon">+</span></summary>
+        <div class="hn-faq-answer"><p>Ten people sleep in king-size beds, two in each of the five bell tents, with bedding provided. There's room for up to 20 in total if you bring air beds or extra tents, so the more the merrier. Just let me know your numbers when you book.</p></div>
+      </details>
+      <details class="hn-faq-item">
+        <summary class="hn-faq-question"><span>Is the whole site private?</span><span class="hn-faq-icon">+</span></summary>
+        <div class="hn-faq-answer"><p>Yes. You book the whole retreat, so there are no other guests on site and you don't share the hot tub, kitchen, showers or fire pit with anyone.</p></div>
+      </details>
+      <details class="hn-faq-item">
+        <summary class="hn-faq-question"><span>Is there a hot tub?</span><span class="hn-faq-icon">+</span></summary>
+        <div class="hn-faq-answer"><p>Yes. There's a wood-fired hot tub on site for your group to use during your stay.</p></div>
+      </details>
+      <details class="hn-faq-item">
+        <summary class="hn-faq-question"><span>Is there electricity?</span><span class="hn-faq-icon">+</span></summary>
+        <div class="hn-faq-answer"><p>There's no mains power. The site runs on solar, so you have lighting and phone charging, and the kitchen cooks on gas.</p></div>
+      </details>
+      <details class="hn-faq-item">
+        <summary class="hn-faq-question"><span>Is it good for hen dos and birthdays?</span><span class="hn-faq-icon">+</span></summary>
+        <div class="hn-faq-answer"><p>Yes. Hen dos, birthdays, family gatherings and reunions all work really well here. Small speakers are fine. It's a quiet valley, so please keep the noise down after dark.</p></div>
+      </details>
+      <details class="hn-faq-item">
+        <summary class="hn-faq-question"><span>Can we bring our dog?</span><span class="hn-faq-icon">+</span></summary>
+        <div class="hn-faq-answer"><p>Please ask before booking and I'll let you know what works for your dates.</p></div>
+      </details>
+      <details class="hn-faq-item">
+        <summary class="hn-faq-question"><span>Where is it?</span><span class="hn-faq-icon">+</span></summary>
+        <div class="hn-faq-answer"><p>We're near Martley in Worcestershire, about 25 minutes from Worcester and 50 minutes from Birmingham. <a href="/local-guide.html" style="color:var(--sage);font-weight:600">The Talbot pub</a> is a five-minute walk away. I'll send the exact address and directions when you book.</p></div>
+      </details>
+    </div>
+  </section>
+
   <!-- Getting Here (Short) -->
   <section class="hn-section hn-animate-fade" style="background: var(--linen); padding: 3rem 0;">
     <div class="hn-container">
       <h2>Getting here</h2>
-      <p style="margin-bottom: 1.5rem;">Near Martley, Worcestershire — 25 minutes from Worcester, 50 minutes from Birmingham. Exact address and arrival instructions sent on booking. Very low cars not advised on the farm track.</p>
-      <a href="/index.html#getting-here" style="color: var(--sage); text-decoration: none; font-weight: 600;">View map and driving distances →</a>
+      <p style="margin-bottom: 1.5rem;">Near Martley, Worcestershire. About 25 minutes from Worcester and 50 from Birmingham. We'll send the exact address and directions when you book. The farm track isn't suitable for very low cars.</p>
+      <a href="/index.html#getting-here" style="color: var(--sage); text-decoration: none; font-weight: 600;">See the map and driving times →</a>
     </div>
   </section>
 
-  <!-- House Rules Section -->
-  <section class="hn-section hn-animate-fade" style="background: var(--parchment);">
+  <!-- House Rules Section (id="pricing" kept because footers across the site link to it) -->
+  <section class="hn-section hn-animate-fade" id="pricing" style="background: var(--parchment);">
     <div class="hn-container">
       <h2>Good to know</h2>
       <ul class="hn-experience-list" style="margin-top: 1rem; max-width: 600px;">
-        <li>Check in from 3pm · Check out by 10am</li>
-        <li>Off-grid by design, solar lighting and phone charging, no mains power</li>
-        <li>Small speakers fine, it's a quiet valley, especially after dark</li>
-        <li style="color: #E74C3C; font-weight: 600;">NO SWIMMING — Please see our <a href="terms.html" style="color: inherit; text-decoration: underline;">terms and conditions</a> for further details.</li>
-        <li>Please ask about pets</li>
-        <li style="margin-top: 1.5rem; font-weight: bold; list-style-type: none;">Any questions? Message Elizabeth on <a href="https://wa.me/447583340173" target="_blank" style="color: var(--sage); text-decoration: none; border-bottom: 1px solid var(--sage);">07583 340173</a></li>
+        <li>Check-in from 3pm, check-out by 10am</li>
+        <li>No mains power. Solar lighting and phone charging</li>
+        <li>Small speakers welcome. It's a quiet valley, so please keep it down after dark</li>
+        <li style="color: #E74C3C; font-weight: 600;">No swimming in the river. Please see our <a href="terms.html" style="color: inherit; text-decoration: underline;">terms and conditions</a> for further details.</li>
+        <li>Ask us before bringing dogs</li>
+        <li style="margin-top: 1.5rem; font-weight: bold; list-style-type: none;">Questions? Message Elizabeth on <a href="https://wa.me/447583340173" target="_blank" style="color: var(--sage); text-decoration: none; border-bottom: 1px solid var(--sage);">07583 340173</a></li>
       </ul>
     </div>
   </section>
@@ -1073,6 +1292,7 @@
       <div class="hn-footer-links">
         <p class="hn-label">Stay</p>
         <a href="/bell-tents.html">Bell Tent Retreat</a>
+        <a href="/shepherd-huts.html">Shepherd Hut</a>
         <a href="/exclusive-campsite.html">Exclusive Campsite</a>
       </div>
       <div class="hn-footer-links">
