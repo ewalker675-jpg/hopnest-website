@@ -732,7 +732,7 @@
     /* Booking calendar slot: shown once a Lodgify widget is pasted in and the hidden attribute removed */
     .hn-hero-sub{font-size:1.2rem;max-width:620px;color:#fff;font-weight:400;text-shadow:0 1px 4px rgba(0,0,0,0.7),0 0 18px rgba(0,0,0,0.45)}
     .hn-hero-content h1{text-shadow:0 2px 10px rgba(0,0,0,0.45)}
-    .hn-booking-calendar{background:white;border:1px solid var(--mist);padding:1.25rem;margin:0 auto 2rem;max-width:760px;text-align:left}
+    .hn-booking-calendar{margin:0 auto 2rem;max-width:900px;text-align:left}
     .hn-booking-calendar[hidden]{display:none}
     .hn-reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;align-items:start}
     .hn-review-card{background:white;border:1px solid var(--mist);padding:1.75rem}
@@ -953,19 +953,64 @@
       <span class="hn-label">Check availability</span>
       <h2 style="margin-bottom: 1rem;">How to book</h2>
       <p style="font-size: 1.05rem; line-height: 1.8; color: var(--bark); margin-bottom: 2rem;">
-        Online booking is coming soon. For now, you can book through Airbnb, or message me directly on WhatsApp or email, which works out a little cheaper. Airbnb always shows the latest dates, and I'll block yours out as soon as we've sorted it.<br><span style="font-style:italic">Elizabeth</span>
+        Pick your dates below to book direct, which works out a little cheaper than Airbnb. If you've got any questions, just message me on WhatsApp or email. You can still book through Airbnb if you prefer.<br><span style="font-style:italic">Elizabeth</span>
       </p>
 
-      <!--
-        BOOKING CALENDAR SLOT (Lodgify)
-        When the Lodgify booking widget is ready:
-          1. Paste Lodgify's embed code inside the div below.
-          2. Remove the word "hidden" from the div.
-          3. Change "Online booking is coming soon. For now, you can book through Airbnb"
-             above to "Pick your dates below to book online, or book through Airbnb".
-        Leave the Airbnb and WhatsApp buttons in place as a back-up.
-      -->
-      <div class="hn-booking-calendar" id="hn-booking-calendar" hidden>
+      <!-- BOOKING: Lodgify search bar below. To swap it, replace everything inside the hn-booking-calendar div. -->
+      <div class="hn-booking-calendar" id="hn-booking-calendar">
+        <!-- Lodgify search bar (website 683644). Searches all Hopnest properties and opens results in a new tab. -->
+        <style>
+          :root {
+            --ldg-psb-background: #ffffff;
+            --ldg-psb-border-radius: 0.42em;
+            --ldg-psb-box-shadow: 0px 24px 54px 0px rgba(0, 0, 0, 0.1);
+            --ldg-psb-padding: 14px;
+            --ldg-psb-input-background: #ffffff;
+            --ldg-psb-button-border-radius: 3.58em;
+            --ldg-psb-color-primary: #a4cea1;
+            --ldg-psb-color-primary-lighter:#d2e7d0;
+            --ldg-psb-color-primary-darker: #526751;
+            --ldg-psb-color-primary-contrast: #333333;
+            --ldg-semantic-color-primary:  #a4cea1;
+            --ldg-semantic-color-primary-lighter: #d2e7d0;
+            --ldg-semantic-color-primary-darker: #526751;
+            --ldg-semantic-color-primary-contrast: #333333;
+            --ldg-component-modal-z-index: 999;
+          }
+          #lodgify-search-bar {
+            width:100%;
+          }
+        </style>
+        <div
+          id="lodgify-search-bar"
+          data-website-id="683644"
+          data-language-code="en"
+          data-search-page-url='https://elizabeth-walker-47829c.lodgify.com/en/all-properties'
+          data-dates-check-in-label='Check-in'
+          data-dates-check-out-label='Check-out'
+          data-guests-counter-label='Guests'
+          data-guests-input-singular-label='{{NumberOfGuests}} guest'
+          data-guests-input-plural-label='{{NumberOfGuests}} guests'
+          data-location-input-label='Location'
+          data-search-button-label='Search'
+          data-dates-input-min-stay-tooltip-text='{"one":"Minimum {minStay} night","other":"Minimum {minStay} nights"}'
+          data-guests-breakdown-label='Guests'
+          data-adults-label='{"one":"adult","other":"adults"}'
+          data-adults-description='Ages {minAge} or above'
+          data-children-label='{"one":"child","other":"children"}'
+          data-children-description='Ages {minAge}-{maxAge}'
+          data-children-not-allowed-label='Not suitable for children'
+          data-infants-label='{"one":"infant","other":"infants"}'
+          data-infants-description='Under {maxAge}'
+          data-infants-not-allowed-label='Not suitable for infants'
+          data-pets-label='{"one":"pet","other":"pets"}'
+          data-pets-not-allowed-label='Not allowed'
+          data-done-label='Done'
+          data-new-tab="true"
+          data-version="stable"
+          data-has-guests-breakdown
+        ></div>
+        <script src="https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js" defer></script>
       </div>
 
       <!-- Airbnb button -->
